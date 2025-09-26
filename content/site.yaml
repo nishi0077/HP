@@ -1,0 +1,122 @@
+site:
+  name: Next Sociality
+  locale: ja
+  domain: example.com
+  brand:
+    tagline: 一貫したWebマーケで売上直結
+    phone: "+81-XX-XXXX-XXXX"
+    email: info@example.com
+    address: Tokyo, Japan
+  seo:
+    title: 一貫型Webマーケ支援｜広告運用・LP制作・バナー・SNS運用
+    description: 戦略設計からクリエイティブ制作、広告運用、計測と改善までを一気通貫で支援。高い再現性でCPA最適化とLTV向上を実現します。
+    keywords: [広告運用, LP制作, バナー制作, SNS運用, Webマーケティング, CAPI, GA4, CVR改善]
+navigation:
+  logo_text: Next Sociality
+  links:
+    - { label: ホーム, href: "/" }
+    - { label: サービス, href: "/services" }
+    - { label: 価格, href: "/pricing" }
+    - { label: 事例, href: "/cases" }
+    - { label: 私たちについて, href: "/about" }
+    - { label: FAQ, href: "/faq" }
+  cta: { label: 相談を予約, href: "/book" }
+home:
+  hero:
+    heading: 売上に直結する一貫型Webマーケティング
+    subheading: 戦略設計からLP・バナー制作、広告運用、SNS運用、計測改善まで。分断をなくし、最短で成果へ。
+    primary_cta: { label: 無料相談を予約, href: "/book" }
+    secondary_cta: { label: 実績を見る, href: "/cases" }
+    trust_badges:
+      - KPI合意→週次レポート→改善のPDCAを標準化
+      - GA4/CAPI連携で計測精度を最大化
+  highlights:
+    title: 選ばれる理由
+    items:
+      - { title: 一気通貫体制, text: 企画から運用・制作・計測までを一社完結。意図のズレとリードタイムを削減。 }
+      - { title: 収益設計, text: CPAだけでなくLTV/粗利を指標化し、意思決定を数値で支援。 }
+      - { title: 計測と再現性, text: ピクセル+CAPI/GA4/タグマネの整備で学習を安定化。 }
+services:
+  title: サービス
+  intro: 目的とKPIに合わせて、必要最小コストで最大の成果を設計します。
+  cards:
+    - slug: advertising
+      name: 広告運用（Meta/Google/YouTube）
+      bullets:
+        - 目標設計 - CPA/ROAS/リード品質
+        - 構成 - キャンペーン設計、入札/配信最適化
+        - 計測 - ピクセル+CAPI、GA4、CVイベント設計
+        - クリエイティブ - 静止画/動画のABテスト運用
+      cta: 見積を依頼
+    - slug: lp
+      name: LP制作/改善
+      bullets:
+        - 価値提案の言語化、構成案、ワイヤー
+        - 証拠設計 - レビュー/実績/FAQ/反論処理
+        - 計測実装 - CVイベント、スクロール/クリック
+        - 継続改善 - ヒートマップ/ABテスト
+      cta: 相談する
+    - slug: banners
+      name: バナー/動画クリエイティブ
+      bullets:
+        - ファネル別訴求（認知/比較/刈り取り）
+        - コメント誘発/保存率設計
+        - クリエ×配信の一体最適
+      cta: 制作を依頼
+    - slug: sns
+      name: SNS運用（Instagram/TikTok/YouTube）
+      bullets:
+        - 役割定義 - 認知・指名検索・LINE流入
+        - コンテンツ計画 - 月次テーマ/週次カレンダー
+        - KPI - 保存率/コメント率/プロフィール遷移
+      cta: 運用を相談
+process:
+  title: 進め方
+  steps:
+    - { no: 1, name: ヒアリング/現状診断, output: 目標/KPI、制約条件、測定環境の棚卸し }
+    - { no: 2, name: 戦略/ファネル設計, output: ペルソナ/便益/RTB、導線と指標の設計図 }
+    - { no: 3, name: クリエイティブ/LP制作, output: ワイヤー、コピー、デザイン/実装、タグ設計 }
+    - { no: 4, name: 計測/運用開始, output: CAPI/GA4連携、キャンペーン設計、初期学習 }
+    - { no: 5, name: 週次レポート/改善, output: クリエ/入札/LPのAB改善、次月計画 }
+pricing:
+  title: 価格
+  plans:
+    - { name: スタート, target: まずは計測と土台を整備, monthly_fee: 100000, setup_fee: 100000, includes: [ペルソナ/訴求整理, 計測実装（ピクセル+CAPI/GA4）, LP簡易改善提案] }
+    - { name: グロース, target: 広告とLPを一体で最適化, monthly_fee: 300000, setup_fee: 150000, includes: [Meta/Google運用（月30〜100万円目安）, クリエイティブ月8本, LP改善ABテスト（月1回）, 週次レポート/定例30分] }
+    - { name: スケール, target: 複数チャネルで拡大, monthly_fee: 500000, setup_fee: 200000, includes: [配信拡張（P-MAX/YouTube/Discovery等）, クリエイティブ月16本, LP新規作成（四半期1本）, BI可視化/意思決定支援] }
+cases:
+  title: 実績ハイライト
+  items:
+    - { title: 工務店新築リード, kpi: リード45件/月 → 成約2件, results: [広告費 - 500,000円, CPA - 11,111円, 売上 - 80,000,000円], levers: [反論処理をLPに実装, 指名検索用の比較コンテンツ] }
+    - { title: 太陽光・蓄電池, kpi: 診断フォーム完了率向上, results: [CTR - 5.0%, CPA - 3,200円], levers: [診断→予約の摩擦低減, CAPI実装で学習安定] }
+about:
+  title: 私たちについて
+  mission: 中小企業の強みを言語化し、最短距離で売上へつなげる。
+  values: [一貫性, 実用性, 検証可能性]
+  profile:
+    representative: 西浦 颯汰
+    description: 戦略設計から制作、運用、分析まで一人称で遂行できる体制を強みとし、高単価商材の獲得効率最大化を支援。
+faq:
+  title: よくある質問
+  items:
+    - { q: 最低契約期間はありますか, a: 原則3か月。学習と改善サイクル確立に必要な期間です。 }
+    - { q: 計測が未整備ですが対応可能ですか, a: 可能です。初月でピクセル+CAPI/GA4を整備し、イベントを標準化します。 }
+    - { q: 成果指標は何で見ますか, a: CPA/ROASに加え、LTV/粗利、一次/二次指標（保存率/コメント率/LP滞在等）で意思決定します。 }
+cta:
+  banner:
+    heading: まずは無料相談から
+    subtext: 目標、制約、現状の計測環境を共有いただければ、最短の勝ち筋をご提案します。
+    button: { label: 相談を予約, href: "/book" }
+contact:
+  form_fields:
+    - { name: company, label: 会社名, required: true }
+    - { name: name, label: ご担当者名, required: true }
+    - { name: email, label: メール, required: true }
+    - { name: budget, label: 月間広告予算, type: select, options: [〜30万円, 30〜100万円, 100〜300万円, 300万円〜] }
+    - { name: objectives, label: 目的, type: textarea, placeholder: 例）CPA改善、LTV最大化、計測整備 等 }
+footer:
+  quick_links: [ホーム, サービス, 価格, 事例, 私たちについて, FAQ]
+  legal: [プライバシーポリシー, 取引条件]
+  copyright:
+    text: © Next Sociality. All rights reserved.
+
