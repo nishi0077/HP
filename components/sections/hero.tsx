@@ -23,9 +23,15 @@ export function Hero({ hero }: HeroProps) {
 
             <div className="flex flex-col gap-4 sm:flex-row sm:justify-center">
               <Button size="lg" asChild>
-                <Link href={hero.primary_cta.href}>
-                  {hero.primary_cta.label}
-                </Link>
+                {hero.primary_cta.href.startsWith('http') ? (
+                  <a href={hero.primary_cta.href} target="_blank" rel="noopener noreferrer">
+                    {hero.primary_cta.label}
+                  </a>
+                ) : (
+                  <Link href={hero.primary_cta.href}>
+                    {hero.primary_cta.label}
+                  </Link>
+                )}
               </Button>
               <Button variant="outline" size="lg" asChild>
                 <Link href={hero.secondary_cta.href}>

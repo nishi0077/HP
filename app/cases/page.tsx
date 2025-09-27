@@ -1,6 +1,6 @@
 import { loadSite } from '@/lib/content'
 import { Header } from '@/components/sections/header'
-import { Cases } from '@/components/sections/cases'
+import { CasesWithCharts } from '@/components/sections/cases-with-charts'
 import { CtaBanner } from '@/components/sections/cta-banner'
 import { Footer } from '@/components/sections/footer'
 
@@ -23,7 +23,7 @@ export default function CasesPage() {
             </div>
           </div>
         </div>
-        <Cases cases={site.cases} />
+        <CasesWithCharts cases={site.cases} />
         <CtaBanner cta={site.cta} />
       </main>
       <Footer footer={site.footer} navigation={site.navigation} site={site.site} />

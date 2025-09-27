@@ -5,7 +5,7 @@ import { Highlights } from '@/components/sections/highlights'
 import { Services } from '@/components/sections/services'
 import { Process } from '@/components/sections/process'
 import { Pricing } from '@/components/sections/pricing'
-import { Cases } from '@/components/sections/cases'
+import { CasesWithCharts } from '@/components/sections/cases-with-charts'
 import { Faq } from '@/components/sections/faq'
 import { CtaBanner } from '@/components/sections/cta-banner'
 import { Footer } from '@/components/sections/footer'
@@ -22,7 +22,7 @@ export default function HomePage() {
         <Services services={site.services} />
         <Process process={site.process} />
         <Pricing pricing={site.pricing} />
-        <Cases cases={site.cases} />
+        <CasesWithCharts cases={site.cases} />
         <Faq faq={site.faq} />
         <CtaBanner cta={site.cta} />
       </main>

@@ -59,7 +59,9 @@ export function Pricing({ pricing }: PricingProps) {
                   className="w-full" 
                   asChild
                 >
-                  <Link href="/book">相談を予約</Link>
+                  <a href="https://lin.ee/7IVLhKDH" target="_blank" rel="noopener noreferrer">
+                    相談を予約
+                  </a>
                 </Button>
               </CardContent>
             </Card>

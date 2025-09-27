@@ -70,7 +70,9 @@ export interface SiteData {
     items: Array<{
       title: string
       kpi: string
-      results: string[]
+      metrics: {
+        [key: string]: number
+      }
       levers: string[]
     }>
   }

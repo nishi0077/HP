@@ -36,7 +36,13 @@ export function Header({ navigation }: HeaderProps) {
         {/* Desktop CTA */}
         <div className="hidden md:block">
           <Button asChild>
-            <Link href={navigation.cta.href}>{navigation.cta.label}</Link>
+            {navigation.cta.href.startsWith('http') ? (
+              <a href={navigation.cta.href} target="_blank" rel="noopener noreferrer">
+                {navigation.cta.label}
+              </a>
+            ) : (
+              <Link href={navigation.cta.href}>{navigation.cta.label}</Link>
+            )}
           </Button>
         </div>
 
@@ -65,7 +71,13 @@ export function Header({ navigation }: HeaderProps) {
               </Link>
             ))}
             <Button asChild className="w-full">
-              <Link href={navigation.cta.href}>{navigation.cta.label}</Link>
+              {navigation.cta.href.startsWith('http') ? (
+                <a href={navigation.cta.href} target="_blank" rel="noopener noreferrer">
+                  {navigation.cta.label}
+                </a>
+              ) : (
+                <Link href={navigation.cta.href}>{navigation.cta.label}</Link>
+              )}
             </Button>
           </nav>
         </div>

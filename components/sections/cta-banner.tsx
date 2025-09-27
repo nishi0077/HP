@@ -18,9 +18,15 @@ export function CtaBanner({ cta }: CtaBannerProps) {
             {cta.banner.subtext}
           </p>
           <Button size="lg" variant="secondary" asChild>
-            <Link href={cta.banner.button.href}>
-              {cta.banner.button.label}
-            </Link>
+            {cta.banner.button.href.startsWith('http') ? (
+              <a href={cta.banner.button.href} target="_blank" rel="noopener noreferrer">
+                {cta.banner.button.label}
+              </a>
+            ) : (
+              <Link href={cta.banner.button.href}>
+                {cta.banner.button.label}
+              </Link>
+            )}
           </Button>
         </div>
       </div>

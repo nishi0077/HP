@@ -20,20 +20,20 @@ navigation:
     - { label: 事例, href: "/cases" }
     - { label: 私たちについて, href: "/about" }
     - { label: FAQ, href: "/faq" }
-  cta: { label: 相談を予約, href: "/book" }
+  cta: { label: 相談を予約, href: "https://lin.ee/7IVLhKDH" }
 home:
   hero:
-    heading: 売上に直結する一貫型Webマーケティング
+    heading: 結果にこだわるWebマーケティング会社
     subheading: 戦略設計からLP・バナー制作、広告運用、SNS運用、計測改善まで。分断をなくし、最短で成果へ。
-    primary_cta: { label: 無料相談を予約, href: "/book" }
+    primary_cta: { label: 無料相談を予約, href: "https://lin.ee/7IVLhKDH" }
     secondary_cta: { label: 実績を見る, href: "/cases" }
     trust_badges:
-      - KPI合意→週次レポート→改善のPDCAを標準化
+      - 全てのプロセスで高い技術力
       - GA4/CAPI連携で計測精度を最大化
   highlights:
     title: 選ばれる理由
     items:
-      - { title: 一気通貫体制, text: 企画から運用・制作・計測までを一社完結。意図のズレとリードタイムを削減。 }
+      - { title: トータルプロデュース, text: 企画から運用・制作・計測までを一社完結。意図のズレとリードタイムを削減。 }
       - { title: 収益設計, text: CPAだけでなくLTV/粗利を指標化し、意思決定を数値で支援。 }
       - { title: 計測と再現性, text: ピクセル+CAPI/GA4/タグマネの整備で学習を安定化。 }
 services:
@@ -87,8 +87,31 @@ pricing:
 cases:
   title: 実績ハイライト
   items:
-    - { title: 工務店新築リード, kpi: リード45件/月 → 成約2件, results: [広告費 - 500,000円, CPA - 11,111円, 売上 - 80,000,000円], levers: [反論処理をLPに実装, 指名検索用の比較コンテンツ] }
-    - { title: 太陽光・蓄電池, kpi: 診断フォーム完了率向上, results: [CTR - 5.0%, CPA - 3,200円], levers: [診断→予約の摩擦低減, CAPI実装で学習安定] }
+    - { 
+        title: 工務店新築リード, 
+        kpi: リード45件/月 → 成約2件, 
+        metrics: {
+          leads: 45,
+          conversions: 2,
+          cost: 500000,
+          cpa: 11111,
+          revenue: 80000000,
+          roi: 16000
+        },
+        levers: [反論処理をLPに実装, 指名検索用の比較コンテンツ] 
+      }
+    - { 
+        title: 太陽光・蓄電池, 
+        kpi: 診断フォーム完了率向上, 
+        metrics: {
+          ctr: 5.0,
+          cpa: 3200,
+          conversion_rate: 12.5,
+          leads: 38,
+          cost: 121600
+        },
+        levers: [診断→予約の摩擦低減, CAPI実装で学習安定] 
+      }
 about:
   title: 私たちについて
   mission: 中小企業の強みを言語化し、最短距離で売上へつなげる。
@@ -106,7 +129,7 @@ cta:
   banner:
     heading: まずは無料相談から
     subtext: 目標、制約、現状の計測環境を共有いただければ、最短の勝ち筋をご提案します。
-    button: { label: 相談を予約, href: "/book" }
+    button: { label: 相談を予約, href: "https://lin.ee/7IVLhKDH" }
 contact:
   form_fields:
     - { name: company, label: 会社名, required: true }
