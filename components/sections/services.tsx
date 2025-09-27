@@ -2,6 +2,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
 import Link from 'next/link'
+import { Target, TrendingUp, Users, BarChart3 } from 'lucide-react'
 import type { SiteData } from '@/lib/content'
 
 interface ServicesProps {
@@ -22,12 +23,21 @@ export function Services({ services }: ServicesProps) {
         </div>
 
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
-          {services.cards.map((service) => (
-            <Card key={service.slug} className="h-full flex flex-col">
-              <CardHeader>
-                <CardTitle className="text-lg">{service.name}</CardTitle>
-              </CardHeader>
-              <CardContent className="flex-1 flex flex-col justify-between">
+          {services.cards.map((service, index) => {
+            const icons = [Target, TrendingUp, Users, BarChart3];
+            const Icon = icons[index % icons.length];
+            
+            return (
+              <Card key={service.slug} className="h-full flex flex-col">
+                <CardHeader>
+                  <div className="flex items-center gap-3 mb-2">
+                    <div className="p-2 rounded-lg bg-primary/10">
+                      <Icon className="h-6 w-6 text-primary" />
+                    </div>
+                  </div>
+                  <CardTitle className="text-lg">{service.name}</CardTitle>
+                </CardHeader>
+                <CardContent className="flex-1 flex flex-col justify-between">
                 <div className="space-y-3 mb-6">
                   {service.bullets.map((bullet, index) => (
                     <div key={index} className="flex items-start gap-2">
@@ -41,7 +51,8 @@ export function Services({ services }: ServicesProps) {
                 </Button>
               </CardContent>
             </Card>
-          ))}
+            )
+          })}
         </div>
       </div>
     </section>

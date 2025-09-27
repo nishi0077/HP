@@ -9,7 +9,7 @@ interface CasesWithChartsProps {
   cases: SiteData['cases']
 }
 
-const COLORS = ['#3b82f6', '#10b981', '#f59e0b', '#ef4444', '#8b5cf6']
+const COLORS = ['#000000', '#404040', '#808080', '#a0a0a0', '#c0c0c0']
 
 export function CasesWithCharts({ cases }: CasesWithChartsProps) {
   const formatCurrency = (value: number) => {
@@ -47,58 +47,41 @@ export function CasesWithCharts({ cases }: CasesWithChartsProps) {
                   {/* 工務店のケース */}
                   {index === 0 && (
                     <>
-                      {/* ROI と成果指標 */}
+                      {/* リード数の改善 */}
                       <div className="space-y-6">
-                        <h4 className="font-semibold text-lg mb-4">ROI & パフォーマンス</h4>
+                        <h4 className="font-semibold text-lg mb-4">リード数改善</h4>
                         <ResponsiveContainer width="100%" height={300}>
                           <BarChart data={[
-                            { name: '広告費', value: caseItem.metrics.cost, color: COLORS[0] },
-                            { name: '売上', value: caseItem.metrics.revenue, color: COLORS[1] },
-                            { name: 'ROI', value: caseItem.metrics.roi, suffix: '%', color: COLORS[2] }
+                            { name: '改善前', value: caseItem.metrics.leads_before },
+                            { name: '改善後', value: caseItem.metrics.leads_after }
                           ]}>
                             <CartesianGrid strokeDasharray="3 3" />
                             <XAxis dataKey="name" />
-                            <YAxis tickFormatter={formatCurrency} />
-                            <Tooltip 
-                              formatter={(value: number, name) => [
-                                name === 'ROI' ? `${value}%` : formatCurrency(value),
-                                name
-                              ]}
-                            />
+                            <YAxis domain={[0, 50]} />
+                            <Tooltip formatter={(value: number) => [`${value}件`, 'リード数']} />
                             <Bar dataKey="value" fill={COLORS[1]} />
                           </BarChart>
                         </ResponsiveContainer>
                       </div>
 
-                      {/* リード成約率 */}
+                      {/* ROAS & 売上改善 */}
                       <div className="space-y-6">
-                        <h4 className="font-semibold text-lg mb-4">リード成約率</h4>
+                        <h4 className="font-semibold text-lg mb-4">ROAS & 売上改善</h4>
                         <ResponsiveContainer width="100%" height={300}>
-                          <PieChart>
-                            <Pie
-                              data={[
-                                { name: '成約', value: caseItem.metrics.conversions, color: COLORS[1] },
-                                { name: '未成約', value: caseItem.metrics.leads - caseItem.metrics.conversions, color: COLORS[3] }
-                              ]}
-                              cx="50%"
-                              cy="50%"
-                              outerRadius={80}
-                              dataKey="value"
-                              label={({ name, value, percent }) => `${name}: ${value}件 (${(percent * 100).toFixed(1)}%)`}
-                            >
-                              {[
-                                { name: '成約', value: caseItem.metrics.conversions, color: COLORS[1] },
-                                { name: '未成約', value: caseItem.metrics.leads - caseItem.metrics.conversions, color: COLORS[3] }
-                              ].map((entry, index) => (
-                                <Cell key={`cell-${index}`} fill={entry.color} />
-                              ))}
-                            </Pie>
-                            <Tooltip />
-                          </PieChart>
+                          <BarChart data={[
+                            { name: '改善前', value: caseItem.metrics.revenue_before / 1000000, unit: '百万円' },
+                            { name: '改善後', value: caseItem.metrics.revenue_after / 1000000, unit: '百万円' }
+                          ]}>
+                            <CartesianGrid strokeDasharray="3 3" />
+                            <XAxis dataKey="name" />
+                            <YAxis domain={[0, 100]} tickFormatter={(value) => `${value}百万円`} />
+                            <Tooltip formatter={(value: number) => [`${value}百万円`, '売上']} />
+                            <Bar dataKey="value" fill={COLORS[2]} />
+                          </BarChart>
                         </ResponsiveContainer>
                         <div className="text-center">
                           <Badge variant="secondary" className="text-lg px-4 py-2">
-                            成約率: {((caseItem.metrics.conversions / caseItem.metrics.leads) * 100).toFixed(1)}%
+                            ROAS: {(caseItem.metrics.roas / 100).toFixed(0)}倍
                           </Badge>
                         </div>
                       </div>
@@ -108,58 +91,68 @@ export function CasesWithCharts({ cases }: CasesWithChartsProps) {
                   {/* 太陽光のケース */}
                   {index === 1 && (
                     <>
-                      {/* パフォーマンス指標 */}
+                      {/* 業界平均 vs 実績比較 */}
                       <div className="space-y-6">
-                        <h4 className="font-semibold text-lg mb-4">パフォーマンス指標</h4>
+                        <h4 className="font-semibold text-lg mb-4">業界平均 vs 実績比較</h4>
                         <ResponsiveContainer width="100%" height={300}>
                           <BarChart data={[
-                            { name: 'CTR', value: caseItem.metrics.ctr, unit: '%' },
-                            { name: 'CV率', value: caseItem.metrics.conversion_rate, unit: '%' },
-                            { name: 'CPA', value: caseItem.metrics.cpa / 1000, unit: '千円' }
+                            { 
+                              name: 'CTR', 
+                              業界平均: caseItem.metrics.ctr_industry, 
+                              実績: caseItem.metrics.ctr_actual,
+                              unit: '%'
+                            },
+                            { 
+                              name: 'CPA', 
+                              業界平均: caseItem.metrics.cpa_industry / 1000, 
+                              実績: caseItem.metrics.cpa_actual / 1000,
+                              unit: '千円'
+                            },
+                            { 
+                              name: 'ROAS', 
+                              業界平均: caseItem.metrics.roas_industry, 
+                              実績: caseItem.metrics.roas_actual / 100,
+                              unit: '倍'
+                            }
                           ]}>
                             <CartesianGrid strokeDasharray="3 3" />
                             <XAxis dataKey="name" />
                             <YAxis />
                             <Tooltip 
-                              formatter={(value: number, name) => {
-                                if (name === 'CPA') return [`${(value * 1000).toLocaleString()}円`, name]
-                                return [`${value}%`, name]
+                              formatter={(value: number, name, props) => {
+                                const unit = props.payload.unit;
+                                if (unit === '千円') return [`${(value * 1000).toLocaleString()}円`, name];
+                                if (unit === '倍') return [`${value.toFixed(0)}倍`, name];
+                                return [`${value}%`, name];
                               }}
                             />
-                            <Bar dataKey="value" fill={COLORS[2]} />
+                            <Bar dataKey="業界平均" fill={COLORS[3]} />
+                            <Bar dataKey="実績" fill={COLORS[1]} />
                           </BarChart>
                         </ResponsiveContainer>
                       </div>
 
-                      {/* リード数と費用効率 */}
+                      {/* 成果サマリー */}
                       <div className="space-y-6">
-                        <h4 className="font-semibold text-lg mb-4">リード数と費用効率</h4>
+                        <h4 className="font-semibold text-lg mb-4">成果サマリー</h4>
                         <div className="grid grid-cols-2 gap-4 mb-6">
-                          <div className="text-center p-4 bg-blue-50 rounded-lg">
-                            <div className="text-3xl font-bold text-blue-600">{caseItem.metrics.leads}</div>
-                            <div className="text-sm text-blue-600">リード数</div>
+                          <div className="text-center p-4 bg-gray-50 rounded-lg">
+                            <div className="text-3xl font-bold text-gray-800">{caseItem.metrics.conversions}</div>
+                            <div className="text-sm text-gray-600">成約数</div>
                           </div>
-                          <div className="text-center p-4 bg-green-50 rounded-lg">
-                            <div className="text-3xl font-bold text-green-600">{formatCurrency(caseItem.metrics.cost)}</div>
-                            <div className="text-sm text-green-600">総広告費</div>
+                          <div className="text-center p-4 bg-gray-100 rounded-lg">
+                            <div className="text-3xl font-bold text-gray-800">{formatCurrency(caseItem.metrics.cost)}</div>
+                            <div className="text-sm text-gray-600">総広告費</div>
                           </div>
                         </div>
-                        <ResponsiveContainer width="100%" height={200}>
-                          <LineChart data={[
-                            { month: '開始前', cpa: 8000, leads: 15 },
-                            { month: '1ヶ月', cpa: 6500, leads: 22 },
-                            { month: '2ヶ月', cpa: 4200, leads: 32 },
-                            { month: '3ヶ月', cpa: 3200, leads: 38 }
-                          ]}>
-                            <CartesianGrid strokeDasharray="3 3" />
-                            <XAxis dataKey="month" />
-                            <YAxis yAxisId="left" orientation="left" />
-                            <YAxis yAxisId="right" orientation="right" />
-                            <Tooltip />
-                            <Line yAxisId="left" type="monotone" dataKey="cpa" stroke={COLORS[0]} strokeWidth={3} name="CPA (円)" />
-                            <Line yAxisId="right" type="monotone" dataKey="leads" stroke={COLORS[1]} strokeWidth={3} name="リード数" />
-                          </LineChart>
-                        </ResponsiveContainer>
+                        <div className="text-center">
+                          <Badge variant="secondary" className="text-lg px-4 py-2 mr-2">
+                            CTR: {caseItem.metrics.ctr_actual}% (業界平均の{(caseItem.metrics.ctr_actual / caseItem.metrics.ctr_industry).toFixed(1)}倍)
+                          </Badge>
+                          <Badge variant="secondary" className="text-lg px-4 py-2">
+                            ROAS: {(caseItem.metrics.roas_actual / 100).toFixed(0)}倍
+                          </Badge>
+                        </div>
                       </div>
                     </>
                   )}

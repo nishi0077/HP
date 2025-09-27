@@ -18,26 +18,26 @@ const config: Config = {
     },
     extend: {
       colors: {
-        border: "hsl(var(--border))",
+        border: "hsl(0 0% 89%)", // シルバーボーダー
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
-        background: "hsl(var(--background))",
-        foreground: "hsl(var(--foreground))",
+        background: "hsl(0 0% 98%)", // ホワイト背景
+        foreground: "hsl(0 0% 9%)", // ブラックテキスト
         primary: {
-          DEFAULT: "hsl(var(--primary))",
-          foreground: "hsl(var(--primary-foreground))",
+          DEFAULT: "hsl(0 0% 9%)", // ダークブラック
+          foreground: "hsl(0 0% 98%)", // ホワイト
         },
         secondary: {
-          DEFAULT: "hsl(var(--secondary))",
-          foreground: "hsl(var(--secondary-foreground))",
+          DEFAULT: "hsl(0 0% 86%)", // シルバー
+          foreground: "hsl(0 0% 9%)", // ブラック
         },
         destructive: {
           DEFAULT: "hsl(var(--destructive))",
           foreground: "hsl(var(--destructive-foreground))",
         },
         muted: {
-          DEFAULT: "hsl(var(--muted))",
-          foreground: "hsl(var(--muted-foreground))",
+          DEFAULT: "hsl(0 0% 94%)", // ライトシルバー
+          foreground: "hsl(0 0% 30%)", // ダークグレー
         },
         accent: {
           DEFAULT: "hsl(var(--accent))",

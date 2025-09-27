@@ -9,15 +9,22 @@ interface HeroProps {
 
 export function Hero({ hero }: HeroProps) {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-background to-muted py-20 lg:py-32">
+    <section className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20 lg:py-32">
+      <div className="absolute inset-0">
+        <div className="absolute inset-0 opacity-20">
+          <div className="absolute inset-0 bg-black/5"></div>
+          <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-transparent via-white/5 to-transparent"></div>
+        </div>
+      </div>
       <div className="container relative z-10">
         <div className="mx-auto max-w-4xl text-center">
           <div className="space-y-6">
-            <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl lg:text-6xl">
-              {hero.heading}
-            </h1>
+            <h1 
+              className="text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl" 
+              dangerouslySetInnerHTML={{ __html: hero.heading }}
+            />
             
-            <p className="mx-auto max-w-2xl text-lg text-muted-foreground sm:text-xl">
+            <p className="mx-auto max-w-2xl text-lg text-white/80 sm:text-xl">
               {hero.subheading}
             </p>
 
