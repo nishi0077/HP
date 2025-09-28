@@ -3,6 +3,7 @@ import { Header } from '@/components/sections/header'
 import { Portfolio } from '@/components/sections/portfolio'
 import { CtaBanner } from '@/components/sections/cta-banner'
 import { Footer } from '@/components/sections/footer'
+import { TestImage } from '@/components/test-image'
 
 export default function CasesPage() {
   const site = loadSite()
@@ -23,6 +24,7 @@ export default function CasesPage() {
             </div>
           </div>
         </div>
+        <TestImage />
         <Portfolio portfolio={site.portfolio} />
         <CtaBanner cta={site.cta} />
       </main>

@@ -59,59 +59,50 @@ export function Portfolio({ portfolio }: PortfolioProps) {
                   viewport={{ once: true }}
                 >
                   <Card className="h-full hover:shadow-lg transition-shadow duration-300">
-                    {(work.image || work.url) && (
-                      <div className="relative h-64 w-full overflow-hidden rounded-t-lg bg-gradient-to-br from-gray-100 to-gray-200">
-                        {work.image ? (
+                    <div className="relative h-64 w-full overflow-hidden rounded-t-lg bg-gradient-to-br from-gray-100 to-gray-200">
+                      {work.image ? (
+                        <div className="w-full h-full">
                           <Image
                             src={work.image}
                             alt={`${work.title}のWebサイトスクリーンショット`}
-                            width={1200}
-                            height={800}
-                            className="w-full h-full object-cover transition-opacity duration-300 image-render-crisp"
-                            quality={100}
+                            width={800}
+                            height={600}
+                            className="w-full h-full object-cover"
                             priority={true}
-                            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                            unoptimized={false}
                             onError={(e) => {
-                              console.log('Image load error:', work.image);
-                              const target = e.currentTarget as HTMLImageElement;
-                              target.src = `https://via.placeholder.com/800x600/e5e7eb/6b7280?text=${encodeURIComponent(work.title.substring(0, 20))}`
+                              console.error('Local image load error:', work.image);
                             }}
-                            onLoad={(e) => {
-                              const target = e.currentTarget as HTMLImageElement;
-                              target.style.opacity = '1';
+                            onLoad={() => {
+                              console.log('Local image loaded:', work.image);
                             }}
-                            style={{ opacity: 0 }}
                           />
-                        ) : (
+                        </div>
+                      ) : work.url ? (
+                        <div className="w-full h-full">
                           <Image
-                            src={`https://s0.wp.com/mshots/v1/${encodeURIComponent(work.url!)}?w=1200&h=800`}
+                            src={`https://s0.wp.com/mshots/v1/${encodeURIComponent(work.url)}?w=800&h=600`}
                             alt={`${work.title}のWebサイトスクリーンショット`}
-                            width={1200}
-                            height={800}
-                            className="w-full h-full object-cover transition-opacity duration-300 image-render-crisp"
-                            quality={100}
+                            width={800}
+                            height={600}
+                            className="w-full h-full object-cover"
                             priority={false}
-                            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                             onError={(e) => {
-                              const target = e.currentTarget as HTMLImageElement;
-                              target.src = `https://via.placeholder.com/800x600/e5e7eb/6b7280?text=${encodeURIComponent(work.title.substring(0, 20))}`
+                              console.error('Screenshot load error:', work.url);
                             }}
-                            onLoad={(e) => {
-                              const target = e.currentTarget as HTMLImageElement;
-                              target.style.opacity = '1';
+                            onLoad={() => {
+                              console.log('Screenshot loaded:', work.url);
                             }}
-                            style={{ opacity: 0 }}
                           />
-                        )}
-                        {/* ローディングアニメーション */}
-                        <div className="absolute inset-0 flex items-center justify-center bg-gray-50">
-                          <div className="animate-pulse">
-                            <div className="w-16 h-16 bg-gray-300 rounded-lg"></div>
+                        </div>
+                      ) : (
+                        <div className="w-full h-full flex items-center justify-center bg-gray-200">
+                          <div className="text-gray-500 text-center">
+                            <div className="text-2xl mb-2">🏢</div>
+                            <div className="text-sm">{work.title}</div>
                           </div>
                         </div>
-                      </div>
-                    )}
+                      )}
+                    </div>
                     <CardHeader>
                       <div className="flex items-start justify-between">
                         <div className="flex-1">
