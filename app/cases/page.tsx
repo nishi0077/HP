@@ -19,7 +19,7 @@ export default function CasesPage() {
                 {site.cases.title}
               </h1>
               <p className="mt-6 text-lg text-muted-foreground max-w-2xl mx-auto">
-                実際の事例を通して、私たちの取り組みと成果をご紹介します。
+                実際の実績を通して、私たちの取り組みと成果をご紹介します。
               </p>
             </div>
           </div>

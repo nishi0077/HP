@@ -17,7 +17,7 @@ navigation:
     - { label: ホーム, href: "/" }
     - { label: サービス, href: "/services" }
     - { label: 価格, href: "/pricing" }
-    - { label: 事例, href: "/cases" }
+    - { label: 実績, href: "/cases" }
     - { label: 私たちについて, href: "/about" }
     - { label: FAQ, href: "/faq" }
   cta: { label: 相談を予約, href: "https://lin.ee/7IVLhKDH" }
@@ -85,7 +85,7 @@ pricing:
     - { name: グロース, target: 広告とLPを一体で最適化, monthly_fee: 300000, setup_fee: 150000, includes: [Meta/Google運用（月30〜100万円目安）, 導線設計&改善提案, 新規バナー/クリエイティブ作成, 週次レポート/定例30分] }
     - { name: スケール, target: 複数チャネルで拡大, monthly_fee: 500000, setup_fee: 200000, includes: [配信拡張（P-MAX/YouTube/Discovery等）, 広告/SNS/LP・HP/公式LINEまでトータルでプロデュース, LP新規作成（四半期1本）, ブランディング強化/マーケティング戦略の立案] }
 cases:
-  title: 実績ハイライト
+  title: 実績
   items:
     - { 
         title: 工務店新築リード, 
@@ -118,7 +118,7 @@ cases:
         levers: [診断→予約の摩擦低減, CAPI実装で学習安定, LP改善&広告媒体ごとの新LP, 一貫した導線設計, 公式LINE構築]
       }
 portfolio:
-  title: 制作事例
+  title: 制作実績
   description: これまでに手がけたWebマーケティング支援とクリエイティブ制作の実績をご紹介します。
   categories:
     - name: Webマーケティング実績事例
@@ -172,7 +172,7 @@ contact:
     - { name: budget, label: 月間広告予算, type: select, options: [〜30万円, 30〜100万円, 100〜300万円, 300万円〜] }
     - { name: objectives, label: 目的, type: textarea, placeholder: 例）CPA改善、LTV最大化、計測整備 等 }
 footer:
-  quick_links: [ホーム, サービス, 価格, 事例, 私たちについて, FAQ]
+  quick_links: [ホーム, サービス, 価格, 実績, 私たちについて, FAQ]
   legal: [プライバシーポリシー, 取引条件]
   copyright:
     text: © Next Sociality. All rights reserved.
