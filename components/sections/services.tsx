@@ -1,8 +1,11 @@
+"use client"
+
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
 import Link from 'next/link'
 import { Target, TrendingUp, Users, BarChart3 } from 'lucide-react'
+import { motion } from 'framer-motion'
 import type { SiteData } from '@/lib/content'
 
 interface ServicesProps {
@@ -13,14 +16,20 @@ export function Services({ services }: ServicesProps) {
   return (
     <section className="py-20 bg-muted/50">
       <div className="container">
-        <div className="text-center mb-16">
+        <motion.div 
+          className="text-center mb-16"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+        >
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4">
             {services.title}
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             {services.intro}
           </p>
-        </div>
+        </motion.div>
 
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
           {services.cards.map((service, index) => {
@@ -28,15 +37,22 @@ export function Services({ services }: ServicesProps) {
             const Icon = icons[index % icons.length];
             
             return (
-              <Card key={service.slug} className="h-full flex flex-col">
-                <CardHeader>
-                  <div className="flex items-center gap-3 mb-2">
-                    <div className="p-2 rounded-lg bg-primary/10">
-                      <Icon className="h-6 w-6 text-primary" />
+              <motion.div
+                key={service.slug}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+              >
+                <Card className="h-full flex flex-col">
+                  <CardHeader>
+                    <div className="flex items-center gap-3 mb-2">
+                      <div className="p-2 rounded-lg bg-primary/10">
+                        <Icon className="h-6 w-6 text-primary" />
+                      </div>
                     </div>
-                  </div>
-                  <CardTitle className="text-lg">{service.name}</CardTitle>
-                </CardHeader>
+                    <CardTitle className="text-lg">{service.name}</CardTitle>
+                  </CardHeader>
                 <CardContent className="flex-1 flex flex-col justify-between">
                 <div className="space-y-3 mb-6">
                   {service.bullets.map((bullet, index) => (
@@ -49,8 +65,9 @@ export function Services({ services }: ServicesProps) {
                 <Button variant="outline" size="sm" asChild>
                   <Link href="/book">{service.cta}</Link>
                 </Button>
-              </CardContent>
-            </Card>
+                </CardContent>
+              </Card>
+              </motion.div>
             )
           })}
         </div>

@@ -76,6 +76,21 @@ export interface SiteData {
       levers: string[]
     }>
   }
+  portfolio: {
+    title: string
+    description: string
+    categories: Array<{
+      name: string
+      works: Array<{
+        title: string
+        description: string
+        url?: string
+        category: string
+        tech?: string[]
+        deliverables?: string[]
+      }>
+    }>
+  }
   about: {
     title: string
     mission: string

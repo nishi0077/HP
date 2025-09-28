@@ -117,6 +117,22 @@ cases:
         },
         levers: [診断→予約の摩擦低減, CAPI実装で学習安定, LP改善&広告媒体ごとの新LP, 一貫した導線設計, 公式LINE構築] 
       }
+portfolio:
+  title: 制作事例
+  description: これまでに手がけたWebサイト制作とクリエイティブ制作の実績をご紹介します。
+  categories:
+    - name: Webサイト制作
+      works:
+        - { title: 株式会社AS IT IS, description: 自然素材を活かした住宅設計・施工, url: "https://asitis.ibaraki.jp/", category: "住宅・建築", tech: ["WordPress", "レスポンシブデザイン"] }
+        - { title: ReBORN GROUP株式会社, description: 企業ブランディング・事業開発, url: "https://reborngroup.me/", category: "コーポレート", tech: ["Next.js", "React", "アニメーション"] }
+        - { title: 銀座XIAOMA（ASU BRAND株式会社）, description: 高級ブランドバッグ買取サービス, url: "https://ginzaxiaoma.com/ja", category: "EC・買取", tech: ["多言語対応", "予約システム"] }
+        - { title: 株式会社ACTLAND, description: 美容・健康商品の企画・販売, url: "https://actland.co.jp/", category: "美容・健康", tech: ["Vue.js", "ECサイト連携"] }
+    - name: クリエイティブ制作
+      works:
+        - { title: 太陽光・蓄電池サービス（診断フォーム）, description: ソーラーシステム導入診断のランディングページ, category: "LP制作", deliverables: ["診断フォーム設計", "CVR最適化", "レスポンシブ対応"] }
+        - { title: 太陽光・蓄電池サービス（家計サポート）, description: 電気代削減効果をアピールするクリエイティブ, category: "広告クリエイティブ", deliverables: ["コピーライティング", "ビジュアルデザイン", "A/Bテスト素材"] }
+        - { title: EC・酵素ドリンクの販売, description: 健康志向の酵素ドリンクブランディング, category: "ブランディング", deliverables: ["パッケージデザイン", "商品撮影", "ECサイト構築"] }
+        - { title: 赤坂の個別ゴルフレッスン, description: プレミアムゴルフレッスンサービス, category: "サービス業", deliverables: ["ブランド設計", "予約サイト", "集客戦略"] }
 about:
   title: 私たちについて
   mission: 中小企業の強みを言語化し、最短距離で売上へつなげる。

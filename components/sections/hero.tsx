@@ -1,6 +1,9 @@
+"use client"
+
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
+import { motion } from 'framer-motion'
 import type { SiteData } from '@/lib/content'
 
 interface HeroProps {
@@ -17,7 +20,12 @@ export function Hero({ hero }: HeroProps) {
         <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent"></div>
       </div>
       <div className="container relative z-10">
-        <div className="mx-auto max-w-4xl text-center">
+        <motion.div 
+          className="mx-auto max-w-4xl text-center"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+        >
           <div className="space-y-6">
             <h1 
               className="text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl" 
@@ -59,7 +67,7 @@ export function Hero({ hero }: HeroProps) {
               ))}
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
       
       {/* Background decoration */}
