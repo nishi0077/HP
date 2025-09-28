@@ -59,17 +59,17 @@ export function Portfolio({ portfolio }: PortfolioProps) {
                   viewport={{ once: true }}
                 >
                   <Card className="h-full hover:shadow-lg transition-shadow duration-300">
-                    {work.url && (
+                    {(work.image || work.url) && (
                       <div className="relative h-48 w-full overflow-hidden rounded-t-lg bg-gradient-to-br from-gray-100 to-gray-200">
                         <Image
-                          src={`https://s0.wp.com/mshots/v1/${encodeURIComponent(work.url)}?w=640&h=360`}
+                          src={work.image || `https://s0.wp.com/mshots/v1/${encodeURIComponent(work.url!)}?w=640&h=360`}
                           alt={`${work.title}のWebサイトスクリーンショット`}
                           fill
                           className="object-cover transition-opacity duration-300"
                           onError={(e) => {
                             // フォールバック: よりシンプルなプレースホルダー
                             const target = e.currentTarget as HTMLImageElement;
-                            target.src = `https://via.placeholder.com/640x360/e5e7eb/6b7280?text=${encodeURIComponent(work.title.substring(0, 20))}`
+                            target.src = `https://via.placeholder.com/400x240/e5e7eb/6b7280?text=${encodeURIComponent(work.title.substring(0, 20))}`
                           }}
                           onLoad={(e) => {
                             const target = e.currentTarget as HTMLImageElement;

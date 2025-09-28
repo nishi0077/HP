@@ -182,44 +182,6 @@ export function CasesWithCharts({ cases }: CasesWithChartsProps) {
                   </div>
                 </div>
 
-                {/* 実績画像ギャラリー */}
-                {caseItem.images && caseItem.images.length > 0 && (
-                  <div className="mt-8 pt-6 border-t">
-                    <h4 className="font-semibold mb-4">実績画像</h4>
-                    <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-                      {caseItem.images.map((image, imageIndex) => (
-                        <motion.div
-                          key={imageIndex}
-                          className="group cursor-pointer"
-                          initial={{ opacity: 0, y: 20 }}
-                          whileInView={{ opacity: 1, y: 0 }}
-                          transition={{ duration: 0.5, delay: imageIndex * 0.1 }}
-                          viewport={{ once: true }}
-                        >
-                          <Card className="overflow-hidden hover:shadow-lg transition-shadow duration-300">
-                            <div className="relative h-48 overflow-hidden">
-                              <Image
-                                src={image.src}
-                                alt={image.caption}
-                                fill
-                                className="object-cover group-hover:scale-105 transition-transform duration-300"
-                                onError={(e) => {
-                                  // フォールバック画像を設定
-                                  const target = e.currentTarget as HTMLImageElement;
-                                  target.src = `https://via.placeholder.com/400x240/f3f4f6/6b7280?text=${encodeURIComponent(image.caption)}`
-                                }}
-                              />
-                            </div>
-                            <CardContent className="p-4">
-                              <h5 className="font-semibold text-sm mb-2">{image.caption}</h5>
-                              <p className="text-xs text-muted-foreground">{image.description}</p>
-                            </CardContent>
-                          </Card>
-                        </motion.div>
-                      ))}
-                    </div>
-                  </div>
-                )}
               </CardContent>
             </Card>
           ))}

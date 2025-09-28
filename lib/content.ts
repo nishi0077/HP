@@ -74,11 +74,6 @@ export interface SiteData {
         [key: string]: number
       }
       levers: string[]
-      images?: Array<{
-        src: string
-        caption: string
-        description: string
-      }>
     }>
   }
   portfolio: {

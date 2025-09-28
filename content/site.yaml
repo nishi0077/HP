@@ -98,12 +98,7 @@ cases:
           revenue_after: 80000000,
           roas: 16000
         },
-        levers: [徹底した広告配信設定, 一貫した導線設計, 地方特有の広告戦略, 公式LINE構築],
-        images: [
-          { src: "/images/cases/housing-ad-creative.jpg", caption: "Meta広告クリエイティブ", description: "高CTRを実現したFacebook広告の実際のクリエイティブ" },
-          { src: "/images/cases/housing-line-flow.jpg", caption: "公式LINE導線設計", description: "リード獲得から成約までの一貫した導線設計" },
-          { src: "/images/cases/housing-lp-after.jpg", caption: "LP改善後", description: "CVR向上を実現したランディングページデザイン" }
-        ]
+        levers: [徹底した広告配信設定, 一貫した導線設計, 地方特有の広告戦略, 公式LINE構築]
       }
     - { 
         title: 太陽光・蓄電池, 
@@ -120,12 +115,7 @@ cases:
           gross_profit: 14000000,
           roi: 1340
         },
-        levers: [診断→予約の摩擦低減, CAPI実装で学習安定, LP改善&広告媒体ごとの新LP, 一貫した導線設計, 公式LINE構築],
-        images: [
-          { src: "/images/cases/solar-diagnostic-form.jpg", caption: "診断フォーム", description: "摩擦を減らした診断フォームで予約率向上" },
-          { src: "/images/cases/solar-meta-ads.jpg", caption: "Meta広告配信画面", description: "CAPI実装で学習を安定化し、CTR4.8%を実現" },
-          { src: "/images/cases/solar-line-automation.jpg", caption: "LINE自動化フロー", description: "成約までの導線を一貫して自動化" }
-        ]
+        levers: [診断→予約の摩擦低減, CAPI実装で学習安定, LP改善&広告媒体ごとの新LP, 一貫した導線設計, 公式LINE構築]
       }
 portfolio:
   title: 制作事例
@@ -133,10 +123,10 @@ portfolio:
   categories:
     - name: Webマーケティング実績事例
       works:
-        - { title: 株式会社AS IT IS, subtitle: "toC", description: 自然素材を活かした住宅設計・施工, url: "https://asitis.ibaraki.jp/", category: "住宅業界", tech: ["マーケティング戦略", "広告運用", "SNS運用"] }
-        - { title: ReBORN GROUP株式会社, subtitle: "toC toB", description: "年商20億の急成長企業\n太陽光/蓄電池の販売・セールスマーケティング事業", url: "https://reborngroup.me/", category: "住宅エネルギー業界", tech: ["広告運用", "公式LINE構築", "LP制作"] }
-        - { title: 銀座XIAOMA（ASU BRAND株式会社）, subtitle: "toC toB", description: 高級ブランドバッグ買取サービス, url: "https://ginzaxiaoma.com/ja", category: "小売業界", tech: ["多言語対応", "広告運用", "公式LINE構築"] }
-        - { title: 株式会社ACTLAND, subtitle: "toB", description: 美容・健康商品の企画＆販売、直営サロン, url: "https://actland.co.jp/", category: "美容・化粧品業界", tech: ["新規サロン立ち上げ", "マーケティング戦略", "Meta広告運用", "SNS運用", "現地撮影"] }
+        - { title: 株式会社AS IT IS, subtitle: "toC", description: 自然素材を活かした住宅設計・施工, url: "https://asitis.ibaraki.jp/", category: "住宅業界", tech: ["マーケティング戦略", "広告運用", "SNS運用"], image: "/images/marketing/as-it-is.png" }
+        - { title: ReBORN GROUP株式会社, subtitle: "toC toB", description: "年商20億の急成長企業\n太陽光/蓄電池の販売・セールスマーケティング事業", url: "https://reborngroup.me/", category: "住宅エネルギー業界", tech: ["広告運用", "公式LINE構築", "LP制作"], image: "/images/marketing/reborn-group.png" }
+        - { title: 銀座XIAOMA（ASU BRAND株式会社）, subtitle: "toC toB", description: 高級ブランドバッグ買取サービス, url: "https://ginzaxiaoma.com/ja", category: "小売業界", tech: ["多言語対応", "広告運用", "公式LINE構築"], image: "/images/marketing/xiaoma.png" }
+        - { title: 株式会社ACTLAND, subtitle: "toB", description: 美容・健康商品の企画＆販売、直営サロン, url: "https://actland.co.jp/", category: "美容・化粧品業界", tech: ["新規サロン立ち上げ", "マーケティング戦略", "Meta広告運用", "SNS運用", "現地撮影"], image: "/images/marketing/actland.png" }
     - name: クリエイティブ制作
       works:
         - { title: 太陽光・蓄電池サービス（診断フォーム）, description: ソーラーシステム導入診断のランディングページ, category: "LP制作", deliverables: ["診断フォーム設計", "CVR最適化", "レスポンシブ対応"] }
