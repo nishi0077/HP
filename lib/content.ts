@@ -83,11 +83,13 @@ export interface SiteData {
       name: string
       works: Array<{
         title: string
+        subtitle?: string
         description: string
         url?: string
         category: string
         tech?: string[]
         deliverables?: string[]
+        image?: string
       }>
     }>
   }
