@@ -131,12 +131,12 @@ export function CasesWithCharts({ cases }: CasesWithChartsProps) {
                         <ResponsiveContainer width="100%" height={250}>
                           <BarChart data={[
                             { name: '業界平均', value: caseItem.metrics.roas_industry, fill: COLORS[0] },
-                            { name: '実績', value: caseItem.metrics.roas_actual / 100, fill: COLORS[1] }
+                            { name: '実績', value: caseItem.metrics.roas_actual, fill: COLORS[1] }
                           ]}>
                             <CartesianGrid strokeDasharray="3 3" />
                             <XAxis dataKey="name" />
                             <YAxis />
-                            <Tooltip formatter={(value: number) => [`${value.toFixed(0)}倍`, 'ROAS']} />
+                            <Tooltip formatter={(value: number) => [`${value}%`, 'ROAS']} />
                             <Bar dataKey="value" />
                           </BarChart>
                         </ResponsiveContainer>

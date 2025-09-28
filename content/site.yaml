@@ -108,11 +108,11 @@ cases:
           ctr_actual: 4.8,
           cpa_industry: 17500,
           cpa_actual: 8000,
-          roas_industry: 250,
-          roas_actual: 8000,
+          roas_industry: 200,
+          roas_actual: 800,
           cost: 1000000,
           conversions: 4,
-          gross_profit: 14400000,
+          gross_profit: 14000000,
           roi: 1340
         },
         levers: [診断→予約の摩擦低減, CAPI実装で学習安定, LP改善&広告媒体ごとの新LP, 一貫した導線設計, 公式LINE構築] 
