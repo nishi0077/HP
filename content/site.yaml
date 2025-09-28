@@ -98,7 +98,12 @@ cases:
           revenue_after: 80000000,
           roas: 16000
         },
-        levers: [徹底した広告配信設定, 一貫した導線設計, 地方特有の広告戦略, 公式LINE構築] 
+        levers: [徹底した広告配信設定, 一貫した導線設計, 地方特有の広告戦略, 公式LINE構築],
+        images: [
+          { src: "/images/cases/housing-ad-creative.jpg", caption: "Meta広告クリエイティブ", description: "高CTRを実現したFacebook広告の実際のクリエイティブ" },
+          { src: "/images/cases/housing-line-flow.jpg", caption: "公式LINE導線設計", description: "リード獲得から成約までの一貫した導線設計" },
+          { src: "/images/cases/housing-lp-after.jpg", caption: "LP改善後", description: "CVR向上を実現したランディングページデザイン" }
+        ]
       }
     - { 
         title: 太陽光・蓄電池, 
@@ -115,7 +120,12 @@ cases:
           gross_profit: 14000000,
           roi: 1340
         },
-        levers: [診断→予約の摩擦低減, CAPI実装で学習安定, LP改善&広告媒体ごとの新LP, 一貫した導線設計, 公式LINE構築] 
+        levers: [診断→予約の摩擦低減, CAPI実装で学習安定, LP改善&広告媒体ごとの新LP, 一貫した導線設計, 公式LINE構築],
+        images: [
+          { src: "/images/cases/solar-diagnostic-form.jpg", caption: "診断フォーム", description: "摩擦を減らした診断フォームで予約率向上" },
+          { src: "/images/cases/solar-meta-ads.jpg", caption: "Meta広告配信画面", description: "CAPI実装で学習を安定化し、CTR4.8%を実現" },
+          { src: "/images/cases/solar-line-automation.jpg", caption: "LINE自動化フロー", description: "成約までの導線を一貫して自動化" }
+        ]
       }
 portfolio:
   title: 制作事例
