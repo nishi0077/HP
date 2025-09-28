@@ -59,14 +59,30 @@ export function Portfolio({ portfolio }: PortfolioProps) {
                   viewport={{ once: true }}
                 >
                   <Card className="h-full hover:shadow-lg transition-shadow duration-300">
-                    {work.image && (
-                      <div className="relative h-48 w-full overflow-hidden rounded-t-lg">
+                    {work.url && (
+                      <div className="relative h-48 w-full overflow-hidden rounded-t-lg bg-gradient-to-br from-gray-100 to-gray-200">
                         <Image
-                          src={work.image}
-                          alt={work.title}
+                          src={`https://s0.wp.com/mshots/v1/${encodeURIComponent(work.url)}?w=640&h=360`}
+                          alt={`${work.title}のWebサイトスクリーンショット`}
                           fill
-                          className="object-cover"
+                          className="object-cover transition-opacity duration-300"
+                          onError={(e) => {
+                            // フォールバック: よりシンプルなプレースホルダー
+                            const target = e.currentTarget as HTMLImageElement;
+                            target.src = `https://via.placeholder.com/640x360/e5e7eb/6b7280?text=${encodeURIComponent(work.title.substring(0, 20))}`
+                          }}
+                          onLoad={(e) => {
+                            const target = e.currentTarget as HTMLImageElement;
+                            target.style.opacity = '1';
+                          }}
+                          style={{ opacity: 0 }}
                         />
+                        {/* ローディングアニメーション */}
+                        <div className="absolute inset-0 flex items-center justify-center">
+                          <div className="animate-pulse">
+                            <div className="w-16 h-16 bg-gray-300 rounded-lg"></div>
+                          </div>
+                        </div>
                       </div>
                     )}
                     <CardHeader>

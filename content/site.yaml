@@ -123,10 +123,10 @@ portfolio:
   categories:
     - name: Webマーケティング実績事例
       works:
-        - { title: 株式会社AS IT IS, subtitle: "toC", description: 自然素材を活かした住宅設計・施工, url: "https://asitis.ibaraki.jp/", category: "住宅業界", tech: ["マーケティング戦略", "広告運用", "SNS運用"], image: "/images/portfolio/as-it-is.jpg" }
-        - { title: ReBORN GROUP株式会社, subtitle: "toC toB", description: "年商20億の急成長企業\n太陽光/蓄電池の販売・セールスマーケティング事業", url: "https://reborngroup.me/", category: "住宅エネルギー業界", tech: ["広告運用", "公式LINE構築", "LP制作"], image: "/images/portfolio/reborn-group.jpg" }
-        - { title: 銀座XIAOMA（ASU BRAND株式会社）, subtitle: "toC toB", description: 高級ブランドバッグ買取サービス, url: "https://ginzaxiaoma.com/ja", category: "小売業界", tech: ["多言語対応", "広告運用", "公式LINE構築"], image: "/images/portfolio/xiaoma.jpg" }
-        - { title: 株式会社ACTLAND, subtitle: "toB", description: 美容・健康商品の企画＆販売、直営サロン, url: "https://actland.co.jp/", category: "美容・化粧品業界", tech: ["新規サロン立ち上げ", "マーケティング戦略", "Meta広告運用", "SNS運用", "現地撮影"], image: "/images/portfolio/actland.jpg" }
+        - { title: 株式会社AS IT IS, subtitle: "toC", description: 自然素材を活かした住宅設計・施工, url: "https://asitis.ibaraki.jp/", category: "住宅業界", tech: ["マーケティング戦略", "広告運用", "SNS運用"] }
+        - { title: ReBORN GROUP株式会社, subtitle: "toC toB", description: "年商20億の急成長企業\n太陽光/蓄電池の販売・セールスマーケティング事業", url: "https://reborngroup.me/", category: "住宅エネルギー業界", tech: ["広告運用", "公式LINE構築", "LP制作"] }
+        - { title: 銀座XIAOMA（ASU BRAND株式会社）, subtitle: "toC toB", description: 高級ブランドバッグ買取サービス, url: "https://ginzaxiaoma.com/ja", category: "小売業界", tech: ["多言語対応", "広告運用", "公式LINE構築"] }
+        - { title: 株式会社ACTLAND, subtitle: "toB", description: 美容・健康商品の企画＆販売、直営サロン, url: "https://actland.co.jp/", category: "美容・化粧品業界", tech: ["新規サロン立ち上げ", "マーケティング戦略", "Meta広告運用", "SNS運用", "現地撮影"] }
     - name: クリエイティブ制作
       works:
         - { title: 太陽光・蓄電池サービス（診断フォーム）, description: ソーラーシステム導入診断のランディングページ, category: "LP制作", deliverables: ["診断フォーム設計", "CVR最適化", "レスポンシブ対応"] }
