@@ -5,6 +5,7 @@
 /* 画像品質向上のためのカスタムスタイル */
 .image-render-crisp {
   image-rendering: -webkit-optimize-contrast;
+  image-rendering: -moz-crisp-edges;
   image-rendering: high-quality;
   image-rendering: optimizeQuality;
   -webkit-backface-visibility: hidden;
@@ -17,6 +18,9 @@
   filter: blur(0);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  -webkit-interpolation-mode: bicubic;
+  interpolation-mode: bicubic;
+  image-resolution: 300dpi;
 }
  
 @layer base {

@@ -60,17 +60,18 @@ export function Portfolio({ portfolio }: PortfolioProps) {
                 >
                   <Card className="h-full hover:shadow-lg transition-shadow duration-300">
                     {(work.image || work.url) && (
-                      <div className="relative h-56 w-full overflow-hidden rounded-t-lg bg-gradient-to-br from-gray-100 to-gray-200">
+                      <div className="relative h-64 w-full overflow-hidden rounded-t-lg bg-gradient-to-br from-gray-100 to-gray-200">
                         {work.image ? (
                           <Image
                             src={work.image}
                             alt={`${work.title}のWebサイトスクリーンショット`}
-                            width={800}
-                            height={600}
+                            width={1200}
+                            height={800}
                             className="w-full h-full object-cover transition-opacity duration-300 image-render-crisp"
-                            quality={95}
+                            quality={100}
                             priority={true}
                             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                            unoptimized={false}
                             onError={(e) => {
                               console.log('Image load error:', work.image);
                               const target = e.currentTarget as HTMLImageElement;
@@ -84,12 +85,12 @@ export function Portfolio({ portfolio }: PortfolioProps) {
                           />
                         ) : (
                           <Image
-                            src={`https://s0.wp.com/mshots/v1/${encodeURIComponent(work.url!)}?w=800&h=600`}
+                            src={`https://s0.wp.com/mshots/v1/${encodeURIComponent(work.url!)}?w=1200&h=800`}
                             alt={`${work.title}のWebサイトスクリーンショット`}
-                            width={800}
-                            height={600}
+                            width={1200}
+                            height={800}
                             className="w-full h-full object-cover transition-opacity duration-300 image-render-crisp"
-                            quality={95}
+                            quality={100}
                             priority={false}
                             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                             onError={(e) => {
