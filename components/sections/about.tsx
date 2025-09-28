@@ -15,18 +15,6 @@ export function About({ about }: AboutProps) {
   return (
     <section className="py-20 bg-background">
       <div className="container">
-        <motion.div
-          className="text-center mb-16"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-        >
-          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4">
-            {about.title}
-          </h2>
-        </motion.div>
-
         <div className="grid gap-12 lg:grid-cols-2">
           {/* 左側: ミッション・ビジョン・連絡先 */}
           <motion.div
