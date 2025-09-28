@@ -96,11 +96,16 @@ export interface SiteData {
   about: {
     title: string
     mission: string
-    values: string[]
-    profile: {
-      representative: string
-      description: string
+    vision: string
+    contact: {
+      line: string
     }
+    company: {
+      name: string
+      representative: string
+      profile: string
+    }
+    strengths: string[]
   }
   faq: {
     title: string
