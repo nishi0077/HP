@@ -24,19 +24,19 @@ export function Pricing({ pricing }: PricingProps) {
             <Card 
               key={plan.name} 
               className={`h-full flex flex-col ${
-                index === 1 ? 'border-primary border-2 scale-105' : ''
+                index === 1 ? 'border-blue-500 border-2 scale-105 bg-blue-50/30' : ''
               }`}
             >
               <CardHeader className="text-center">
                 {index === 1 && (
-                  <Badge variant="default" className="mx-auto mb-4">
+                  <Badge className="mx-auto mb-4 bg-blue-500 text-white hover:bg-blue-600">
                     おすすめ
                   </Badge>
                 )}
-                <CardTitle className="text-2xl">{plan.name}</CardTitle>
+                <CardTitle className={`text-2xl ${index === 1 ? 'text-blue-600' : ''}`}>{plan.name}</CardTitle>
                 <p className="text-sm text-muted-foreground">{plan.target}</p>
                 <div className="mt-4">
-                  <div className="text-3xl font-bold">
+                  <div className={`text-3xl font-bold ${index === 1 ? 'text-blue-600' : ''}`}>
                     {formatPrice(plan.monthly_fee)}
                     <span className="text-sm font-normal text-muted-foreground">/月</span>
                   </div>
@@ -56,7 +56,7 @@ export function Pricing({ pricing }: PricingProps) {
                 </div>
                 <Button 
                   variant={index === 1 ? "default" : "outline"} 
-                  className="w-full" 
+                  className={`w-full ${index === 1 ? 'bg-blue-500 hover:bg-blue-600 text-white' : ''}`}
                   asChild
                 >
                   <a href="https://lin.ee/7IVLhKDH" target="_blank" rel="noopener noreferrer">

@@ -9,22 +9,21 @@ interface HeroProps {
 
 export function Hero({ hero }: HeroProps) {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20 lg:py-32">
+    <section className="relative overflow-hidden bg-gradient-to-br from-gray-100 via-gray-200 to-gray-300 py-20 lg:py-32">
       <div className="absolute inset-0">
-        <div className="absolute inset-0 opacity-20">
-          <div className="absolute inset-0 bg-black/5"></div>
-          <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-transparent via-white/5 to-transparent"></div>
-        </div>
+        <div className="absolute inset-0 bg-gradient-to-br from-gray-50/80 via-gray-100/60 to-gray-200/80"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-gray-300/20 via-transparent to-gray-100/30"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent"></div>
       </div>
       <div className="container relative z-10">
         <div className="mx-auto max-w-4xl text-center">
           <div className="space-y-6">
             <h1 
-              className="text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl" 
+              className="text-4xl font-bold tracking-tight text-gray-800 sm:text-5xl lg:text-6xl" 
               dangerouslySetInnerHTML={{ __html: hero.heading }}
             />
             
-            <p className="mx-auto max-w-2xl text-lg text-white/80 sm:text-xl">
+            <p className="mx-auto max-w-2xl text-lg text-gray-600 sm:text-xl">
               {hero.subheading}
             </p>
 

@@ -77,13 +77,13 @@ process:
     - { no: 2, name: 戦略/ファネル設計, output: ペルソナ/便益/RTB、導線と指標の設計図 }
     - { no: 3, name: クリエイティブ/LP制作, output: ワイヤー、コピー、デザイン/実装、タグ設計 }
     - { no: 4, name: 計測/運用開始, output: CAPI/GA4連携、キャンペーン設計、初期学習 }
-    - { no: 5, name: 週次レポート/改善, output: クリエ/入札/LPのAB改善、次月計画 }
+    - { no: 5, name: 週次レポート/改善, output: クリエイティブ/入札/LPのAB改善、次月計画 }
 pricing:
   title: 価格
   plans:
     - { name: スタート, target: まずは計測と土台を整備, monthly_fee: 100000, setup_fee: 100000, includes: [ペルソナ/訴求整理, 計測実装（ピクセル+CAPI/GA4）, LP簡易改善提案] }
     - { name: グロース, target: 広告とLPを一体で最適化, monthly_fee: 300000, setup_fee: 150000, includes: [Meta/Google運用（月30〜100万円目安）, 導線設計&改善提案, 新規バナー/クリエイティブ作成, 週次レポート/定例30分] }
-    - { name: スケール, target: 複数チャネルで拡大, monthly_fee: 500000, setup_fee: 200000, includes: [配信拡張（P-MAX/YouTube/Discovery等）, 広告/SNS/LP・HP/公式LINEまでトータルでプロデュース, LP新規作成（四半期1本）, BI可視化/意思決定支援] }
+    - { name: スケール, target: 複数チャネルで拡大, monthly_fee: 500000, setup_fee: 200000, includes: [配信拡張（P-MAX/YouTube/Discovery等）, 広告/SNS/LP・HP/公式LINEまでトータルでプロデュース, LP新規作成（四半期1本）, ブランディング強化/マーケティング戦略の立案] }
 cases:
   title: 実績ハイライト
   items:
@@ -111,7 +111,9 @@ cases:
           roas_industry: 250,
           roas_actual: 8000,
           cost: 1000000,
-          conversions: 4
+          conversions: 4,
+          gross_profit: 14400000,
+          roi: 1340
         },
         levers: [診断→予約の摩擦低減, CAPI実装で学習安定, LP改善&広告媒体ごとの新LP, 一貫した導線設計, 公式LINE構築] 
       }
