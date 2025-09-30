@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import Script from 'next/script'
+import Image from 'next/image'
 import './globals.css'
 import { loadSite } from '@/lib/content'
 
@@ -73,9 +74,9 @@ export default function RootLayout({
           }}
         />
         <noscript>
-          <img 
-            height="1" 
-            width="1" 
+          <Image 
+            height={1} 
+            width={1} 
             style={{display:'none'}} 
             src={`https://www.facebook.com/tr?id=${process.env.NEXT_PUBLIC_META_PIXEL_ID}&ev=PageView&noscript=1`}
             alt=""
