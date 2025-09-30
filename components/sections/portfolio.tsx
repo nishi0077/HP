@@ -3,7 +3,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
-import { ExternalLink, Monitor, Palette } from 'lucide-react'
+import { ExternalLink, Monitor, Palette, BarChart3, TrendingUp } from 'lucide-react'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 import type { SiteData } from '@/lib/content'
@@ -13,6 +13,21 @@ interface PortfolioProps {
 }
 
 export function Portfolio({ portfolio }: PortfolioProps) {
+  // デバッグ: ポートフォリオデータの確認
+  console.log('Portfolio data:', portfolio);
+  
+  // 各作品の画像パスをデバッグ
+  portfolio.categories.forEach(category => {
+    console.log(`Category: ${category.name}`);
+    category.works.forEach(work => {
+      console.log(`Work: ${work.title}`);
+      console.log(`Image path: ${work.image}`);
+      if (work.image && typeof window !== 'undefined') {
+        console.log(`Full URL: ${window.location.origin}${work.image}`);
+      }
+    });
+  });
+  
   return (
     <section className="py-20 bg-muted/30">
       <div className="container">
@@ -41,10 +56,12 @@ export function Portfolio({ portfolio }: PortfolioProps) {
             viewport={{ once: true }}
           >
             <div className="flex items-center gap-3 mb-8">
-              {category.name === 'Webサイト制作' ? (
+              {category.name === 'Webマーケティング実績事例' ? (
                 <Monitor className="h-6 w-6 text-primary" />
+              ) : category.name === '広告運用実績' ? (
+                <TrendingUp className="h-6 w-6 text-primary" />
               ) : (
-                <Palette className="h-6 w-6 text-primary" />
+                <BarChart3 className="h-6 w-6 text-primary" />
               )}
               <h3 className="text-2xl font-bold">{category.name}</h3>
             </div>
@@ -59,25 +76,31 @@ export function Portfolio({ portfolio }: PortfolioProps) {
                   viewport={{ once: true }}
                 >
                   <Card className="h-full hover:shadow-lg transition-shadow duration-300">
-                    <div className="relative h-64 w-full overflow-hidden rounded-t-lg bg-gradient-to-br from-gray-100 to-gray-200">
-                      {work.image ? (
+                    {/* 画像表示をカテゴリーごとに制御 */}
+                    {(category.name === 'Webマーケティング実績事例' || category.name === '広告運用実績' || category.name === '実績・成果事例') && work.image ? (
+                      <div className="relative h-64 w-full overflow-hidden rounded-t-lg bg-gradient-to-br from-gray-100 to-gray-200">
                         <div className="w-full h-full">
-                          <Image
+                          <img
                             src={work.image}
-                            alt={`${work.title}のWebサイトスクリーンショット`}
-                            width={800}
-                            height={600}
+                            alt={`${work.title}の制作事例画像`}
                             className="w-full h-full object-cover"
-                            priority={true}
                             onError={(e) => {
-                              console.error('Local image load error:', work.image);
+                              console.error('画像読み込みエラー:', {
+                                パス: work.image,
+                                タイトル: work.title,
+                                試行URL: e.currentTarget.src
+                              });
+                              // フォールバック画像に切り替え
+                              e.currentTarget.src = 'https://via.placeholder.com/400x240/e5e7eb/9ca3af?text=No+Image';
                             }}
                             onLoad={() => {
-                              console.log('Local image loaded:', work.image);
+                              console.log('画像読み込み成功:', work.title);
                             }}
                           />
                         </div>
-                      ) : work.url ? (
+                      </div>
+                    ) : (category.name === 'Webマーケティング実績事例' || category.name === '広告運用実績' || category.name === '実績・成果事例') && work.url ? (
+                      <div className="relative h-64 w-full overflow-hidden rounded-t-lg bg-gradient-to-br from-gray-100 to-gray-200">
                         <div className="w-full h-full">
                           <Image
                             src={`https://s0.wp.com/mshots/v1/${encodeURIComponent(work.url)}?w=800&h=600`}
@@ -94,15 +117,17 @@ export function Portfolio({ portfolio }: PortfolioProps) {
                             }}
                           />
                         </div>
-                      ) : (
+                      </div>
+                    ) : (category.name === 'Webマーケティング実績事例' || category.name === '広告運用実績' || category.name === '実績・成果事例') ? (
+                      <div className="relative h-64 w-full overflow-hidden rounded-t-lg bg-gradient-to-br from-gray-100 to-gray-200">
                         <div className="w-full h-full flex items-center justify-center bg-gray-200">
                           <div className="text-gray-500 text-center">
-                            <div className="text-2xl mb-2">🏢</div>
+                            <div className="text-2xl mb-2">■</div>
                             <div className="text-sm">{work.title}</div>
                           </div>
                         </div>
-                      )}
-                    </div>
+                      </div>
+                    ) : null}
                     <CardHeader>
                       <div className="flex items-start justify-between">
                         <div className="flex-1">
@@ -130,7 +155,21 @@ export function Portfolio({ portfolio }: PortfolioProps) {
                       </div>
                     </CardHeader>
                     <CardContent>
-                      <p className="text-muted-foreground mb-4 whitespace-pre-line">{work.description}</p>
+                      <div className="text-muted-foreground mb-4 whitespace-pre-line space-y-2">
+                        {work.description.split('\n').map((line, index) => {
+                          // Markdownライクなスタイリング
+                          if (line.startsWith('**') && line.endsWith('**')) {
+                            return <div key={index} className="font-bold text-foreground">{line.slice(2, -2)}</div>
+                          }
+                          if (line.startsWith('• ')) {
+                            return <div key={index} className="ml-4">{line}</div>
+                          }
+                          if (line.startsWith('1. ') || line.startsWith('2. ') || line.startsWith('3. ')) {
+                            return <div key={index} className="ml-4 font-medium">{line}</div>
+                          }
+                          return line ? <div key={index}>{line}</div> : <div key={index} className="h-2"></div>
+                        })}
+                      </div>
                       
                       {work.tech && (
                         <div className="mb-4">
