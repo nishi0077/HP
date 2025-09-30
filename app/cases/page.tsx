@@ -4,7 +4,6 @@ import { PageHero } from '@/components/sections/page-hero'
 import { Portfolio } from '@/components/sections/portfolio'
 import { CtaBanner } from '@/components/sections/cta-banner'
 import { Footer } from '@/components/sections/footer'
-import { TestImage } from '@/components/test-image'
 
 export default function CasesPage() {
   const site = loadSite()
@@ -18,7 +17,6 @@ export default function CasesPage() {
           description="実際の実績を通して、私たちの取り組みと成果をご紹介します。"
           colorScheme="orange"
         />
-        <TestImage />
         <Portfolio portfolio={site.portfolio} />
         <CtaBanner cta={site.cta} />
       </main>

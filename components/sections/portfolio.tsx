@@ -220,6 +220,32 @@ export function Portfolio({ portfolio }: PortfolioProps) {
             </div>
           </motion.div>
         ))}
+        
+        {/* LINEボタン - SNS運用実績とWebマーケティング事例の間 */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="flex justify-center my-12"
+        >
+          <div className="bg-gradient-to-r from-green-400 to-green-600 rounded-lg p-6 text-center max-w-md">
+            <h3 className="text-xl font-bold text-white mb-4">相談はこちら</h3>
+            <p className="text-green-100 mb-4">お気軽にご相談ください</p>
+            <Button 
+              asChild 
+              className="bg-white text-green-600 hover:bg-green-50 font-bold px-8 py-3"
+            >
+              <a 
+                href="https://line.me/R/ti/p/@yourid" 
+                target="_blank" 
+                rel="noopener noreferrer"
+              >
+                📱 公式LINEで相談する
+              </a>
+            </Button>
+          </div>
+        </motion.div>
       </div>
     </section>
   )
