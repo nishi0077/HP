@@ -18,7 +18,6 @@ export default function CasesPage() {
           description="実際の実績を通して、私たちの取り組みと成果をご紹介します。"
           colorScheme="orange"
         />
-        <TestImage />
         <Portfolio portfolio={site.portfolio} />
         <CtaBanner cta={site.cta} />
       </main>
