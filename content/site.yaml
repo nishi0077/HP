@@ -110,7 +110,7 @@ cases:
         roi: 480
       levers: [診断→予約の摩擦低減, CAPI実装で学習安定]
 portfolio:
-  title: 制作実績
+  title: 実績・成果事例
   description: Webサイト制作からクリエイティブ制作まで、幅広い領域での制作実績をご紹介します。
   categories:
     - name: 広告運用実績
@@ -146,6 +146,64 @@ portfolio:
           tech: [Meta広告, Facebook広告, Instagram広告, 診断フォーム, 公式LINE, UI/UXデザイン]
           deliverables: [広告キャンペーン設計, クリエイティブ制作, 診断システム, LINE導線構築, 診断フォームデザイン]
           image: /images/creative/solar-diagnostic-form.png
+    - name: SNS運用実績
+      works:
+        - title: アパレル
+          subtitle: SNS運用実績
+          description: |
+            **アパレル成果**
+            
+            **実施期間**: 2024年5月～8月（3ヶ月間）
+            
+            **実施内容**
+            • コンサルティング及び戦略立案
+            • リール動画の企画・制作
+            • POP-UP用プロモーション動画の制作
+            • コンテンツ戦略の立案・実行
+            
+            **成果・数値**
+            • 過去最高の売上を達成（+132%）
+            • リール動画の再生数: 50万回超え
+            • 多くの新規層へのリーチを実現
+            • エンゲージメント率の大幅向上
+            
+            **成功ポイント**
+            コンサルティングとコンテンツ制作を一体化し、ブランドの世界観を保ちながらバイラルしやすいコンテンツを作成。POP-UPイベントと連動した総合的なマーケティング戦略が功を奏しました。
+          category: SNS運用
+          tech: [Instagram運用, リール動画制作, コンサルティング, コンテンツ戦略, POP-UPマーケティング]
+          deliverables: [戦略コンサルティング, リール動画制作, POP-UP用動画, コンテンツ企画]
+          image: /images/creative/test3.png
+        - title: 個人ゴルフレッスン
+          subtitle: SNS運用実績
+          description: |
+            **ゴルフレッスン成果**
+            
+            **実施期間**: 2025年5月～8月（現在進行中）
+            
+            **目的・目標**
+            • Instagramでの認知拡大
+            • 公式LINE登録者数の増加
+            • YouTubeチャンネルの成長
+            • オンラインからオフラインへの導線構築
+            
+            **実施内容**
+            • Instagramアカウントの戦略設計・運用
+            • 投稿コンテンツの企画・制作
+            • YouTubeチャンネルのコンサルティング
+            • 公式LINEへの導線設計
+            
+            **達成成果**
+            • 公式LINE登録者数: 600人 → 3,000人（投稿3ヶ月で達成）
+            • YouTube登録者数: 1.1万人獲得（2025年8月現在）
+            • インスタグラムのエンゲージメント率向上
+            • オンラインからのレッスン予約増加
+            
+            **成功ポイント**
+            InstagramとYouTubeを連動させたマルチプラットフォーム戦略で、各プラットフォームの特性を活かしたコンテンツを展開。公式LINEへの導線を強化し、質の高いリード獲得を実現しました。
+          category: SNS運用
+          tech: [Instagram運用, YouTube運用, 公式LINE構築, コンテンツ戦略, マルチプラットフォーム連動]
+          deliverables: [SNS戦略設計, コンテンツ企画・制作, YouTubeコンサルティング, LINE導線設計]
+          image: /images/creative/test4.png
     - name: 制作クリエイティブ
       works:
         - title: EC酵素クリエイティブ

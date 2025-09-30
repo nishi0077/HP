@@ -3,7 +3,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
-import { ExternalLink, Monitor, Palette, BarChart3, TrendingUp } from 'lucide-react'
+import { ExternalLink, Monitor, Palette, BarChart3, TrendingUp, Users } from 'lucide-react'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 import type { SiteData } from '@/lib/content'
@@ -60,6 +60,8 @@ export function Portfolio({ portfolio }: PortfolioProps) {
                 <Monitor className="h-6 w-6 text-primary" />
               ) : category.name === '広告運用実績' ? (
                 <TrendingUp className="h-6 w-6 text-primary" />
+              ) : category.name === 'SNS運用実績' ? (
+                <Users className="h-6 w-6 text-primary" />
               ) : category.name === '制作クリエイティブ' ? (
                 <Palette className="h-6 w-6 text-primary" />
               ) : (
@@ -68,8 +70,8 @@ export function Portfolio({ portfolio }: PortfolioProps) {
               <h3 className="text-2xl font-bold">{category.name}</h3>
             </div>
 
-            {/* 広告運用実績と実績・成果事例は左右レイアウト */}
-            {(category.name === '広告運用実績' || category.name === '実績・成果事例') ? (
+            {/* 広告運用実績、SNS運用実績、実績・成果事例は左右レイアウト */}
+            {(category.name === '広告運用実績' || category.name === 'SNS運用実績' || category.name === '実績・成果事例') ? (
               <div className="space-y-8">
                 {category.works.map((work, workIndex) => (
                   <motion.div
