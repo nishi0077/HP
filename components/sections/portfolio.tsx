@@ -3,7 +3,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
-import { ExternalLink, Monitor, Palette, BarChart3, TrendingUp } from 'lucide-react'
+import { ExternalLink, Monitor, Palette, BarChart3, TrendingUp, Users } from 'lucide-react'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 import type { SiteData } from '@/lib/content'
@@ -60,6 +60,8 @@ export function Portfolio({ portfolio }: PortfolioProps) {
                 <Monitor className="h-6 w-6 text-primary" />
               ) : category.name === '広告運用実績' ? (
                 <TrendingUp className="h-6 w-6 text-primary" />
+              ) : category.name === 'SNS運用実績' ? (
+                <Users className="h-6 w-6 text-primary" />
               ) : category.name === '制作クリエイティブ' ? (
                 <Palette className="h-6 w-6 text-primary" />
               ) : (
@@ -79,7 +81,7 @@ export function Portfolio({ portfolio }: PortfolioProps) {
                 >
                   <Card className="h-full hover:shadow-lg transition-shadow duration-300">
                     {/* 画像表示をカテゴリーごとに制御 */}
-                    {(category.name === 'Webマーケティング実績事例' || category.name === '広告運用実績' || category.name === '制作クリエイティブ') && work.image ? (
+                    {(category.name === 'Webマーケティング実績事例' || category.name === '広告運用実績' || category.name === 'SNS運用実績' || category.name === '制作クリエイティブ') && work.image ? (
                       <div className="relative h-64 w-full overflow-hidden rounded-t-lg bg-gradient-to-br from-gray-100 to-gray-200">
                         <div className="w-full h-full">
                           <Image
@@ -103,7 +105,7 @@ export function Portfolio({ portfolio }: PortfolioProps) {
                           />
                         </div>
                       </div>
-                    ) : (category.name === 'Webマーケティング実績事例' || category.name === '広告運用実績' || category.name === '制作クリエイティブ') && work.url ? (
+                    ) : (category.name === 'Webマーケティング実績事例' || category.name === '広告運用実績' || category.name === 'SNS運用実績' || category.name === '制作クリエイティブ') && work.url ? (
                       <div className="relative h-64 w-full overflow-hidden rounded-t-lg bg-gradient-to-br from-gray-100 to-gray-200">
                         <div className="w-full h-full">
                           <Image
@@ -122,7 +124,7 @@ export function Portfolio({ portfolio }: PortfolioProps) {
                           />
                         </div>
                       </div>
-                    ) : (category.name === 'Webマーケティング実績事例' || category.name === '広告運用実績' || category.name === '制作クリエイティブ') ? (
+                    ) : (category.name === 'Webマーケティング実績事例' || category.name === '広告運用実績' || category.name === 'SNS運用実績' || category.name === '制作クリエイティブ') ? (
                       <div className="relative h-64 w-full overflow-hidden rounded-t-lg bg-gradient-to-br from-gray-100 to-gray-200">
                         <div className="w-full h-full flex items-center justify-center bg-gray-200">
                           <div className="text-gray-500 text-center">
