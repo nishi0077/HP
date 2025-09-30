@@ -148,6 +148,31 @@ portfolio:
           image: /images/creative/solar-diagnostic-form.png
     - name: SNS運用実績
       works:
+        - title: 地方工務店
+          subtitle: SNS運用実績
+          description: |
+            地方工務店のSNS構築と広告運用による認知&リード獲得
+            
+            相談内容
+            • SNSの構築
+            • 広告にて認知&リードの獲得
+            • 内製化支援
+            
+            実施したこと
+            1. 世界観の構築・アルゴリズムの理解
+            2. SNS設計で"感情導線"を構築
+            3. 都会では使えない地方での広告戦略
+            
+            数値パフォーマンス
+            • 広告を使いながらフォロワー1.5万人
+            • 広告費50万円でリード45件の獲得
+            • 月間売上8,000万円
+            
+            こちらも業界平均を大きく上回る成果です。地方ならではの戦略で質の高いリードを獲得し、きちんと売上に繋げることに成功
+          category: SNS運用
+          tech: [Instagram運用, 広告戦略, 内製化支援, 地方マーケティング]
+          deliverables: [SNS戦略, 投稿運用, 広告運用, 内製化支援]
+          image: /images/creative/test2.png
         - title: アパレル
           subtitle: SNS運用実績
           description: |
@@ -173,37 +198,6 @@ portfolio:
           tech: [Instagram運用, リール動画制作, コンサルティング, コンテンツ戦略, POP-UPマーケティング]
           deliverables: [戦略コンサルティング, リール動画制作, POP-UP用動画, コンテンツ企画]
           image: /images/creative/test3.png
-        - title: 個人ゴルフレッスン
-          subtitle: SNS運用実績
-          description: |
-            ゴルフレッスン成果
-            
-            実施期間: 2025年5月～8月（3ヶ月）
-            
-            目的・目標
-            • Instagramでの認知拡大
-            • 公式LINE登録者数の増加
-            • YouTubeチャンネルの成長
-            • オンラインからオフラインへの導線構築
-            
-            実施内容
-            • Instagramアカウントの戦略設計・運用
-            • 投稿コンテンツの企画・制作
-            • YouTubeチャンネルのコンサルティング
-            • 公式LINEへの導線設計
-            
-            達成成果
-            • 公式LINE登録者数: 600人 → 3,000人（投稿3ヶ月で達成）
-            • YouTube登録者数: 1.1万人獲得（2025年8月現在）
-            • インスタグラムのエンゲージメント率向上
-            • オンラインからのレッスン予約増加
-            
-            成功ポイント
-            InstagramとYouTubeを連動させたマルチプラットフォーム戦略で、各プラットフォームの特性を活かしたコンテンツを展開。公式LINEへの導線を強化し、質の高いリード獲得を実現しました。
-          category: SNS運用
-          tech: [Instagram運用, YouTube運用, 公式LINE構築, コンテンツ戦略, マルチプラットフォーム連動]
-          deliverables: [SNS戦略設計, コンテンツ企画・制作, YouTubeコンサルティング, LINE導線設計]
-          image: /images/creative/test4.png
     - name: 制作クリエイティブ
       works:
         - title: EC酵素クリエイティブ
@@ -300,61 +294,6 @@ portfolio:
           category: Web制作
           tech: [新規サロン立ち上げ, マーケティング戦略, Meta広告運用, SNS運用, 現地撮影]
           image: /images/marketing/actland.png
-    - name: 実績・成果事例
-      works:
-        - title: 太陽光・蓄電池業界
-          subtitle: 広告運用実績
-          description: |
-            Meta広告＋Google広告併用運用
-            
-            主な成果
-            • CPA：30,000円 → 8,000円に改善
-            • 広告費50万円 → 4件成約 → 粗利益600万円創出
-            • ROAS 2,940%
-            
-            課題: 新規サービスで認知ゼロ
-            
-            施策: 電気代削減ニーズを切り口に広告で訴求、LP&診断で意欲を高め、公式LINEで刈り取る → 質の高いリストにより商談精度向上
-            
-            成果: 少額予算で利益最大化
-            
-            広告パフォーマンス
-            • CTR 4.15% ／ CPC ¥66.67
-            • リンククリック数 1,552 ／ リーチ 100,856
-            • 合計で4件/月の成約 → 600万の粗利益
-            
-            この数値は業界平均を大きく上回る成果です。一般的なクリック率は1〜2%が目安ですが今回は4.15%と倍以上。
-            
-            エネルギー業界の平均コンバージョン単価(CPA)は15,000円～20,000円に対し、8,000円以下で獲得しています。
-          category: 広告運用
-          tech: [Meta広告, Google広告, LP制作, 公式LINE構築, 診断フォーム]
-          deliverables: [広告運用, ランディングページ, 診断システム, LINE自動化]
-          image: /images/creative/test3.png
-        - title: 地方工務店
-          subtitle: SNS運用実績
-          description: |
-            地方工務店のSNS構築と広告運用による認知&リード獲得
-            
-            相談内容
-            • SNSの構築
-            • 広告にて認知&リードの獲得
-            • 内製化支援
-            
-            実施したこと
-            1. 世界観の構築・アルゴリズムの理解
-            2. SNS設計で"感情導線"を構築
-            3. 都会では使えない地方での広告戦略
-            
-            数値パフォーマンス
-            • 広告を使いながらフォロワー1.5万人
-            • 広告費50万円でリード45件の獲得
-            • 月間売上8,000万円
-            
-            こちらも業界平均を大きく上回る成果です。地方ならではの戦略で質の高いリードを獲得し、きちんと売上に繋げることに成功
-          category: SNS運用
-          tech: [Instagram運用, 広告戦略, 内製化支援, 地方マーケティング]
-          deliverables: [SNS戦略, 投稿運用, 広告運用, 内製化支援]
-          image: /images/creative/test2.png
 about:
   title: 私たちについて
   mission: 中小企業の強みを言語化し、最短距離で売上へつなげる。
