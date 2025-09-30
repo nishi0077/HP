@@ -92,15 +92,28 @@ export function Portfolio({ portfolio }: PortfolioProps) {
                                 alt={`${work.title}の制作事例画像`}
                                 className="w-full h-full object-cover"
                                 onError={(e) => {
-                                  console.error('画像読み込みエラー:', {
-                                    パス: work.image,
-                                    タイトル: work.title,
-                                    試行URL: e.currentTarget.src
+                                  console.error('[ERROR] 画像読み込み失敗:', {
+                                    元パス: work.image,
+                                    作品タイトル: work.title,
+                                    実際のURL: e.currentTarget.src,
+                                    HTTPエラー: e.type,
+                                    カテゴリ: category.name
                                   });
-                                  e.currentTarget.src = 'https://via.placeholder.com/400x240/e5e7eb/9ca3af?text=No+Image';
+                                  // 元のパスをフルパスで再試行
+                                  if (!e.currentTarget.src.includes('placeholder')) {
+                                    const fullPath = `${window.location.origin}${work.image}`;
+                                    console.log('[RETRY] フルパスで再試行:', fullPath);
+                                    e.currentTarget.src = fullPath;
+                                  } else {
+                                    e.currentTarget.src = 'https://via.placeholder.com/400x240/e5e7eb/9ca3af?text=No+Image';
+                                  }
                                 }}
                                 onLoad={() => {
-                                  console.log('画像読み込み成功:', work.title);
+                                  console.log('[SUCCESS] 画像読み込み成功:', {
+                                    作品: work.title,
+                                    パス: work.image,
+                                    実際のURL: window.location.origin + work.image
+                                  });
                                 }}
                               />
                             </div>
@@ -237,15 +250,28 @@ export function Portfolio({ portfolio }: PortfolioProps) {
                             alt={`${work.title}の制作事例画像`}
                             className="w-full h-full object-cover"
                             onError={(e) => {
-                              console.error('画像読み込みエラー:', {
-                                パス: work.image,
-                                タイトル: work.title,
-                                試行URL: e.currentTarget.src
+                              console.error('[ERROR] グリッド画像読み込み失敗:', {
+                                元パス: work.image,
+                                作品タイトル: work.title,
+                                実際のURL: e.currentTarget.src,
+                                HTTPエラー: e.type,
+                                カテゴリ: category.name
                               });
-                              e.currentTarget.src = 'https://via.placeholder.com/400x240/e5e7eb/9ca3af?text=No+Image';
+                              // 元のパスをフルパスで再試行
+                              if (!e.currentTarget.src.includes('placeholder')) {
+                                const fullPath = `${window.location.origin}${work.image}`;
+                                console.log('[RETRY] グリッド画像フルパスで再試行:', fullPath);
+                                e.currentTarget.src = fullPath;
+                              } else {
+                                e.currentTarget.src = 'https://via.placeholder.com/400x240/e5e7eb/9ca3af?text=No+Image';
+                              }
                             }}
                             onLoad={() => {
-                              console.log('画像読み込み成功:', work.title);
+                              console.log('[SUCCESS] グリッド画像読み込み成功:', {
+                                作品: work.title,
+                                パス: work.image,
+                                実際のURL: window.location.origin + work.image
+                              });
                             }}
                           />
                         </div>

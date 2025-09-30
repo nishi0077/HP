@@ -329,6 +329,7 @@ portfolio:
           category: 広告運用
           tech: [Meta広告, Google広告, LP制作, 公式LINE構築, 診断フォーム]
           deliverables: [広告運用, ランディングページ, 診断システム, LINE自動化]
+          image: /images/creative/test3.png
         - title: 地方工務店
           subtitle: SNS運用実績
           description: |
