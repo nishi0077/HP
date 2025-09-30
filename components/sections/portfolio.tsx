@@ -162,14 +162,14 @@ export function Portfolio({ portfolio }: PortfolioProps) {
                           
                           <div className="text-muted-foreground mb-4 whitespace-pre-line space-y-2">
                             {work.description.split('\n').map((line, index) => {
-                              if (line.startsWith('**') && line.endsWith('**')) {
-                                return <div key={index} className="font-bold text-foreground">{line.slice(2, -2)}</div>
-                              }
                               if (line.startsWith('• ')) {
                                 return <div key={index} className="ml-4">{line}</div>
                               }
                               if (line.startsWith('1. ') || line.startsWith('2. ') || line.startsWith('3. ')) {
                                 return <div key={index} className="ml-4 font-medium">{line}</div>
+                              }
+                              if (line.endsWith(':') && line.length < 50) {
+                                return <div key={index} className="font-bold text-foreground mt-3 mb-1">{line}</div>
                               }
                               return line ? <div key={index}>{line}</div> : <div key={index} className="h-2"></div>
                             })}
@@ -305,14 +305,14 @@ export function Portfolio({ portfolio }: PortfolioProps) {
                       <CardContent>
                         <div className="text-muted-foreground mb-4 whitespace-pre-line space-y-2">
                           {work.description.split('\n').map((line, index) => {
-                            if (line.startsWith('**') && line.endsWith('**')) {
-                              return <div key={index} className="font-bold text-foreground">{line.slice(2, -2)}</div>
-                            }
                             if (line.startsWith('• ')) {
                               return <div key={index} className="ml-4">{line}</div>
                             }
                             if (line.startsWith('1. ') || line.startsWith('2. ') || line.startsWith('3. ')) {
                               return <div key={index} className="ml-4 font-medium">{line}</div>
+                            }
+                            if (line.endsWith(':') && line.length < 50) {
+                              return <div key={index} className="font-bold text-foreground mt-3 mb-1">{line}</div>
                             }
                             return line ? <div key={index}>{line}</div> : <div key={index} className="h-2"></div>
                           })}
