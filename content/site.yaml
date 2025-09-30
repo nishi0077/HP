@@ -207,15 +207,8 @@ portfolio:
             • ECサイト用商品バナー
             • 酵素商品の特徴を訴求するデザイン
             • ターゲット層に響くビジュアル設計
-            
-            デザインポイント
-            • 健康・美容を意識したカラーリング
-            • 商品の信頼性を高める要素配置
-            • CTR向上を意識したキャッチコピー配置
           category: クリエイティブ制作
-          tech: [バナーデザイン, EC最適化, ターゲティング]
-          deliverables: [バナー制作, デザインガイドライン]
-          image: /images/creative/ec-enzyme-creative.png
+          image: /images/creative/1.png
         - title: ゴルフレッスンクリエイティブ
           subtitle: 広告バナー制作
           description: |
@@ -223,15 +216,8 @@ portfolio:
             • ゴルフレッスン広告用バナー
             • スポーツ系サービスの訴求デザイン
             • アクション喚起を重視した構成
-            
-            デザインポイント
-            • スポーティーで信頼感のあるデザイン
-            • ターゲット層（ゴルフ愛好者）への訴求
-            • レッスン効果をイメージしやすいビジュアル
           category: クリエイティブ制作
-          tech: [広告デザイン, スポーツマーケティング, ビジュアル戦略]
-          deliverables: [広告バナー, クリエイティブ戦略]
-          image: /images/creative/golf-lesson-creative.jpg
+          image: /images/creative/4.png
         - title: 太陽光・蓄電池クリエイティブ1
           subtitle: エネルギー業界バナー
           description: |
@@ -239,15 +225,8 @@ portfolio:
             • 太陽光・蓄電池サービス用バナー
             • エネルギー業界向けデザイン
             • 環境配慮とコスト削減を訴求
-            
-            デザインポイント
-            • クリーンエネルギーをイメージするビジュアル
-            • 経済効果を分かりやすく表現
-            • 信頼性と先進性を両立したデザイン
           category: クリエイティブ制作
-          tech: [エネルギー業界デザイン, 環境訴求, コスト訴求]
-          deliverables: [バナー制作, 業界特化デザイン]
-          image: /images/creative/solar-battery-creative1.png
+          image: /images/creative/2.png
         - title: 太陽光・蓄電池クリエイティブ2
           subtitle: エネルギー業界バナー
           description: |
@@ -255,15 +234,8 @@ portfolio:
             • 太陽光・蓄電池サービス用バナー（第2弾）
             • 異なるアプローチでの訴求デザイン
             • ABテスト用クリエイティブ
-            
-            デザインポイント
-            • 第1弾とは異なる訴求角度
-            • より具体的な数値・効果を前面に
-            • ユーザーの関心を引く構成
           category: クリエイティブ制作
-          tech: [ABテスト設計, 数値訴求, ユーザー心理]
-          deliverables: [バナー制作, ABテスト用素材]
-          image: /images/creative/solar-battery-creative2.png
+          image: /images/creative/3.png
     - name: Webマーケティング実績事例
       works:
         - title: 株式会社AS IT IS
