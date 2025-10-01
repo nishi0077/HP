@@ -205,13 +205,15 @@ export function Portfolio({ portfolio }: PortfolioProps) {
                         <div className={`relative ${imageHeight} w-full overflow-hidden rounded-t-lg bg-gradient-to-br from-gray-100 to-gray-200`}>
                           <div className="w-full h-full">
                             <Image
-                              src={`https://s0.wp.com/mshots/v1/${encodeURIComponent(work.url)}?w=400&h=240`}
+                              src={`https://s0.wp.com/mshots/v1/${encodeURIComponent(work.url)}?w=1200&h=720`}
                               alt={`${work.title}のWebサイトスクリーンショット`}
-                              width={400}
-                              height={240}
+                              width={1200}
+                              height={720}
                               className="w-full h-full object-cover"
                               priority={false}
                               quality={100}
+                              unoptimized={false}
+                              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                             />
                           </div>
                         </div>
