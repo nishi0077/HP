@@ -175,7 +175,9 @@ export function Portfolio({ portfolio }: PortfolioProps) {
                     ? 'h-[240px]' 
                     : work.title === 'ゴルフレッスンクリエイティブ'
                       ? 'h-[640px]'
-                      : 'h-[800px]';
+                      : work.title === '太陽光・蓄電池クリエイティブ2'
+                        ? 'h-[571px]'
+                        : 'h-[800px]';
                   
                   return (
                   <motion.div
@@ -203,12 +205,13 @@ export function Portfolio({ portfolio }: PortfolioProps) {
                         <div className={`relative ${imageHeight} w-full overflow-hidden rounded-t-lg bg-gradient-to-br from-gray-100 to-gray-200`}>
                           <div className="w-full h-full">
                             <Image
-                              src={`https://s0.wp.com/mshots/v1/${encodeURIComponent(work.url)}?w=800&h=600`}
+                              src={`https://s0.wp.com/mshots/v1/${encodeURIComponent(work.url)}?w=1200&h=800`}
                               alt={`${work.title}のWebサイトスクリーンショット`}
-                              width={800}
-                              height={600}
+                              width={1200}
+                              height={800}
                               className="w-full h-full object-cover"
                               priority={false}
+                              quality={100}
                             />
                           </div>
                         </div>
