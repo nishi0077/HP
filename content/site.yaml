@@ -201,41 +201,25 @@ portfolio:
           subtitle: 制作クリエイティブ (toC EC)
           description: |
             **酵素ドリンクの広告クリエイティブ制作**
-            
-            健康志向をアピールする色彩設計で商品の魅力を伝えるレイアウトを制作。購買意欲を刺激するコピーライティングでターゲット層に響くビジュアルを実現。
           category: クリエイティブ制作
-          tech: [バナーデザイン, 色彩設計, レイアウト設計]
-          deliverables: [広告バナー, クリエイティブデザイン]
           image: /images/creative/1.png
         - title: 太陽光・蓄電池クリエイティブ1
           subtitle: 制作クリエイティブ (toC エネルギー)
           description: |
             **太陽光・蓄電池サービスの広告クリエイティブ制作**
-            
-            環境に優しいイメージの色彩でコスト削減効果を視覚的に表現。信頼性を重視したデザインでエネルギー業界向けの訴求を実現。
           category: クリエイティブ制作
-          tech: [バナーデザイン, 色彩設計, レイアウト設計]
-          deliverables: [広告バナー, クリエイティブデザイン]
           image: /images/creative/2.png
         - title: 太陽光・蓄電池クリエイティブ2
           subtitle: 制作クリエイティブ (toC エネルギー)
           description: |
             **太陽光・蓄電池サービスの広告クリエイティブ制作（第2弾）**
-            
-            異なる訴求ポイントでのアプローチでターゲット層の拡大を狙ったデザイン。効果測定を考慮したABテスト用クリエイティブを制作。
           category: クリエイティブ制作
-          tech: [バナーデザイン, ABテスト, クリエイティブ最適化]
-          deliverables: [広告バナー, ABテスト用クリエイティブ]
           image: /images/creative/3.png
         - title: ゴルフレッスンクリエイティブ
           subtitle: 制作クリエイティブ (toC スポーツ)
           description: |
             **ゴルフレッスンサービスの広告クリエイティブ制作**
-            
-            スポーツの躍動感を表現し、上達への期待感を演出。明確なCTA（Call to Action）の配置でアクション喚起を重視した構成を実現。
           category: クリエイティブ制作
-          tech: [バナーデザイン, スポーツマーケティング, CTA設計]
-          deliverables: [広告バナー, スポーツ系クリエイティブ]
           image: /images/creative/4.png
 about:
   title: 私たちについて
