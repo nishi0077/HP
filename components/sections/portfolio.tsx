@@ -176,7 +176,7 @@ export function Portfolio({ portfolio }: PortfolioProps) {
                     : work.title === 'ゴルフレッスンクリエイティブ'
                       ? 'h-[640px]'
                       : work.title === '太陽光・蓄電池クリエイティブ2'
-                        ? 'h-[571px]'
+                        ? 'h-[640px]'
                         : 'h-[800px]';
                   
                   return (

@@ -17,7 +17,7 @@ navigation:
     - { label: ホーム, href: "/" }
     - { label: サービス, href: "/services" }
     - { label: 価格, href: "/pricing" }
-    - { label: 事例, href: "/cases" }
+    - { label: 実績, href: "/cases" }
     - { label: 私たちについて, href: "/about" }
     - { label: FAQ, href: "/faq" }
   cta: { label: 相談を予約, href: "/book" }
@@ -256,7 +256,7 @@ contact:
     - { name: budget, label: 月間広告予算, type: select, options: [〜30万円, 30〜100万円, 100〜300万円, 300万円〜] }
     - { name: objectives, label: 目的, type: textarea, placeholder: 例）CPA改善、LTV最大化、計測整備 等 }
 footer:
-  quick_links: [ホーム, サービス, 価格, 事例, 私たちについて, FAQ]
+  quick_links: [ホーム, サービス, 価格, 実績, 私たちについて, FAQ]
   legal: [プライバシーポリシー, 取引条件]
   copyright:
     text: © Next Sociality. All rights reserved.
