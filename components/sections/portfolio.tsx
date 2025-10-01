@@ -16,44 +16,6 @@ export function Portfolio({ portfolio }: PortfolioProps) {
   return (
     <section className="py-20 bg-muted/30">
       <div className="container">
-        <motion.div 
-          className="text-center mb-16"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-        >
-          <h2 className="text-4xl font-bold mb-4">{portfolio.title}</h2>
-          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            {portfolio.description}
-          </p>
-        </motion.div>
-
-        {/* LINEボタン - Webマーケティング事例より上に配置 */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-          className="flex justify-center mb-16"
-        >
-          <div className="bg-gradient-to-r from-green-400 to-green-600 rounded-lg p-6 text-center max-w-md">
-            <h3 className="text-xl font-bold text-white mb-4">相談はこちら</h3>
-            <p className="text-green-100 mb-4">お気軽にご相談ください</p>
-            <Button 
-              asChild 
-              className="bg-white text-green-600 hover:bg-green-50 font-bold px-8 py-3"
-            >
-              <a 
-                href="https://lin.ee/7IVLhKDH" 
-                target="_blank" 
-                rel="noopener noreferrer"
-              >
-                📱 公式LINEで相談する
-              </a>
-            </Button>
-          </div>
-        </motion.div>
 
         {portfolio.categories.map((category, categoryIndex) => (
           <motion.div
@@ -95,7 +57,7 @@ export function Portfolio({ portfolio }: PortfolioProps) {
                         {/* 左側: 画像 */}
                         <div className="lg:w-1/2">
                           {work.image ? (
-                            <div className="relative h-64 lg:h-full w-full overflow-hidden bg-gradient-to-br from-gray-100 to-gray-200">
+                            <div className="relative h-[800px] w-full overflow-hidden bg-gradient-to-br from-gray-100 to-gray-200">
                               <Image
                                 src={work.image}
                                 alt={`${work.title}の制作事例画像`}
@@ -105,7 +67,7 @@ export function Portfolio({ portfolio }: PortfolioProps) {
                               />
                             </div>
                           ) : (
-                            <div className="relative h-64 lg:h-full w-full overflow-hidden bg-gradient-to-br from-gray-100 to-gray-200">
+                            <div className="relative h-[800px] w-full overflow-hidden bg-gradient-to-br from-gray-100 to-gray-200">
                               <div className="w-full h-full flex items-center justify-center bg-gray-200">
                                 <div className="text-gray-500 text-center">
                                   <div className="text-2xl mb-2">■</div>
@@ -181,6 +143,28 @@ export function Portfolio({ portfolio }: PortfolioProps) {
                     </Card>
                   </motion.div>
                 ))}
+                
+                {/* LINEボタン - 広告運用実績（地方工務店SNS運用実績）の下に配置 */}
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6 }}
+                  viewport={{ once: true }}
+                  className="flex justify-center mt-12"
+                >
+                  <Button 
+                    asChild 
+                    className="bg-gradient-to-r from-green-400 to-green-600 hover:from-green-500 hover:to-green-700 text-white font-bold px-8 py-3"
+                  >
+                    <a 
+                      href="https://lin.ee/7IVLhKDH" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                    >
+                      📱 公式LINEで相談する
+                    </a>
+                  </Button>
+                </motion.div>
               </div>
             ) : (
               /* その他のカテゴリーはグリッドレイアウト */
@@ -196,7 +180,7 @@ export function Portfolio({ portfolio }: PortfolioProps) {
                     <Card className="h-full hover:shadow-lg transition-shadow duration-300">
                       {/* 画像表示 */}
                       {work.image ? (
-                        <div className="relative h-64 w-full overflow-hidden rounded-t-lg bg-gradient-to-br from-gray-100 to-gray-200">
+                        <div className="relative h-[800px] w-full overflow-hidden rounded-t-lg bg-gradient-to-br from-gray-100 to-gray-200">
                           <div className="w-full h-full">
                             <Image
                               src={work.image}
@@ -208,7 +192,7 @@ export function Portfolio({ portfolio }: PortfolioProps) {
                           </div>
                         </div>
                       ) : work.url ? (
-                        <div className="relative h-64 w-full overflow-hidden rounded-t-lg bg-gradient-to-br from-gray-100 to-gray-200">
+                        <div className="relative h-[800px] w-full overflow-hidden rounded-t-lg bg-gradient-to-br from-gray-100 to-gray-200">
                           <div className="w-full h-full">
                             <Image
                               src={`https://s0.wp.com/mshots/v1/${encodeURIComponent(work.url)}?w=800&h=600`}
@@ -221,7 +205,7 @@ export function Portfolio({ portfolio }: PortfolioProps) {
                           </div>
                         </div>
                       ) : (
-                        <div className="relative h-64 w-full overflow-hidden rounded-t-lg bg-gradient-to-br from-gray-100 to-gray-200">
+                        <div className="relative h-[800px] w-full overflow-hidden rounded-t-lg bg-gradient-to-br from-gray-100 to-gray-200">
                           <div className="w-full h-full flex items-center justify-center bg-gray-200">
                             <div className="text-gray-500 text-center">
                               <div className="text-2xl mb-2">■</div>
