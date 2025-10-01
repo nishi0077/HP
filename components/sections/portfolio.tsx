@@ -169,7 +169,15 @@ export function Portfolio({ portfolio }: PortfolioProps) {
             ) : (
               /* その他のカテゴリーはグリッドレイアウト */
               <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-2">
-                {category.works.map((work, workIndex) => (
+                {category.works.map((work, workIndex) => {
+                  // カテゴリーごとに画像の高さを設定
+                  const imageHeight = category.name === 'Webマーケティング実績事例' 
+                    ? 'h-[240px]' 
+                    : work.title === 'ゴルフレッスンクリエイティブ'
+                      ? 'h-[640px]'
+                      : 'h-[800px]';
+                  
+                  return (
                   <motion.div
                     key={work.title}
                     initial={{ opacity: 0, y: 20 }}
@@ -180,7 +188,7 @@ export function Portfolio({ portfolio }: PortfolioProps) {
                     <Card className="h-full hover:shadow-lg transition-shadow duration-300">
                       {/* 画像表示 */}
                       {work.image ? (
-                        <div className="relative h-[800px] w-full overflow-hidden rounded-t-lg bg-gradient-to-br from-gray-100 to-gray-200">
+                        <div className={`relative ${imageHeight} w-full overflow-hidden rounded-t-lg bg-gradient-to-br from-gray-100 to-gray-200`}>
                           <div className="w-full h-full">
                             <Image
                               src={work.image}
@@ -192,7 +200,7 @@ export function Portfolio({ portfolio }: PortfolioProps) {
                           </div>
                         </div>
                       ) : work.url ? (
-                        <div className="relative h-[800px] w-full overflow-hidden rounded-t-lg bg-gradient-to-br from-gray-100 to-gray-200">
+                        <div className={`relative ${imageHeight} w-full overflow-hidden rounded-t-lg bg-gradient-to-br from-gray-100 to-gray-200`}>
                           <div className="w-full h-full">
                             <Image
                               src={`https://s0.wp.com/mshots/v1/${encodeURIComponent(work.url)}?w=800&h=600`}
@@ -205,7 +213,7 @@ export function Portfolio({ portfolio }: PortfolioProps) {
                           </div>
                         </div>
                       ) : (
-                        <div className="relative h-[800px] w-full overflow-hidden rounded-t-lg bg-gradient-to-br from-gray-100 to-gray-200">
+                        <div className={`relative ${imageHeight} w-full overflow-hidden rounded-t-lg bg-gradient-to-br from-gray-100 to-gray-200`}>
                           <div className="w-full h-full flex items-center justify-center bg-gray-200">
                             <div className="text-gray-500 text-center">
                               <div className="text-2xl mb-2">■</div>
@@ -297,7 +305,8 @@ export function Portfolio({ portfolio }: PortfolioProps) {
                       </CardContent>
                     </Card>
                   </motion.div>
-                ))}
+                  );
+                })}
               </div>
             )}
           </motion.div>
