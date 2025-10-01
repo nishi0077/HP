@@ -173,28 +173,28 @@ portfolio:
           url: https://asitis.ibaraki.jp/
           category: Web制作
           tech: [マーケティング戦略, 広告運用, SNS運用]
-          image: /images/marketing/as-it-is.png
+          image: /images/marketing/as-it-is1.png
         - title: ReBORN GROUP株式会社
           subtitle: 住宅エネルギー業界（toC toB）
           description: 年商20億の急成長企業、太陽光/蓄電池の販売・セールスマーケティング事業
           url: https://reborngroup.me/
           category: Web制作
           tech: [広告運用, 公式LINE構築, LP制作]
-          image: /images/marketing/reborn-group.png
+          image: /images/marketing/reborn-group1.png
         - title: 銀座XIAOMA（ASU BRAND株式会社）
           subtitle: 小売業界（toC toB）
           description: 高級ブランドバッグ買取サービス
           url: https://ginzaxiaoma.com/ja
           category: Web制作
           tech: [多言語対応, 広告運用, 公式LINE構築]
-          image: /images/marketing/xiaoma.png
+          image: /images/marketing/xiaoma1.png
         - title: 株式会社ACTLAND
           subtitle: 美容・化粧品業界（toB）
           description: 美容・健康商品の企画＆販売、直営サロン
           url: https://actland.co.jp/
           category: Web制作
           tech: [新規サロン立ち上げ, マーケティング戦略, Meta広告運用, SNS運用, 現地撮影]
-          image: /images/marketing/actland.png
+          image: /images/marketing/actland1.png
     - name: 制作クリエイティブ
       works:
         - title: 酵素ドリンククリエイティブ
