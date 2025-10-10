@@ -5,7 +5,6 @@ import {
   Instagram,
   Mail,
   MapPin,
-  Phone,
   Twitter,
 } from 'lucide-react';
 import Link from 'next/link';
@@ -35,9 +34,8 @@ const data = {
     livechat: '/book',
   },
   contact: {
-    email: 'info@example.com',
-    phone: '+81-XX-XXXX-XXXX',
-    address: 'Tokyo, Japan',
+    email: 'nishiura@nextsociality.com',
+    address: 'Saitama, Japan',
   },
   company: {
     name: 'Next Sociality',
@@ -77,7 +75,6 @@ const helpfulLinks = [
 
 const contactInfo = [
   { icon: Mail, text: data.contact.email },
-  { icon: Phone, text: data.contact.phone },
   { icon: MapPin, text: data.contact.address, isAddress: true },
 ];
 
