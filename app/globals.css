@@ -2,6 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --gradient-color: #8350e8;
+  --sparkles-color: #8350e8;
+}
+
+.dark {
+  --gradient-color: #8350e8;
+  --sparkles-color: #ffffff;
+}
+
 /* 画像品質向上のためのカスタムスタイル */
 .image-render-crisp {
   image-rendering: -webkit-optimize-contrast;
