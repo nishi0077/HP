@@ -22,7 +22,7 @@ navigation:
   cta: { label: 相談を予約, href: "/book" }
 home:
   hero:
-    heading: 売上に直結する一貫型Webマーケティング
+    heading: 売上に直結する<br>一貫型Webマーケティング
     subheading: 戦略設計からLP・バナー制作、広告運用、SNS運用、計測改善まで。分断をなくし、最短で成果へ。
     primary_cta: { label: 無料相談を予約, href: "/book" }
     secondary_cta: { label: 実績を見る, href: "/cases" }
