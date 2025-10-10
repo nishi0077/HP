@@ -22,7 +22,6 @@ export function Footer({ footer, navigation, site }: FooterProps) {
             </p>
             <div className="space-y-1 text-sm text-muted-foreground">
               <p>{site.brand.email}</p>
-              <p>{site.brand.phone}</p>
               <p>{site.brand.address}</p>
             </div>
           </div>
