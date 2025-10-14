@@ -1,11 +1,15 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { M_PLUS_1p } from 'next/font/google'
 import Script from 'next/script'
 import Image from 'next/image'
 import './globals.css'
 import { loadSite } from '@/lib/content'
 
-const inter = Inter({ subsets: ['latin'] })
+const mPlus1p = M_PLUS_1p({ 
+  weight: ['300', '400', '500', '700', '800'],
+  subsets: ['latin'],
+  display: 'swap',
+})
 
 export function generateMetadata(): Metadata {
   const site = loadSite()
@@ -40,7 +44,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ja">
-      <body className={inter.className}>
+      <body className={mPlus1p.className}>
         {children}
         
         {/* GA4 */}
