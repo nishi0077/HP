@@ -86,7 +86,7 @@ export default function PricingSection4() {
         animationNum={4}
         timelineRef={pricingRef}
         customVariants={revealVariants}
-        className="absolute top-0 h-96 w-screen overflow-hidden [mask-image:radial-gradient(50%_50%,white,transparent)]"
+        className="absolute top-0 h-96 w-screen overflow-hidden [mask-image:radial-gradient(circle_at_50%_50%,white,transparent)]"
       >
         <div className="absolute bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#ffffff2c_1px,transparent_1px),linear-gradient(to_bottom,#3a3a3a01_1px,transparent_1px)] bg-[size:70px_80px]"></div>
         <SparklesComp
@@ -94,7 +94,7 @@ export default function PricingSection4() {
           direction="bottom"
           speed={1}
           color="#FFFFFF"
-          className="absolute inset-x-0 bottom-0 h-full w-full [mask-image:radial-gradient(50%_50%,white,transparent_85%)]"
+          className="absolute inset-x-0 bottom-0 h-full w-full [mask-image:radial-gradient(circle_at_50%_50%,white,transparent_85%)]"
         />
       </TimelineContent>
       
