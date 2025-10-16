@@ -1,13 +1,14 @@
 import type { Metadata } from 'next'
-import { M_PLUS_1p } from 'next/font/google'
+import { IBM_Plex_Sans_JP } from 'next/font/google'
 import Script from 'next/script'
 import './globals.css'
 import { loadSite } from '@/lib/content'
 
-const mPlus1p = M_PLUS_1p({ 
-  weight: ['300', '400', '500', '700', '800'],
+const ibmPlexSansJP = IBM_Plex_Sans_JP({ 
+  weight: ['300', '400', '500', '700'],
   subsets: ['latin'],
   display: 'swap',
+  variable: '--font-ibm-plex-sans-jp',
 })
 
 export function generateMetadata(): Metadata {
@@ -42,8 +43,13 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="ja">
-      <body className={mPlus1p.className}>
+    <html lang="ja" className={ibmPlexSansJP.variable}>
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
+        <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet" />
+      </head>
+      <body className={ibmPlexSansJP.className}>
         {children}
         
         {/* GA4 */}
