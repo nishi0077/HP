@@ -4,6 +4,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
 import { SparklesCore } from '@/components/ui/sparkles'
+import { usePerformanceOptimizer } from '@/components/ui/performance-optimizer'
 import Link from 'next/link'
 import { Target, TrendingUp, Users, BarChart3 } from 'lucide-react'
 import { motion } from 'framer-motion'
@@ -14,6 +15,8 @@ interface ServicesProps {
 }
 
 export function Services({ services }: ServicesProps) {
+  const { particleDensity } = usePerformanceOptimizer();
+  
   return (
     <section className="py-20 bg-black relative overflow-hidden">
       {/* Sparkles Background */}
@@ -23,7 +26,7 @@ export function Services({ services }: ServicesProps) {
           background="transparent"
           minSize={0.4}
           maxSize={1.2}
-          particleDensity={400}
+          particleDensity={particleDensity}
           className="w-full h-full"
           particleColor="#FFFFFF"
           speed={1}

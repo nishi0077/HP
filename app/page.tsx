@@ -20,7 +20,7 @@ export default function HomePage() {
         <PricingSection4 />
         <CtaBanner cta={site.cta} />
       </main>
-      <Footer />
+      <Footer footer={site.footer} navigation={site.navigation} site={site.site} />
     </div>
   )
 }

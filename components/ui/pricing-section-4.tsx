@@ -7,6 +7,7 @@ import { InteractiveHoverButton } from "@/components/ui/interactive-hover-button
 import { cn } from "@/lib/utils";
 import NumberFlow from "@number-flow/react";
 import { useRef } from "react";
+import { usePerformanceOptimizer } from "@/components/ui/performance-optimizer";
 
 const plans = [
   {
@@ -60,6 +61,7 @@ const plans = [
 
 export default function PricingSection4() {
   const pricingRef = useRef<HTMLDivElement>(null);
+  const { particleDensity } = usePerformanceOptimizer();
 
   const revealVariants = {
     visible: (i: number) => ({
@@ -91,7 +93,11 @@ export default function PricingSection4() {
       >
         <div className="absolute bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#ffffff2c_1px,transparent_1px),linear-gradient(to_bottom,#3a3a3a01_1px,transparent_1px)] bg-[size:70px_80px]"></div>
         <SparklesComp
-          particleDensity={1800}
+          id="pricing-sparkles"
+          background="transparent"
+          minSize={0.4}
+          maxSize={1.2}
+          particleDensity={particleDensity}
           speed={1}
           particleColor="#FFFFFF"
           className="absolute inset-x-0 bottom-0 h-full w-full [mask-image:radial-gradient(circle_at_50%_50%,white,transparent_85%)]"

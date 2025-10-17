@@ -12,7 +12,7 @@ export default function PricingPage() {
       <main>
         <PricingSection4 />
       </main>
-      <Footer />
+      <Footer footer={site.footer} navigation={site.navigation} site={site.site} />
     </div>
   )
 }

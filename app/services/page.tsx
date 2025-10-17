@@ -3,7 +3,7 @@ import { Header } from '@/components/sections/header'
 import { PageHero } from '@/components/sections/page-hero'
 import { Services } from '@/components/sections/services'
 import { CtaBanner } from '@/components/sections/cta-banner'
-import { Footer } from '@/components/ui/footer-section'
+import { Footer } from '@/components/sections/footer'
 
 export default function ServicesPage() {
   const site = loadSite()
@@ -20,7 +20,7 @@ export default function ServicesPage() {
         <Services services={site.services} />
         <CtaBanner cta={site.cta} />
       </main>
-      <Footer />
+      <Footer footer={site.footer} navigation={site.navigation} site={site.site} />
     </div>
   )
 }
