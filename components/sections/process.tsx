@@ -1,4 +1,3 @@
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { GlowingEffect } from '@/components/ui/glowing-effect'
 import { Search, Lightbulb, Palette, PlayCircle, BarChart } from 'lucide-react'
@@ -35,27 +34,26 @@ export function Process({ process }: ProcessProps) {
                     borderWidth={3}
                     variant="white"
                   />
-                  <Card className="h-full bg-black/80 backdrop-blur-sm border-gray-700">
-                    <CardHeader className="text-center">
+                  <div className="relative flex h-full flex-col justify-between gap-6 overflow-hidden rounded-xl border-[0.75px] bg-black/80 backdrop-blur-sm border-gray-700 p-6 shadow-sm">
+                    <div className="relative flex flex-1 flex-col justify-between gap-3">
                       <div className="flex justify-center mb-3">
                         <div className="p-3 rounded-full bg-white/10">
                           <Icon className="h-8 w-8 text-white" />
                         </div>
                       </div>
-                      <Badge variant="default" className="w-8 h-8 rounded-full mx-auto mb-4 flex items-center justify-center bg-white text-black">
-                        {step.no}
-                      </Badge>
-                      <CardTitle 
-                        className="text-lg font-['Zen_Old_Mincho'] text-white" 
-                        dangerouslySetInnerHTML={{ __html: step.name }}
-                      />
-                    </CardHeader>
-                    <CardContent>
-                      <p className="text-sm text-white/80 text-center font-['Zen_Old_Mincho']">
-                        {step.output}
-                      </p>
-                    </CardContent>
-                  </Card>
+                      <div className="space-y-3">
+                        <div className="flex justify-center">
+                          <Badge variant="default" className="w-8 h-8 rounded-full flex items-center justify-center bg-white text-black">
+                            {step.no}
+                          </Badge>
+                        </div>
+                        <h3 className="text-lg font-['Zen_Old_Mincho'] text-white text-center" dangerouslySetInnerHTML={{ __html: step.name }} />
+                        <p className="text-sm text-white/80 text-center font-['Zen_Old_Mincho']">
+                          {step.output}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
                 </div>
                 
                 {/* Arrow for desktop */}

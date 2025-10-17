@@ -1,7 +1,6 @@
 import { loadSite } from '@/lib/content'
 import { Header } from '@/components/sections/header'
-import { Hero } from '@/components/sections/hero'
-import { Highlights } from '@/components/sections/highlights'
+import { HeroHighlights } from '@/components/sections/hero-highlights'
 import { Services } from '@/components/sections/services'
 import { Process } from '@/components/sections/process'
 import PricingSection4 from '@/components/ui/pricing-section-4'
@@ -15,8 +14,7 @@ export default function HomePage() {
     <div className="min-h-screen bg-background">
       <Header navigation={site.navigation} />
       <main>
-        <Hero hero={site.home.hero} />
-        <Highlights highlights={site.home.highlights} />
+        <HeroHighlights hero={site.home.hero} highlights={site.home.highlights} />
         <Services services={site.services} />
         <Process process={site.process} />
         <PricingSection4 />
