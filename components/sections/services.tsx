@@ -23,7 +23,7 @@ export function Services({ services }: ServicesProps) {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4 font-['Zen_Old_Mincho']">
+          <h2 className="text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl mb-4 font-['Zen_Old_Mincho']">
             {services.title}
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto font-['Zen_Old_Mincho']">

@@ -129,7 +129,7 @@ export default function PricingSection4() {
       </TimelineContent>
 
       <article className="text-center mb-6 pt-32 max-w-3xl mx-auto space-y-2 relative z-50 px-4">
-        <h2 className="text-4xl font-medium text-white font-['Zen_Old_Mincho']">
+        <h2 className="text-5xl font-medium text-white sm:text-6xl lg:text-7xl font-['Zen_Old_Mincho']">
           <VerticalCutReveal
             splitBy="words"
             staggerDuration={0.15}
