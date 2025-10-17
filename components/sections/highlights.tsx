@@ -1,6 +1,7 @@
 "use client"
 
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
+import { BeamsBackground } from '@/components/ui/beams-background'
 import { Workflow, DollarSign, BarChart3 } from 'lucide-react'
 import { motion } from 'framer-motion'
 import type { SiteData } from '@/lib/content'
@@ -11,7 +12,7 @@ interface HighlightsProps {
 
 export function Highlights({ highlights }: HighlightsProps) {
   return (
-    <section className="py-20 bg-background">
+    <BeamsBackground intensity="subtle" className="py-20">
       <div className="container">
         <motion.div 
           className="text-center mb-16"
@@ -20,7 +21,7 @@ export function Highlights({ highlights }: HighlightsProps) {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl font-['Zen_Old_Mincho']">
+          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl font-['Zen_Old_Mincho'] text-white">
             {highlights.title}
           </h2>
         </motion.div>
@@ -38,17 +39,17 @@ export function Highlights({ highlights }: HighlightsProps) {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
               >
-                <Card className="h-full">
+                <Card className="h-full bg-white/10 backdrop-blur-sm border-white/20">
                   <CardHeader>
                     <div className="flex justify-center mb-4">
-                      <div className="p-3 rounded-full bg-primary/10">
-                        <Icon className="h-8 w-8 text-primary" />
+                      <div className="p-3 rounded-full bg-primary/20">
+                        <Icon className="h-8 w-8 text-white" />
                       </div>
                     </div>
-                    <CardTitle className="text-xl font-['Zen_Old_Mincho']">{item.title}</CardTitle>
+                    <CardTitle className="text-xl font-['Zen_Old_Mincho'] text-white">{item.title}</CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-muted-foreground font-['Zen_Old_Mincho']">{item.text}</p>
+                    <p className="text-white/80 font-['Zen_Old_Mincho']">{item.text}</p>
                   </CardContent>
                 </Card>
               </motion.div>
@@ -56,7 +57,7 @@ export function Highlights({ highlights }: HighlightsProps) {
           })}
         </div>
       </div>
-    </section>
+    </BeamsBackground>
   )
 }
 
