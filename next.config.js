@@ -1,47 +1,44 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  // パフォーマンス最適化設定
+  experimental: {
+    optimizeCss: true,
+    optimizePackageImports: ['lucide-react', 'framer-motion', '@tsparticles/react'],
+  },
+  
+  // 画像最適化
   images: {
+    formats: ['image/webp', 'image/avif'],
+    minimumCacheTTL: 60,
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: 's0.wp.com',
-        port: '',
-        pathname: '/mshots/v1/**',
-      },
-      {
-        protocol: 'https',
-        hostname: 'via.placeholder.com',
-        port: '',
-        pathname: '/**',
-      },
-      {
-        protocol: 'https',
         hostname: 'images.unsplash.com',
-        port: '',
-        pathname: '/**',
       },
     ],
-    formats: ['image/webp', 'image/avif'],
-    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
-    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
-    minimumCacheTTL: 60,
-    dangerouslyAllowSVG: false,
-    unoptimized: false,
   },
-  // 静的ファイルの配信設定を追加
-  async headers() {
-    return [
-      {
-        source: '/images/:path*',
-        headers: [
-          {
-            key: 'Cache-Control',
-            value: 'public, max-age=31536000, immutable',
-          },
-        ],
-      },
-    ]
+
+  // コンパイル最適化
+  compiler: {
+    removeConsole: process.env.NODE_ENV === 'production',
   },
+
+  // バンドル最適化
+  webpack: (config, { isServer }) => {
+    if (!isServer) {
+      config.resolve.fallback = {
+        ...config.resolve.fallback,
+        fs: false,
+      };
+    }
+    return config;
+  },
+
+  // 圧縮
+  compress: true,
+  
+  // 静的エクスポート最適化
+  output: 'standalone',
 }
 
 module.exports = nextConfig

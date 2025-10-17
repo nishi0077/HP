@@ -9,18 +9,18 @@ interface FooterProps {
 
 export function Footer({ footer, navigation, site }: FooterProps) {
   return (
-    <footer className="bg-background border-t">
+    <footer className="bg-black border-t border-gray-800">
       <div className="container py-12">
         <div className="grid gap-8 md:grid-cols-4">
           {/* Brand */}
           <div className="space-y-4">
             <Link href="/" className="flex items-center space-x-2">
-              <span className="text-xl font-bold">{navigation.logo_text}</span>
+              <span className="text-xl font-bold text-white">{navigation.logo_text}</span>
             </Link>
-            <p className="text-sm text-muted-foreground">
+            <p className="text-sm text-white/80">
               {site.brand.tagline}
             </p>
-            <div className="space-y-1 text-sm text-muted-foreground">
+            <div className="space-y-1 text-sm text-white/80">
               <p>{site.brand.email}</p>
               <p>{site.brand.address}</p>
             </div>
@@ -28,7 +28,7 @@ export function Footer({ footer, navigation, site }: FooterProps) {
 
           {/* Quick Links */}
           <div className="space-y-4">
-            <h4 className="font-semibold">クイックリンク</h4>
+            <h4 className="font-semibold text-white">クイックリンク</h4>
             <ul className="space-y-2">
               {footer.quick_links.map((link) => {
                 const href = navigation.links.find(nav => nav.label === link)?.href || '/'
@@ -36,7 +36,7 @@ export function Footer({ footer, navigation, site }: FooterProps) {
                   <li key={link}>
                     <Link
                       href={href}
-                      className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+                      className="text-sm text-white/80 hover:text-white transition-colors"
                     >
                       {link}
                     </Link>
@@ -48,13 +48,13 @@ export function Footer({ footer, navigation, site }: FooterProps) {
 
           {/* Legal */}
           <div className="space-y-4">
-            <h4 className="font-semibold">法的情報</h4>
+            <h4 className="font-semibold text-white">法的情報</h4>
             <ul className="space-y-2">
               {footer.legal.map((legal) => (
                 <li key={legal}>
                   <Link
                     href={`/${legal.toLowerCase().replace(/\s+/g, '-')}`}
-                    className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+                    className="text-sm text-white/80 hover:text-white transition-colors"
                   >
                     {legal}
                   </Link>
@@ -65,18 +65,18 @@ export function Footer({ footer, navigation, site }: FooterProps) {
 
           {/* Contact */}
           <div className="space-y-4">
-            <h4 className="font-semibold">お問い合わせ</h4>
+            <h4 className="font-semibold text-white">お問い合わせ</h4>
             <Link
               href="/book"
-              className="text-sm text-primary hover:text-primary/80 transition-colors"
+              className="text-sm text-white hover:text-white/80 transition-colors"
             >
               相談を予約する
             </Link>
           </div>
         </div>
 
-        <div className="border-t mt-8 pt-8 text-center">
-          <p className="text-sm text-muted-foreground">
+        <div className="border-t border-gray-800 mt-8 pt-8 text-center">
+          <p className="text-sm text-white/80">
             {footer.copyright.text}
           </p>
         </div>

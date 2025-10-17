@@ -1,7 +1,7 @@
 import { loadSite } from '@/lib/content'
 import { Header } from '@/components/sections/header'
 import { ContactForm } from '@/components/contact-form'
-import { Footer } from '@/components/ui/footer-section'
+import { Footer } from '@/components/sections/footer'
 
 export default function BookPage() {
   const site = loadSite()
@@ -29,7 +29,7 @@ export default function BookPage() {
           </div>
         </section>
       </main>
-      <Footer />
+      <Footer footer={site.footer} navigation={site.navigation} site={site.site} />
     </div>
   )
 }

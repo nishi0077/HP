@@ -23,10 +23,10 @@ export function Services({ services }: ServicesProps) {
           background="transparent"
           minSize={0.4}
           maxSize={1.2}
-          particleDensity={800}
+          particleDensity={400}
           className="w-full h-full"
           particleColor="#FFFFFF"
-          speed={2}
+          speed={1}
         />
       </div>
       
@@ -80,7 +80,7 @@ export function Services({ services }: ServicesProps) {
                     </div>
                   ))}
                 </div>
-                <Button variant="outline" size="sm" asChild className="border-white/30 text-white hover:bg-white/10">
+                <Button variant="outline" size="sm" asChild className="border-white/30 text-black bg-white hover:bg-white/80">
                   <Link href="/book">{service.cta}</Link>
                 </Button>
                 </CardContent>

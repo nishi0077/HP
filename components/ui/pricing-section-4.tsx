@@ -14,7 +14,7 @@ const plans = [
     nameJa: "土台と導線設計を整備したい方向け",
     price: 100000,
     setupFee: 100000,
-    buttonText: "無料相談はこちら",
+    buttonText: "お問い合わせ",
     buttonVariant: "outline" as const,
     includes: [
       "含まれる内容:",
@@ -29,7 +29,7 @@ const plans = [
     nameJa: "広告とLPを一体で最適化",
     price: 300000,
     setupFee: 100000,
-    buttonText: "無料相談はこちら",
+    buttonText: "お問い合わせ",
     buttonVariant: "default" as const,
     popular: true,
     includes: [
@@ -45,7 +45,7 @@ const plans = [
     nameJa: "複数チャネルで拡大",
     price: 500000,
     setupFee: 200000,
-    buttonText: "無料相談はこちら",
+    buttonText: "お問い合わせ",
     buttonVariant: "outline" as const,
     includes: [
       "含まれる内容:",
