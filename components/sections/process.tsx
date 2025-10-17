@@ -12,7 +12,7 @@ export function Process({ process }: ProcessProps) {
     <section className="py-20 bg-background">
       <div className="container">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl font-['Zen_Old_Mincho']">
+          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl font-['Zen_Old_Mincho']">
             {process.title}
           </h2>
         </div>

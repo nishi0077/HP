@@ -20,7 +20,7 @@ export function Highlights({ highlights }: HighlightsProps) {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl font-['Zen_Old_Mincho']">
+          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl font-['Zen_Old_Mincho']">
             {highlights.title}
           </h2>
         </motion.div>

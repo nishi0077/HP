@@ -11,7 +11,7 @@ export function CtaBanner({ cta }: CtaBannerProps) {
     <section className="py-20 bg-primary text-primary-foreground">
       <div className="container">
         <div className="text-center space-y-6">
-          <h2 className="text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl font-['Zen_Old_Mincho']">
+          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl font-['Zen_Old_Mincho']">
             {cta.banner.heading}
           </h2>
           <p className="text-lg opacity-90 max-w-2xl mx-auto">
