@@ -28,11 +28,11 @@ export function Hero({ hero }: HeroProps) {
         >
           <div className="space-y-6">
             <h1 
-              className="text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl" 
+              className="text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl font-['IBM_Plex_Sans_JP']" 
               dangerouslySetInnerHTML={{ __html: hero.heading }}
             />
             
-            <p className="mx-auto max-w-2xl text-lg text-white/90 sm:text-xl">
+            <p className="mx-auto max-w-2xl text-lg text-white/90 sm:text-xl font-['IBM_Plex_Sans_JP']">
               {hero.subheading}
             </p>
 
