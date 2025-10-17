@@ -3,6 +3,7 @@ import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Sparkles as SparklesComp } from "@/components/ui/sparkles";
 import { TimelineContent } from "@/components/ui/timeline-animation";
 import { VerticalCutReveal } from "@/components/ui/vertical-cut-reveal";
+import { InteractiveHoverButton } from "@/components/ui/interactive-hover-button";
 import { cn } from "@/lib/utils";
 import NumberFlow from "@number-flow/react";
 import { useRef } from "react";
@@ -13,7 +14,7 @@ const plans = [
     nameJa: "土台と導線設計を整備したい方向け",
     price: 100000,
     setupFee: 100000,
-    buttonText: "お問い合わせ",
+    buttonText: "無料相談はこちら",
     buttonVariant: "outline" as const,
     includes: [
       "含まれる内容:",
@@ -28,7 +29,7 @@ const plans = [
     nameJa: "広告とLPを一体で最適化",
     price: 300000,
     setupFee: 100000,
-    buttonText: "お問い合わせ",
+    buttonText: "無料相談はこちら",
     buttonVariant: "default" as const,
     popular: true,
     includes: [
@@ -44,7 +45,7 @@ const plans = [
     nameJa: "複数チャネルで拡大",
     price: 500000,
     setupFee: 200000,
-    buttonText: "お問い合わせ",
+    buttonText: "無料相談はこちら",
     buttonVariant: "outline" as const,
     includes: [
       "含まれる内容:",
@@ -215,17 +216,12 @@ export default function PricingSection4() {
               </CardHeader>
 
               <CardContent className="pt-0">
-                <button
-                  className={`w-full mb-6 p-4 text-xl rounded-xl font-['Zen_Old_Mincho'] ${
-                    plan.popular
-                      ? "bg-gradient-to-t from-blue-500 to-blue-600 shadow-lg shadow-blue-800 border border-blue-500 text-white"
-                      : plan.buttonVariant === "outline"
-                        ? "bg-gradient-to-t from-neutral-950 to-neutral-600 shadow-lg shadow-neutral-900 border border-neutral-800 text-white"
-                        : ""
-                  }`}
-                >
-                  {plan.buttonText}
-                </button>
+                <div className="mb-6 flex justify-center">
+                  <InteractiveHoverButton 
+                    text={plan.buttonText} 
+                    className="w-48 font-['Zen_Old_Mincho']"
+                  />
+                </div>
 
                 <div className="space-y-3 pt-4 border-t border-neutral-700">
                   <h4 className="font-medium text-base mb-3 font-['Zen_Old_Mincho']">

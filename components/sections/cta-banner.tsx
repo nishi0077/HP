@@ -1,5 +1,6 @@
 import { Button } from '@/components/ui/button'
 import Link from 'next/link'
+import { InteractiveHoverButton } from '@/components/ui/interactive-hover-button'
 import type { SiteData } from '@/lib/content'
 
 interface CtaBannerProps {
@@ -17,17 +18,15 @@ export function CtaBanner({ cta }: CtaBannerProps) {
           <p className="text-lg opacity-90 max-w-2xl mx-auto">
             {cta.banner.subtext}
           </p>
-          <Button size="lg" variant="secondary" asChild>
-            {cta.banner.button.href.startsWith('http') ? (
-              <a href={cta.banner.button.href} target="_blank" rel="noopener noreferrer">
-                {cta.banner.button.label}
-              </a>
-            ) : (
-              <Link href={cta.banner.button.href}>
-                {cta.banner.button.label}
-              </Link>
-            )}
-          </Button>
+          {cta.banner.button.href.startsWith('http') ? (
+            <a href={cta.banner.button.href} target="_blank" rel="noopener noreferrer">
+              <InteractiveHoverButton text={cta.banner.button.label} className="w-48" />
+            </a>
+          ) : (
+            <Link href={cta.banner.button.href}>
+              <InteractiveHoverButton text={cta.banner.button.label} className="w-48" />
+            </Link>
+          )}
         </div>
       </div>
     </section>

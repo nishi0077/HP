@@ -3,6 +3,7 @@
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
+import { InteractiveHoverButton } from '@/components/ui/interactive-hover-button'
 import { motion } from 'framer-motion'
 import type { SiteData } from '@/lib/content'
 
@@ -37,17 +38,15 @@ export function Hero({ hero }: HeroProps) {
             </p>
 
             <div className="flex flex-col gap-4 sm:flex-row sm:justify-center">
-              <Button size="lg" asChild>
-                {hero.primary_cta.href.startsWith('http') ? (
-                  <a href={hero.primary_cta.href} target="_blank" rel="noopener noreferrer">
-                    {hero.primary_cta.label}
-                  </a>
-                ) : (
-                  <Link href={hero.primary_cta.href}>
-                    {hero.primary_cta.label}
-                  </Link>
-                )}
-              </Button>
+              {hero.primary_cta.href.startsWith('http') ? (
+                <a href={hero.primary_cta.href} target="_blank" rel="noopener noreferrer">
+                  <InteractiveHoverButton text={hero.primary_cta.label} className="w-48" />
+                </a>
+              ) : (
+                <Link href={hero.primary_cta.href}>
+                  <InteractiveHoverButton text={hero.primary_cta.label} className="w-48" />
+                </Link>
+              )}
               <Button variant="outline" size="lg" asChild>
                 <Link href={hero.secondary_cta.href}>
                   {hero.secondary_cta.label}
