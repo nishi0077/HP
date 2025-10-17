@@ -3,7 +3,7 @@ import { Header } from '@/components/sections/header'
 import { PageHero } from '@/components/sections/page-hero'
 import { Portfolio } from '@/components/sections/portfolio'
 import { CtaBanner } from '@/components/sections/cta-banner'
-import { Footer } from '@/components/sections/footer'
+import { Footer } from '@/components/ui/footer-section'
 
 export default function CasesPage() {
   const site = loadSite()
@@ -20,7 +20,7 @@ export default function CasesPage() {
         <Portfolio portfolio={site.portfolio} />
         <CtaBanner cta={site.cta} />
       </main>
-      <Footer footer={site.footer} navigation={site.navigation} site={site.site} />
+      <Footer />
     </div>
   )
 }

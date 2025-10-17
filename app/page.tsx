@@ -5,7 +5,7 @@ import { Services } from '@/components/sections/services'
 import { Process } from '@/components/sections/process'
 import PricingSection4 from '@/components/ui/pricing-section-4'
 import { CtaBanner } from '@/components/sections/cta-banner'
-import { Footer } from '@/components/sections/footer'
+import { Footer } from '@/components/ui/footer-section'
 
 export default function HomePage() {
   const site = loadSite()
@@ -20,7 +20,7 @@ export default function HomePage() {
         <PricingSection4 />
         <CtaBanner cta={site.cta} />
       </main>
-      <Footer footer={site.footer} navigation={site.navigation} site={site.site} />
+      <Footer />
     </div>
   )
 }
