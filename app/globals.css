@@ -86,10 +86,18 @@
   }
   body {
     @apply bg-background text-foreground;
-    font-family: 'IBM Plex Sans JP', sans-serif;
+    font-family: var(--font-ibm-plex-sans-jp), 'IBM Plex Sans JP', 'Hiragino Sans', 'Yu Gothic', 'Meiryo', sans-serif;
   }
   html {
+    font-family: var(--font-ibm-plex-sans-jp), 'IBM Plex Sans JP', 'Hiragino Sans', 'Yu Gothic', 'Meiryo', sans-serif;
+  }
+  
+  /* フォントテスト用スタイル */
+  .font-test {
     font-family: 'IBM Plex Sans JP', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
   }
 }
 

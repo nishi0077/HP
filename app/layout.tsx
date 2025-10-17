@@ -9,6 +9,7 @@ const ibmPlexSansJP = IBM_Plex_Sans_JP({
   subsets: ['latin'],
   display: 'swap',
   variable: '--font-ibm-plex-sans-jp',
+  preload: true,
 })
 
 export function generateMetadata(): Metadata {
@@ -34,6 +35,23 @@ export function generateMetadata(): Metadata {
       index: true,
       follow: true,
     },
+    other: {
+      'link': [
+        {
+          rel: 'preconnect',
+          href: 'https://fonts.googleapis.com',
+        },
+        {
+          rel: 'preconnect',
+          href: 'https://fonts.gstatic.com',
+          crossOrigin: 'anonymous',
+        },
+        {
+          rel: 'stylesheet',
+          href: 'https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+JP:wght@300;400;500;700&display=swap',
+        },
+      ],
+    },
   }
 }
 
@@ -45,9 +63,11 @@ export default function RootLayout({
   return (
     <html lang="ja" className={ibmPlexSansJP.variable}>
       <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet" />
       </head>
-      <body className={ibmPlexSansJP.className}>
+      <body className={`${ibmPlexSansJP.className} ${ibmPlexSansJP.variable}`}>
         {children}
         
         {/* GA4 */}
