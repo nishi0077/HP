@@ -35,23 +35,6 @@ export function generateMetadata(): Metadata {
       index: true,
       follow: true,
     },
-    other: {
-      'link': [
-        {
-          rel: 'preconnect',
-          href: 'https://fonts.googleapis.com',
-        },
-        {
-          rel: 'preconnect',
-          href: 'https://fonts.gstatic.com',
-          crossOrigin: 'anonymous',
-        },
-        {
-          rel: 'stylesheet',
-          href: 'https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+JP:wght@300;400;500;700&display=swap',
-        },
-      ],
-    },
   }
 }
 
@@ -65,7 +48,7 @@ export default function RootLayout({
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+JP:wght@300;400;500;700&family=Zen+Old+Mincho:wght@400;500;700;900&display=swap" rel="stylesheet" />
       </head>
       <body className={`${ibmPlexSansJP.className} ${ibmPlexSansJP.variable}`}>
         {children}

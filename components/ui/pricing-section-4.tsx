@@ -129,7 +129,7 @@ export default function PricingSection4() {
       </TimelineContent>
 
       <article className="text-center mb-6 pt-32 max-w-3xl mx-auto space-y-2 relative z-50 px-4">
-        <h2 className="text-4xl font-medium text-white">
+        <h2 className="text-4xl font-medium text-white font-['Zen_Old_Mincho']">
           <VerticalCutReveal
             splitBy="words"
             staggerDuration={0.15}
@@ -186,17 +186,17 @@ export default function PricingSection4() {
               <CardHeader className="text-left">
                 <div className="flex justify-between items-start">
                   <div>
-                    <h3 className="text-3xl mb-2">{plan.name} Plan</h3>
-                    <p className="text-sm text-gray-300 mb-4">{plan.nameJa}</p>
+                    <h3 className="text-3xl mb-2 font-['Zen_Old_Mincho']">{plan.name} Plan</h3>
+                    <p className="text-sm text-gray-300 mb-4 font-['Zen_Old_Mincho']">{plan.nameJa}</p>
                   </div>
                   {plan.popular && (
-                    <span className="bg-blue-600 text-white text-xs px-3 py-1 rounded-full h-fit whitespace-nowrap">
+                    <span className="bg-blue-600 text-white text-xs px-3 py-1 rounded-full h-fit whitespace-nowrap font-['Zen_Old_Mincho']">
                       人気
                     </span>
                   )}
                 </div>
                 <div className="flex items-baseline">
-                  <span className="text-4xl font-semibold">
+                  <span className="text-4xl font-semibold font-['Zen_Old_Mincho']">
                     ¥
                     <NumberFlow
                       value={plan.price}
@@ -204,19 +204,19 @@ export default function PricingSection4() {
                         notation: "standard",
                         maximumFractionDigits: 0,
                       }}
-                      className="text-4xl font-semibold"
+                      className="text-4xl font-semibold font-['Zen_Old_Mincho']"
                     />
                   </span>
-                  <span className="text-gray-300 ml-1">/月</span>
+                  <span className="text-gray-300 ml-1 font-['Zen_Old_Mincho']">/月</span>
                 </div>
-                <p className="text-sm text-gray-400 mt-1">
+                <p className="text-sm text-gray-400 mt-1 font-['Zen_Old_Mincho']">
                   初期費用: ¥{plan.setupFee.toLocaleString()}
                 </p>
               </CardHeader>
 
               <CardContent className="pt-0">
                 <button
-                  className={`w-full mb-6 p-4 text-xl rounded-xl ${
+                  className={`w-full mb-6 p-4 text-xl rounded-xl font-['Zen_Old_Mincho'] ${
                     plan.popular
                       ? "bg-gradient-to-t from-blue-500 to-blue-600 shadow-lg shadow-blue-800 border border-blue-500 text-white"
                       : plan.buttonVariant === "outline"
@@ -228,7 +228,7 @@ export default function PricingSection4() {
                 </button>
 
                 <div className="space-y-3 pt-4 border-t border-neutral-700">
-                  <h4 className="font-medium text-base mb-3">
+                  <h4 className="font-medium text-base mb-3 font-['Zen_Old_Mincho']">
                     {plan.includes[0]}
                   </h4>
                   <ul className="space-y-2">
@@ -238,7 +238,7 @@ export default function PricingSection4() {
                         className="flex items-start gap-2"
                       >
                         <span className="h-2.5 w-2.5 bg-neutral-500 rounded-full grid place-content-center mt-1.5 flex-shrink-0"></span>
-                        <span className="text-sm text-gray-300">{feature}</span>
+                        <span className="text-sm text-gray-300 font-['Zen_Old_Mincho']">{feature}</span>
                       </li>
                     ))}
                   </ul>

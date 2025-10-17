@@ -20,7 +20,7 @@ export function Highlights({ highlights }: HighlightsProps) {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
+          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl font-['Zen_Old_Mincho']">
             {highlights.title}
           </h2>
         </motion.div>
@@ -45,10 +45,10 @@ export function Highlights({ highlights }: HighlightsProps) {
                         <Icon className="h-8 w-8 text-primary" />
                       </div>
                     </div>
-                    <CardTitle className="text-xl">{item.title}</CardTitle>
+                    <CardTitle className="text-xl font-['Zen_Old_Mincho']">{item.title}</CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-muted-foreground">{item.text}</p>
+                    <p className="text-muted-foreground font-['Zen_Old_Mincho']">{item.text}</p>
                   </CardContent>
                 </Card>
               </motion.div>

@@ -12,7 +12,7 @@ export function Process({ process }: ProcessProps) {
     <section className="py-20 bg-background">
       <div className="container">
         <div className="text-center mb-16">
-          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
+          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl font-['Zen_Old_Mincho']">
             {process.title}
           </h2>
         </div>
@@ -34,10 +34,13 @@ export function Process({ process }: ProcessProps) {
                     <Badge variant="default" className="w-8 h-8 rounded-full mx-auto mb-4 flex items-center justify-center">
                       {step.no}
                     </Badge>
-                    <CardTitle className="text-lg">{step.name}</CardTitle>
+                    <CardTitle 
+                      className="text-lg font-['Zen_Old_Mincho']" 
+                      dangerouslySetInnerHTML={{ __html: step.name }}
+                    />
                   </CardHeader>
                   <CardContent>
-                    <p className="text-sm text-muted-foreground text-center">
+                    <p className="text-sm text-muted-foreground text-center font-['Zen_Old_Mincho']">
                       {step.output}
                     </p>
                   </CardContent>

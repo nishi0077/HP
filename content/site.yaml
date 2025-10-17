@@ -74,7 +74,7 @@ process:
   steps:
     - { no: 1, name: ヒアリング/現状診断, output: 目標/KPI、制約条件、測定環境の棚卸し }
     - { no: 2, name: 戦略/ファネル設計, output: ペルソナ/便益/RTB、導線と指標の設計図 }
-    - { no: 3, name: クリエイティブ/LP制作, output: ワイヤー、コピー、デザイン/実装、タグ設計 }
+    - { no: 3, name: クリエイティブ<br/>LP制作, output: ワイヤー、コピー、デザイン/実装、タグ設計 }
     - { no: 4, name: 計測/運用開始, output: CAPI/GA4連携、キャンペーン設計、初期学習 }
     - { no: 5, name: 週次レポート/改善, output: クリエ/入札/LPのAB改善、次月計画 }
 pricing:

@@ -23,10 +23,10 @@ export function Services({ services }: ServicesProps) {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4">
+          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4 font-['Zen_Old_Mincho']">
             {services.title}
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto font-['Zen_Old_Mincho']">
             {services.intro}
           </p>
         </motion.div>
@@ -51,14 +51,14 @@ export function Services({ services }: ServicesProps) {
                         <Icon className="h-6 w-6 text-primary" />
                       </div>
                     </div>
-                    <CardTitle className="text-lg">{service.name}</CardTitle>
+                    <CardTitle className="text-lg font-['Zen_Old_Mincho']">{service.name}</CardTitle>
                   </CardHeader>
                 <CardContent className="flex-1 flex flex-col justify-between">
                 <div className="space-y-3 mb-6">
                   {service.bullets.map((bullet, index) => (
                     <div key={index} className="flex items-start gap-2">
                       <div className="h-1.5 w-1.5 rounded-full bg-primary mt-2 shrink-0" />
-                      <p className="text-sm text-muted-foreground">{bullet}</p>
+                      <p className="text-sm text-muted-foreground font-['Zen_Old_Mincho']">{bullet}</p>
                     </div>
                   ))}
                 </div>

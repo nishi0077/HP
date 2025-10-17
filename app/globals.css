@@ -86,10 +86,10 @@
   }
   body {
     @apply bg-background text-foreground;
-    font-family: var(--font-ibm-plex-sans-jp), 'IBM Plex Sans JP', 'Hiragino Sans', 'Yu Gothic', 'Meiryo', sans-serif;
+    font-family: 'Zen Old Mincho', 'Hiragino Mincho ProN', 'Yu Mincho', 'Meiryo', serif;
   }
   html {
-    font-family: var(--font-ibm-plex-sans-jp), 'IBM Plex Sans JP', 'Hiragino Sans', 'Yu Gothic', 'Meiryo', sans-serif;
+    font-family: 'Zen Old Mincho', 'Hiragino Mincho ProN', 'Yu Mincho', 'Meiryo', serif;
   }
   
   /* フォントテスト用スタイル */

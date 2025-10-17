@@ -15,7 +15,7 @@ export function Faq({ faq }: FaqProps) {
     <section className="py-20 bg-muted/50">
       <div className="container">
         <div className="text-center mb-16">
-          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
+          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl font-['Zen_Old_Mincho']">
             {faq.title}
           </h2>
         </div>
