@@ -5,7 +5,7 @@ import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
 import { InteractiveHoverButton } from '@/components/ui/interactive-hover-button'
 import { BeamsBackground } from '@/components/ui/beams-background'
-import { motion } from 'framer-motion'
+import { motion } from 'motion/react'
 import type { SiteData } from '@/lib/content'
 
 interface HeroProps {
@@ -73,5 +73,3 @@ export function Hero({ hero }: HeroProps) {
     </BeamsBackground>
   )
 }
-
-

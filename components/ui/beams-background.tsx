@@ -41,19 +41,13 @@ function createBeam(width: number, height: number): Beam {
 
 export function BeamsBackground({
     className,
-    children,
     intensity = "strong",
+    children,
 }: AnimatedGradientBackgroundProps) {
     const canvasRef = useRef<HTMLCanvasElement>(null);
     const beamsRef = useRef<Beam[]>([]);
     const animationFrameRef = useRef<number>(0);
     const MINIMUM_BEAMS = 20;
-
-    const opacityMap = {
-        subtle: 0.7,
-        medium: 0.85,
-        strong: 1,
-    };
 
     useEffect(() => {
         const canvas = canvasRef.current;
@@ -61,6 +55,12 @@ export function BeamsBackground({
 
         const ctx = canvas.getContext("2d");
         if (!ctx) return;
+
+        const opacityMap = {
+            subtle: 0.7,
+            medium: 0.85,
+            strong: 1,
+        };
 
         const updateCanvasSize = () => {
             const dpr = window.devicePixelRatio || 1;
@@ -170,7 +170,7 @@ export function BeamsBackground({
     return (
         <div
             className={cn(
-                "relative w-full overflow-hidden bg-neutral-950",
+                "relative min-h-screen w-full overflow-hidden bg-neutral-950",
                 className
             )}
         >

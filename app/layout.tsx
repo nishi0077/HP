@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { IBM_Plex_Sans_JP } from 'next/font/google'
+import { IBM_Plex_Sans_JP, Zen_Old_Mincho } from 'next/font/google'
 import Script from 'next/script'
 import './globals.css'
 import { loadSite } from '@/lib/content'
@@ -9,6 +9,14 @@ const ibmPlexSansJP = IBM_Plex_Sans_JP({
   subsets: ['latin'],
   display: 'swap',
   variable: '--font-ibm-plex-sans-jp',
+  preload: true,
+})
+
+const zenOldMincho = Zen_Old_Mincho({ 
+  weight: ['400', '500', '700', '900'],
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-zen-old-mincho',
   preload: true,
 })
 
@@ -44,13 +52,12 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="ja" className={ibmPlexSansJP.variable}>
+    <html lang="ja" className={`${ibmPlexSansJP.variable} ${zenOldMincho.variable}`}>
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+JP:wght@300;400;500;700&family=Zen+Old+Mincho:wght@400;500;700;900&display=swap" rel="stylesheet" />
       </head>
-      <body className={`${ibmPlexSansJP.className} ${ibmPlexSansJP.variable}`}>
+      <body className={`${ibmPlexSansJP.className} ${ibmPlexSansJP.variable} ${zenOldMincho.variable}`}>
         {children}
         
         {/* GA4 */}

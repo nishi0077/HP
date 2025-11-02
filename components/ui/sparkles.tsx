@@ -5,7 +5,7 @@ import Particles, { initParticlesEngine } from "@tsparticles/react";
 import type { Container, SingleOrMultiple } from "@tsparticles/engine";
 import { loadSlim } from "@tsparticles/slim";
 import { cn } from "@/lib/utils";
-import { motion, useAnimation } from "framer-motion";
+import { motion, useAnimation } from "motion/react";
 
 type ParticlesProps = {
   id?: string;
@@ -69,7 +69,8 @@ export const SparklesCore = (props: ParticlesProps) => {
               zIndex: 1,
             },
 
-            fpsLimit: 120,
+            // パフォーマンス最適化: FPS制限を下げる（120 → 60）
+            fpsLimit: 60,
             interactivity: {
               events: {
                 onClick: {
@@ -203,9 +204,10 @@ export const SparklesCore = (props: ParticlesProps) => {
                 },
                 random: false,
                 size: false,
+                // パフォーマンス最適化: 速度を低下させてCPU負荷を軽減
                 speed: {
-                  min: 0.1,
-                  max: 1,
+                  min: 0.05,
+                  max: 0.5,
                 },
                 spin: {
                   acceleration: 0,

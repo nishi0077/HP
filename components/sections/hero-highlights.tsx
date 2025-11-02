@@ -6,7 +6,7 @@ import { InteractiveHoverButton } from '@/components/ui/interactive-hover-button
 import { BeamsBackground } from '@/components/ui/beams-background'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Workflow, DollarSign, BarChart3 } from 'lucide-react'
-import { motion } from 'framer-motion'
+import { motion } from 'motion/react'
 import type { SiteData } from '@/lib/content'
 
 interface HeroHighlightsProps {

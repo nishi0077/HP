@@ -11,7 +11,7 @@ export function Footer({ footer, navigation, site }: FooterProps) {
   return (
     <footer className="bg-black border-t border-gray-800">
       <div className="container py-12">
-        <div className="grid gap-8 md:grid-cols-4">
+        <div className="grid gap-8 md:grid-cols-3 lg:grid-cols-4">
           {/* Brand */}
           <div className="space-y-4">
             <Link href="/" className="flex items-center space-x-2">
@@ -63,16 +63,6 @@ export function Footer({ footer, navigation, site }: FooterProps) {
             </ul>
           </div>
 
-          {/* Contact */}
-          <div className="space-y-4">
-            <h4 className="font-semibold text-white">お問い合わせ</h4>
-            <Link
-              href="/book"
-              className="text-sm text-white hover:text-white/80 transition-colors"
-            >
-              相談を予約する
-            </Link>
-          </div>
         </div>
 
         <div className="border-t border-gray-800 mt-8 pt-8 text-center">

@@ -17,22 +17,21 @@ navigation:
     - { label: サービス, href: "/services" }
     - { label: 価格, href: "/pricing" }
     - { label: 実績, href: "/cases" }
-    - { label: 私たちについて, href: "/about" }
-    - { label: FAQ, href: "/faq" }
-  cta: { label: 相談を予約, href: "/book" }
+    - { label: お問い合わせ, href: "/contact" }
+  cta: { label: 公式LINEで相談, href: "https://lin.ee/7IVLhKDH" }
 home:
   hero:
     heading: 売上に直結する<br>一貫型Webマーケティング
-    subheading: 戦略設計からLP・バナー制作、広告運用、SNS運用、計測改善まで。<br>分断をなくし、最短で成果へ。
-    primary_cta: { label: お問い合わせ, href: "/book" }
+    subheading: 滞りをなくし、最短で成果へ。
+    primary_cta: { label: 公式LINEで相談, href: "https://lin.ee/7IVLhKDH" }
     secondary_cta: { label: 実績を見る, href: "/cases" }
     trust_badges: []
   highlights:
     title: 選ばれる理由
     items:
-      - { title: 一人で完結, text: 高速でPDCAを回して改善しつつ、一貫した導線設計により高い成果を出すことができます。また、土日でも対応できるため、対応スピードと柔軟性を強みにしております。 }
-      - { title: 経営視点での利益重視, text: CPA(顧客1人あたり獲得する費用)だけでなくLTV/粗利を指標化し、成果を数値で支援。中長期的な目線でクライアントの利益向上に貢献します。そのため、一部Webマーケティングをオススメしない業界・職種には別の提案をさせて頂きます。 }
-      - { title: 分かりやすい報告, text: リテラシーが無い方でも理解できるように、専門用語をできるだけ使わずに理解できるレポート作成・定例報告を行います。事業がどのフェーズにいて、どこに向かっているのかをイメージすることが出来ます。ユーザーの感情に寄り添う「物語」で構成されています。 }
+      - { title: 一人で完結, text: 高速でPDCAを回して改善しつつ、一貫した導線設計により高い成果を出すことができます。土日でも対応できるため、対応スピードと柔軟性を保証。 }
+      - { title: 経営視点での利益重視, text: CPA、CVRといった数値だけでなくLTV/粗利を指標化し、利益ベースで話します。短期的な成果ではなく、長期的に走り続けられるよう提案。 }
+      - { title: 多角的にアプローチ, text: マーケティング戦略設計や広告運用、SNS、LP制作など幅広い領域をカバーしています。それによって俯瞰的な目線で施策を提案。 }
 services:
   title: サービス
   intro: 目的とKPIに合わせて、必要最小コストで最大の成果を設計します。
@@ -44,7 +43,7 @@ services:
         - 効果的な広告の作り方 - キャンペーン設計から配信まで
         - 成果の見える化 - どこから売上が来ているかを把握
         - クリエイティブの改善 - 画像や動画の効果測定と改善
-      cta: 見積を依頼
+      cta: 公式LINEで相談
     - slug: lp
       name: LP制作/改善
       bullets:
@@ -52,21 +51,21 @@ services:
         - 信頼性の向上 - お客様の声、実績、よくある質問
         - 成果の測定 - どこで離脱しているかを分析
         - 継続的な改善 - データに基づいたページの改善
-      cta: 相談する
+      cta: 公式LINEで相談
     - slug: banners
       name: バナー/動画クリエイティブ
       bullets:
         - お客様の段階に合わせた訴求 - 認知から購入まで
         - 反応の良いクリエイティブ - コメントや保存を促すデザイン
         - 広告とクリエイティブの連携 - 効果的な組み合わせ
-      cta: 制作を依頼
+      cta: 公式LINEで相談
     - slug: sns
       name: SNS運用（Instagram/TikTok/YouTube）
       bullets:
         - ブランド認知の向上 - 新規顧客の獲得と指名検索の促進
         - 魅力的なコンテンツ制作 - 月間テーマと週間スケジュール
         - 効果測定 - 保存数、コメント数、プロフィール訪問数
-      cta: 運用を相談
+      cta: 公式LINEで相談
 process:
   title: 進め方
   steps:
@@ -122,25 +121,26 @@ portfolio:
             
             「電気代削減診断×公式LINE刈り取り」によって最大効率でリストを獲得
             
-            **実施したこと**
-            1. Meta＆Google広告で接触回数を最大化
-            2. 広告・LP・診断と一貫した訴求
-            3. 公式LINE構築できちんと巻き取り
-            
-            **広告パフォーマンス**
-            • CTR 4.15% ／ CPC ¥66.67
-            • リンククリック数 1,552 ／ リーチ 100,856
-            • 合計で4件/月の成約 → 600万の粗利益
-            
-            **成果のポイント**
-            この数値は業界平均を大きく上回る成果です。一般的なクリック率は1〜2%が目安ですが今回は4.15%と倍以上。
-            
-            **広告後の導線も勝負を分けます**
-            「クリエイティブ→LP→診断→公式LINE」まで一貫した訴求が必須。多くの企業は「マーケティング局」と「クリエイティブ局」が別であるため出来ていないところが多いです。
+            **広告成果**
+            **1件/月の成約→4,000万円の売上**
           category: 広告運用
           tech: [Meta広告, Google広告, LP制作, 公式LINE構築, 診断フォーム, CAPI実装]
           deliverables: [広告キャンペーン設計, クリエイティブ制作, 診断システム, LINE自動化]
           image: /images/creative/solar-battery-creative1.png
+        - title: 銀座Xiaoma
+          subtitle: 広告運用実績
+          description: |
+            **相談内容**
+            • 広告運用の構築
+            • マーケティング戦略設計
+            
+            **成果**
+            **東京で+2,148%の改善**
+            **福岡で+3,322%の改善**
+          category: 広告運用
+          tech: [広告戦略, Meta広告, Google広告]
+          deliverables: [マーケティング戦略設計, 広告キャンペーン設計, キーワード設計]
+          image: /images/marketing/銀座Xiaoma.jpg
         - title: 地方工務店
           subtitle: SNS運用実績
           description: |
@@ -151,13 +151,9 @@ portfolio:
             • 広告にて認知&リードの獲得
             • 内製化支援
             
-            **実施したこと**
-            1. 世界観の構築・アルゴリズムの理解
-            2. SNS設計で"感情導線"を構築
-            3. 都会では使えない地方での広告戦略
-            
             **数値パフォーマンス**
-            • 広告を使いながらフォロワー1.5万人
+            **Meta広告を用いてフォロワー1.5万人**
+            **2件/月の成約→8,000万円の売上**
           category: SNS運用
           tech: [Instagram運用, 広告戦略, 内製化支援, 地方マーケティング]
           deliverables: [SNS戦略, 投稿運用, 広告運用, 内製化支援]
@@ -166,28 +162,44 @@ portfolio:
       works:
         - title: 株式会社AS IT IS
           subtitle: 住宅業界（toC）
-          description: 自然素材を活かした住宅設計・施工
+          description: |
+            自然素材を活かした住宅設計・施工
+            
+            **成果**
+            **広告費50万円で1件成約、売上4,000万円**
           url: https://asitis.ibaraki.jp/
           category: Web制作
           tech: [マーケティング戦略, 広告運用, SNS運用]
           image: /images/marketing/as-it-is1.png
         - title: ReBORN GROUP株式会社
           subtitle: 住宅エネルギー業界（toC toB）
-          description: 年商20億の急成長企業、太陽光/蓄電池の販売・セールスマーケティング事業
+          description: |
+            年商20億の急成長企業、太陽光/蓄電池の販売・セールスマーケティング事業
+            
+            **成果**
+            **新規事業の立ち上げ→成約通算15件**
           url: https://reborngroup.me/
           category: Web制作
           tech: [広告運用, 公式LINE構築, LP制作]
           image: /images/marketing/reborn-group1.png
         - title: 銀座XIAOMA（ASU BRAND株式会社）
           subtitle: 小売業界（toC toB）
-          description: 高級ブランドバッグ買取サービス
+          description: |
+            高級ブランドバッグ買取サービス
+            
+            **成果**
+            **HP流入350％改善。お問い合わせ数3件/日→15件/日へ増加。**
           url: https://ginzaxiaoma.com/ja
           category: Web制作
           tech: [多言語対応, 広告運用, 公式LINE構築]
           image: /images/marketing/xiaoma1.png
         - title: 株式会社ACTLAND
           subtitle: 美容・化粧品業界（toB）
-          description: 美容・健康商品の企画＆販売、直営サロン
+          description: |
+            美容・健康商品の企画＆販売、直営サロン
+            
+            **成果**
+            **オープン初月でInstagram経由12万円の新規契約獲得。以後も平均月5件の契約を継続的に獲得。**
           url: https://actland.co.jp/
           category: Web制作
           tech: [新規サロン立ち上げ, マーケティング戦略, Meta広告運用, SNS運用, 現地撮影]
@@ -244,7 +256,6 @@ cta:
   banner:
     heading: まずは無料相談から
     subtext: 目標、制約、現状の計測環境を共有いただければ、最短の勝ち筋をご提案します。
-    button: { label: 相談を予約, href: "/book" }
 contact:
   form_fields:
     - { name: company, label: 会社名, required: true }
@@ -253,7 +264,7 @@ contact:
     - { name: budget, label: 月間広告予算, type: select, options: [〜30万円, 30〜100万円, 100〜300万円, 300万円〜] }
     - { name: objectives, label: 目的, type: textarea, placeholder: 例）CPA改善、LTV最大化、計測整備 等 }
 footer:
-  quick_links: [ホーム, サービス, 価格, 実績, 私たちについて, FAQ]
+  quick_links: [ホーム, サービス, 価格, 実績, お問い合わせ]
   legal: [プライバシーポリシー, 取引条件]
   copyright:
     text: © Next Sociality. All rights reserved.

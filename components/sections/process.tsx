@@ -1,6 +1,11 @@
 import { Badge } from '@/components/ui/badge'
-import { GlowingEffect } from '@/components/ui/glowing-effect'
-import { Search, Lightbulb, Palette, PlayCircle, BarChart } from 'lucide-react'
+import { 
+  MessageSquare,
+  Search,
+  Lightbulb,
+  Rocket,
+  CheckCircle
+} from 'lucide-react'
 import type { SiteData } from '@/lib/content'
 
 interface ProcessProps {
@@ -19,21 +24,12 @@ export function Process({ process }: ProcessProps) {
 
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-5">
           {process.steps.map((step, index) => {
-            const icons = [Search, Lightbulb, Palette, PlayCircle, BarChart];
+            const icons = [MessageSquare, Search, Lightbulb, Rocket, CheckCircle];
             const Icon = icons[index % icons.length];
             
             return (
               <div key={step.no} className="relative">
                 <div className="relative h-full rounded-[1.25rem] border-[0.75px] border-gray-700 p-2 md:rounded-[1.5rem] md:p-3">
-                  <GlowingEffect
-                    spread={40}
-                    glow={true}
-                    disabled={false}
-                    proximity={64}
-                    inactiveZone={0.01}
-                    borderWidth={3}
-                    variant="white"
-                  />
                   <div className="relative flex h-full flex-col justify-between gap-6 overflow-hidden rounded-xl border-[0.75px] bg-black/80 backdrop-blur-sm border-gray-700 p-6 shadow-sm">
                     <div className="relative flex flex-1 flex-col justify-between gap-3">
                       <div className="flex justify-center mb-3">
@@ -68,5 +64,3 @@ export function Process({ process }: ProcessProps) {
     </section>
   )
 }
-
-

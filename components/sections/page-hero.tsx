@@ -1,6 +1,6 @@
 "use client"
 
-import { motion } from 'framer-motion'
+import { motion } from 'motion/react'
 
 interface PageHeroProps {
   title: string
@@ -9,11 +9,11 @@ interface PageHeroProps {
 }
 
 const colorSchemes = {
-  blue: 'bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800',
-  green: 'bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-800', 
-  purple: 'bg-gradient-to-br from-slate-900 via-purple-900 to-slate-800',
-  orange: 'bg-gradient-to-br from-slate-900 via-orange-900 to-slate-800',
-  teal: 'bg-gradient-to-br from-slate-900 via-teal-900 to-slate-800'
+  blue: 'bg-gradient-to-br from-black via-slate-900 to-black',
+  green: 'bg-gradient-to-br from-black via-slate-900 to-black', 
+  purple: 'bg-gradient-to-br from-black via-slate-900 to-black',
+  orange: 'bg-gradient-to-br from-black via-slate-900 to-black',
+  teal: 'bg-gradient-to-br from-black via-slate-900 to-black'
 }
 
 const overlaySchemes = {

@@ -3,8 +3,10 @@
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
+import { Logos3 } from '@/components/ui/logos3'
+import { BeamsBackground } from '@/components/ui/beams-background'
 import { ExternalLink, Monitor, Palette, BarChart3, TrendingUp, Users } from 'lucide-react'
-import { motion } from 'framer-motion'
+import { motion } from 'motion/react'
 import Image from 'next/image'
 import type { SiteData } from '@/lib/content'
 
@@ -15,7 +17,12 @@ interface PortfolioProps {
 export function Portfolio({ portfolio }: PortfolioProps) {
   return (
     <section className="py-20 bg-muted/30">
-      <div className="container">
+      {/* ロゴカルーセル */}
+      <Logos3 heading="取引実績のある企業様" />
+      
+      {/* Beams背景を適用した実績セクション */}
+      <BeamsBackground intensity="medium" className="min-h-screen">
+        <div className="container relative z-10 py-20">
 
         {portfolio.categories.map((category, categoryIndex) => (
           <motion.div
@@ -28,17 +35,17 @@ export function Portfolio({ portfolio }: PortfolioProps) {
           >
             <div className="flex items-center gap-3 mb-8">
               {category.name === 'Webマーケティング実績事例' ? (
-                <Monitor className="h-6 w-6 text-primary" />
+                <Monitor className="h-6 w-6 text-white" />
               ) : category.name === '広告運用実績' ? (
-                <TrendingUp className="h-6 w-6 text-primary" />
+                <TrendingUp className="h-6 w-6 text-white" />
               ) : category.name === 'SNS運用実績' ? (
                 <Users className="h-6 w-6 text-primary" />
               ) : category.name === '制作クリエイティブ' ? (
-                <Palette className="h-6 w-6 text-primary" />
+                <Palette className="h-6 w-6 text-white" />
               ) : (
                 <BarChart3 className="h-6 w-6 text-primary" />
               )}
-              <h3 className="text-2xl font-bold">{category.name}</h3>
+              <h3 className="text-2xl font-bold text-white">{category.name}</h3>
             </div>
 
             {/* 広告運用実績は左右レイアウト */}
@@ -57,12 +64,12 @@ export function Portfolio({ portfolio }: PortfolioProps) {
                         {/* 左側: 画像 */}
                         <div className="lg:w-1/2">
                           {work.image ? (
-                            <div className="relative h-[800px] w-full overflow-hidden bg-gradient-to-br from-gray-100 to-gray-200">
+                            <div className={`relative w-full overflow-hidden bg-gradient-to-br from-gray-100 to-gray-200 ${work.title === '銀座Xiaoma' ? 'h-[400px]' : 'h-[800px]'}`}>
                               <Image
                                 src={work.image}
                                 alt={`${work.title}の制作事例画像`}
                                 fill
-                                className="object-cover"
+                                className={work.title === '銀座Xiaoma' ? 'object-contain' : 'object-cover'}
                                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                               />
                             </div>
@@ -101,7 +108,16 @@ export function Portfolio({ portfolio }: PortfolioProps) {
                           <div className="text-muted-foreground mb-4 whitespace-pre-line space-y-2">
                             {work.description.split('\n').map((line, index) => {
                               if (line.startsWith('**') && line.endsWith('**')) {
-                                return <div key={index} className="font-bold text-foreground">{line.slice(2, -2)}</div>
+                                const content = line.slice(2, -2);
+                                // 改善率の数字（+で始まる数字）を緑色にする
+                                if (content.includes('+') && (content.includes('%') || content.includes('改善'))) {
+                                  return <div key={index} className="font-bold text-green-500">{content}</div>
+                                }
+                                // 売上やフォロワー数の数字を緑色にする
+                                if (content.includes('万円の売上') || content.includes('フォロワー') || content.includes('万の売上')) {
+                                  return <div key={index} className="font-bold text-green-500">{content}</div>
+                                }
+                                return <div key={index} className="font-bold text-black">{content}</div>
                               }
                               if (line.startsWith('• ')) {
                                 return <div key={index} className="ml-4">{line}</div>
@@ -259,7 +275,16 @@ export function Portfolio({ portfolio }: PortfolioProps) {
                         <div className="text-muted-foreground mb-4 whitespace-pre-line space-y-2">
                           {work.description.split('\n').map((line, index) => {
                             if (line.startsWith('**') && line.endsWith('**')) {
-                              return <div key={index} className="font-bold text-foreground">{line.slice(2, -2)}</div>
+                              const content = line.slice(2, -2);
+                              // 改善率の数字（+で始まる数字）を緑色にする
+                              if (content.includes('+') && (content.includes('%') || content.includes('改善'))) {
+                                return <div key={index} className="font-bold text-green-500">{content}</div>
+                              }
+                              // 売上やフォロワー数の数字を緑色にする
+                              if (content.includes('万円の売上') || content.includes('フォロワー') || content.includes('万の売上')) {
+                                return <div key={index} className="font-bold text-green-500">{content}</div>
+                              }
+                              return <div key={index} className="font-bold text-black">{content}</div>
                             }
                             if (line.startsWith('• ')) {
                               return <div key={index} className="ml-4">{line}</div>
@@ -317,7 +342,8 @@ export function Portfolio({ portfolio }: PortfolioProps) {
           </motion.div>
         ))}
         
-      </div>
+        </div>
+      </BeamsBackground>
     </section>
   )
 }

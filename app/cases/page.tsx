@@ -9,7 +9,7 @@ export default function CasesPage() {
   const site = loadSite()
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-black">
       <Header navigation={site.navigation} />
       <main>
         <PageHero 
