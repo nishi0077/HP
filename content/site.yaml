@@ -256,6 +256,7 @@ cta:
   banner:
     heading: まずは無料相談から
     subtext: 目標、制約、現状の計測環境を共有いただければ、最短の勝ち筋をご提案します。
+    button: { label: ご相談はこちら, href: "https://lin.ee/7IVLhKDH" }
 contact:
   form_fields:
     - { name: company, label: 会社名, required: true }
