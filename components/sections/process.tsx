@@ -43,7 +43,7 @@ export function Process({ process }: ProcessProps) {
                             {step.no}
                           </Badge>
                         </div>
-                        <h3 className="text-lg font-['Zen_Old_Mincho'] text-white text-center" dangerouslySetInnerHTML={{ __html: step.name }} />
+                        <h3 className="text-lg font-['Zen_Old_Mincho'] text-white text-center min-h-[3.5rem] flex items-center justify-center" dangerouslySetInnerHTML={{ __html: step.name }} />
                         <p className="text-sm text-white/80 text-center font-['Zen_Old_Mincho']">
                           {step.output}
                         </p>
