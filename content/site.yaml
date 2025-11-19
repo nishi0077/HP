@@ -18,12 +18,12 @@ navigation:
     - { label: 価格, href: "/pricing" }
     - { label: 実績, href: "/cases" }
     - { label: お問い合わせ, href: "/contact" }
-  cta: { label: 公式LINEで相談, href: "https://lin.ee/7IVLhKDH" }
+  cta: { label: LINEで相談, href: "https://lin.ee/7IVLhKDH" }
 home:
   hero:
     heading: 売上に直結する<br>一貫型Webマーケティング
     subheading: 滞りをなくし、最短で成果へ。
-    primary_cta: { label: 公式LINEで相談, href: "https://lin.ee/7IVLhKDH" }
+    primary_cta: { label: LINEで相談, href: "https://lin.ee/7IVLhKDH" }
     secondary_cta: { label: 実績を見る, href: "/cases" }
     trust_badges: []
   highlights:
@@ -43,7 +43,7 @@ services:
         - 効果的な広告の作り方 - キャンペーン設計から配信まで
         - 成果の見える化 - どこから売上が来ているかを把握
         - クリエイティブの改善 - 画像や動画の効果測定と改善
-      cta: 公式LINEで相談
+      cta: LINEで相談
     - slug: lp
       name: LP制作/改善
       bullets:
@@ -51,21 +51,21 @@ services:
         - 信頼性の向上 - お客様の声、実績、よくある質問
         - 成果の測定 - どこで離脱しているかを分析
         - 継続的な改善 - データに基づいたページの改善
-      cta: 公式LINEで相談
+      cta: LINEで相談
     - slug: banners
       name: バナー/動画クリエイティブ
       bullets:
         - お客様の段階に合わせた訴求 - 認知から購入まで
         - 反応の良いクリエイティブ - コメントや保存を促すデザイン
         - 広告とクリエイティブの連携 - 効果的な組み合わせ
-      cta: 公式LINEで相談
+      cta: LINEで相談
     - slug: sns
       name: SNS運用（Instagram/TikTok/YouTube）
       bullets:
         - ブランド認知の向上 - 新規顧客の獲得と指名検索の促進
         - 魅力的なコンテンツ制作 - 月間テーマと週間スケジュール
         - 効果測定 - 保存数、コメント数、プロフィール訪問数
-      cta: 公式LINEで相談
+      cta: LINEで相談
 process:
   title: 進め方
   steps:
@@ -240,7 +240,7 @@ about:
     representative: 西浦 颯汰
     profile: 戦略設計から制作、運用、分析まで一人称で遂行できる体制を強みとし、高単価商材の獲得効率最大化を支援。
   contact:
-    line: https://line.me/R/ti/p/@yourid
+    line: https://lin.ee/7IVLhKDH
   strengths:
     - 企画から運用・制作・計測までを一社完結で対応
     - CPAだけでなくLTV/粗利を指標化し、意思決定を数値で支援

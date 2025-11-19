@@ -177,7 +177,7 @@ export function Portfolio({ portfolio }: PortfolioProps) {
                       target="_blank" 
                       rel="noopener noreferrer"
                     >
-                      📱 公式LINEで相談する
+                      📱 LINEで相談する
                     </a>
                   </Button>
                 </motion.div>

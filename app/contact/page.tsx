@@ -15,7 +15,7 @@ export default function ContactPage() {
       { label: "実績", href: "/cases" },
       { label: "お問い合わせ", href: "/contact" }
     ],
-    cta: { label: "公式LINEで相談", href: "https://lin.ee/7IVLhKDH" }
+    cta: { label: "LINEで相談", href: "https://lin.ee/7IVLhKDH" }
   }
 
   const footer = {
