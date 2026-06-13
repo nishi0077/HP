@@ -24,10 +24,11 @@ export async function POST(req: Request) {
 
     const { company, name, email, budget, objectives } = parsed.data
 
-    // Rate limiting could be implemented here
-    
+    // 送信先メールアドレス（未設定時のフォールバック）
+    const mailTo = process.env.MAIL_TO || 'nishiura@nextsociality.com'
+
     // Send email using Resend (if API key is configured)
-    if (process.env.RESEND_API_KEY && process.env.MAIL_TO) {
+    if (process.env.RESEND_API_KEY) {
       const resend = new Resend(process.env.RESEND_API_KEY)
       
       const emailContent = `
@@ -44,7 +45,8 @@ export async function POST(req: Request) {
 
       await resend.emails.send({
         from: 'noreply@nextsociality.com',
-        to: process.env.MAIL_TO,
+        to: mailTo,
+        replyTo: email,
         subject: `【Next Sociality】新規お問い合わせ - ${company}`,
         text: emailContent,
       })

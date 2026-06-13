@@ -8,6 +8,7 @@ import { BeamsBackground } from '@/components/ui/beams-background'
 import { ExternalLink, Monitor, Palette, BarChart3, TrendingUp, Users } from 'lucide-react'
 import { motion } from 'motion/react'
 import Image from 'next/image'
+import Link from 'next/link'
 import type { SiteData } from '@/lib/content'
 
 interface PortfolioProps {
@@ -160,7 +161,7 @@ export function Portfolio({ portfolio }: PortfolioProps) {
                   </motion.div>
                 ))}
                 
-                {/* LINEボタン - 広告運用実績（地方工務店SNS運用実績）の下に配置 */}
+                {/* お問い合わせボタン - 広告運用実績（地方工務店SNS運用実績）の下に配置 */}
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -170,15 +171,11 @@ export function Portfolio({ portfolio }: PortfolioProps) {
                 >
                   <Button 
                     asChild 
-                    className="bg-gradient-to-r from-green-400 to-green-600 hover:from-green-500 hover:to-green-700 text-white font-bold px-8 py-3"
+                    className="bg-gradient-to-r from-sky-500 to-indigo-600 hover:from-sky-600 hover:to-indigo-700 text-white font-bold px-8 py-3"
                   >
-                    <a 
-                      href="https://lin.ee/7IVLhKDH" 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                    >
-                      📱 LINEで相談する
-                    </a>
+                    <Link href="/contact">
+                      無料相談を申し込む
+                    </Link>
                   </Button>
                 </motion.div>
               </div>

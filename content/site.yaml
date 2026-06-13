@@ -18,12 +18,12 @@ navigation:
     - { label: 価格, href: "/pricing" }
     - { label: 実績, href: "/cases" }
     - { label: お問い合わせ, href: "/contact" }
-  cta: { label: LINEで相談, href: "https://lin.ee/7IVLhKDH" }
+  cta: { label: お問い合わせ, href: "/contact" }
 home:
   hero:
     heading: あなたの会社に<br><span class="cmo-accent">CMO</span>を置く
     subheading: 成果を目的とした一貫型Webマーケティング
-    primary_cta: { label: LINEで相談, href: "https://lin.ee/7IVLhKDH" }
+    primary_cta: { label: 無料相談を申し込む, href: "/contact" }
     secondary_cta: { label: 実績を見る, href: "/cases" }
     trust_badges: []
   highlights:
@@ -256,7 +256,7 @@ cta:
   banner:
     heading: まずは無料相談から
     subtext: 目標、制約、現状の計測環境を共有いただければ、最短の勝ち筋をご提案します。
-    button: { label: ご相談はこちら, href: "https://lin.ee/7IVLhKDH" }
+    button: { label: 無料相談フォームへ, href: "/contact" }
 contact:
   form_fields:
     - { name: company, label: 会社名, required: true }

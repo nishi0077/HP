@@ -32,7 +32,7 @@ export default function StrategyServicePage() {
             </div>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-8">
               <Button asChild className="bg-white text-black hover:bg-white/90">
-                <Link href="https://lin.ee/7IVLhKDH">無料相談する</Link>
+                <Link href="/contact">無料相談する</Link>
               </Button>
               <div className="text-center">
                 <div className="text-2xl font-bold text-white">50+</div>
@@ -336,7 +336,7 @@ export default function StrategyServicePage() {
               成果にコミットする実行可能な戦略を提供します。
             </p>
             <Button asChild className="bg-white text-black hover:bg-white/90">
-              <Link href="https://lin.ee/7IVLhKDH">ご相談はこちら</Link>
+              <Link href="/contact">ご相談はこちら</Link>
             </Button>
           </div>
         </div>

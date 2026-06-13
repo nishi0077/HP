@@ -38,7 +38,7 @@ export default function SNSServicePage() {
             </div>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-8">
               <Button asChild className="bg-white text-black hover:bg-white/90">
-                <Link href="https://lin.ee/7IVLhKDH">無料相談する</Link>
+                <Link href="/contact">無料相談する</Link>
               </Button>
               <div className="text-center">
                 <div className="text-2xl font-bold text-white">50+</div>
@@ -270,7 +270,7 @@ export default function SNSServicePage() {
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <Button asChild className="bg-white text-black hover:bg-white/90">
-                <Link href="https://lin.ee/7IVLhKDH">ご相談はこちら</Link>
+                <Link href="/contact">ご相談はこちら</Link>
               </Button>
               <Button asChild variant="outline" className="border-white text-white hover:bg-white hover:text-black">
                 <Link href="/cases">実績はこちら</Link>

@@ -5,6 +5,7 @@ import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { MessageCircle, Target, Eye, Building, User, Zap } from 'lucide-react'
 import { motion } from 'motion/react'
+import Link from 'next/link'
 import type { SiteData } from '@/lib/content'
 
 interface AboutProps {
@@ -64,10 +65,10 @@ export function About({ about }: AboutProps) {
               </CardHeader>
               <CardContent>
                 <Button variant="outline" size="lg" asChild className="w-full">
-                  <a href={about.contact.line} target="_blank" rel="noopener noreferrer">
+                  <Link href="/contact">
                     <MessageCircle className="h-4 w-4 mr-2" />
-                    公式LINE
-                  </a>
+                    お問い合わせ
+                  </Link>
                 </Button>
               </CardContent>
             </Card>
