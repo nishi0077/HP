@@ -46,7 +46,7 @@ export async function POST(req: Request) {
       await resend.emails.send({
         from: 'noreply@nextsociality.com',
         to: mailTo,
-        replyTo: email,
+        reply_to: email,
         subject: `【Next Sociality】新規お問い合わせ - ${company}`,
         text: emailContent,
       })
