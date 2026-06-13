@@ -38,7 +38,9 @@ export default function ManagementLPLayout({
 }) {
   return (
     <>
-      <style jsx global>{`
+      <style
+        dangerouslySetInnerHTML={{
+          __html: `
         :root {
           --lp-primary: 214 100% 45%;
           --lp-primary-dark: 214 100% 35%;
@@ -49,7 +51,9 @@ export default function ManagementLPLayout({
           --lp-bg: 0 0% 100%;
           --lp-bg-secondary: 214 32% 97%;
         }
-      `}</style>
+      `,
+        }}
+      />
       <div className={`${ibmPlexSansJP.variable} font-sans`}>
         {children}
       </div>
