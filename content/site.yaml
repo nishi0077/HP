@@ -21,7 +21,7 @@ navigation:
   cta: { label: LINEで相談, href: "https://lin.ee/7IVLhKDH" }
 home:
   hero:
-    heading: あなたの会社に<br>CMOを置く
+    heading: あなたの会社に<br><span class="cmo-accent">CMO</span>を置く
     subheading: 成果を目的とした一貫型Webマーケティング
     primary_cta: { label: LINEで相談, href: "https://lin.ee/7IVLhKDH" }
     secondary_cta: { label: 実績を見る, href: "/cases" }

@@ -109,9 +109,10 @@ const Logos3 = ({
             plugins={[
               AutoScroll({
                 playOnInit: true,
-                speed: 0.6,
+                startDelay: 0,
+                speed: 1,
                 stopOnInteraction: false,
-                stopOnMouseEnter: true,
+                stopOnMouseEnter: false,
                 stopOnFocusIn: false,
               }),
             ]}

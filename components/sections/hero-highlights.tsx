@@ -43,14 +43,14 @@ export function HeroHighlights({ hero, highlights }: HeroHighlightsProps) {
 
             <div className="space-y-6">
               <h1 
-                className="text-4xl font-bold leading-[1.15] tracking-tight text-white drop-shadow-[0_2px_20px_rgba(0,0,0,0.35)] sm:text-5xl lg:text-7xl font-['Zen_Old_Mincho']" 
+                className="text-4xl font-black leading-[1.15] tracking-[-0.01em] text-white drop-shadow-[0_2px_20px_rgba(0,0,0,0.35)] sm:text-5xl lg:text-7xl font-['Zen_Old_Mincho']" 
                 dangerouslySetInnerHTML={{ __html: hero.heading }}
               />
 
               <div className="mx-auto h-px w-24 bg-gradient-to-r from-transparent via-white/50 to-transparent" />
 
               <p 
-                className="mx-auto max-w-2xl text-lg text-white/85 sm:text-xl font-['Zen_Old_Mincho']"
+                className="mx-auto max-w-2xl text-lg text-white/85 sm:text-xl tracking-wide font-['Zen_Old_Mincho']"
                 dangerouslySetInnerHTML={{ __html: hero.subheading }}
               />
             </div>
