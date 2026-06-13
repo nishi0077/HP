@@ -21,8 +21,8 @@ navigation:
   cta: { label: LINEで相談, href: "https://lin.ee/7IVLhKDH" }
 home:
   hero:
-    heading: 売上に直結する<br>一貫型Webマーケティング
-    subheading: 滞りをなくし、最短で成果へ。
+    heading: あなたの会社に<br>CMOを置く
+    subheading: 成果を目的とした一貫型Webマーケティング
     primary_cta: { label: LINEで相談, href: "https://lin.ee/7IVLhKDH" }
     secondary_cta: { label: 実績を見る, href: "/cases" }
     trust_badges: []
