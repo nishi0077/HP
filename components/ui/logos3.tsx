@@ -102,17 +102,21 @@ const Logos3 = ({
             {logos.map((logo) => (
               <div
                 key={logo.id}
-                className="group flex h-28 w-48 shrink-0 items-center justify-center rounded-2xl border border-white/10 bg-white px-7 shadow-[0_10px_30px_-12px_rgba(0,0,0,0.45)] ring-1 ring-black/5 transition-all duration-300 ease-out hover:-translate-y-1.5 hover:border-white/30 hover:shadow-[0_18px_45px_-12px_rgba(0,0,0,0.6)]"
+                className="group flex h-32 w-56 shrink-0 items-center justify-center rounded-2xl border border-white/10 bg-white px-5 shadow-[0_10px_30px_-12px_rgba(0,0,0,0.45)] ring-1 ring-black/5 transition-all duration-300 ease-out hover:-translate-y-1.5 hover:border-white/30 hover:shadow-[0_18px_45px_-12px_rgba(0,0,0,0.6)]"
               >
                 <Image
                   src={logo.image}
                   alt={logo.description}
-                  width={200}
-                  height={100}
+                  width={260}
+                  height={130}
                   loading="lazy"
                   className={cn(
                     "w-auto object-contain opacity-90 grayscale transition-all duration-300 ease-out group-hover:opacity-100 group-hover:grayscale-0",
-                    logo.large ? "max-h-20" : "max-h-14",
+                    logo.id === "dentsu-digital"
+                      ? "max-h-28"
+                      : logo.large
+                        ? "max-h-24"
+                        : "max-h-20",
                     logo.invert && "invert"
                   )}
                 />
