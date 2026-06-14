@@ -2,9 +2,12 @@ import { Header } from '@/components/sections/header'
 import { Footer } from '@/components/sections/footer'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
-import { MessageCircle, Twitter, Instagram } from 'lucide-react'
+import { Twitter, Instagram } from 'lucide-react'
+import { ContactForm } from '@/components/contact-form'
+import { loadSite } from '@/lib/content'
 
 export default function ContactPage() {
+  const siteData = loadSite()
   // ナビゲーションデータを直接定義
   const navigation = {
     logo_text: "Next Sociality",
@@ -15,7 +18,7 @@ export default function ContactPage() {
       { label: "実績", href: "/cases" },
       { label: "お問い合わせ", href: "/contact" }
     ],
-    cta: { label: "LINEで相談", href: "https://lin.ee/7IVLhKDH" }
+    cta: { label: "お問い合わせ", href: "/contact" }
   }
 
   const footer = {
@@ -57,36 +60,21 @@ export default function ContactPage() {
             </p>
           </div>
 
-          {/* お問い合わせ方法 */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-            {/* 公式LINE */}
-            <Card className="bg-white/10 border-white/20 hover:bg-white/15 transition-colors duration-300 h-full">
-              <CardHeader className="text-center">
-                <div className="mx-auto mb-4 p-4 bg-green-500/20 rounded-full w-fit">
-                  <MessageCircle className="h-8 w-8 text-green-400" />
-                </div>
-                <CardTitle className="text-white text-xl font-['Zen_Old_Mincho']">公式LINEでのお問い合わせ</CardTitle>
-              </CardHeader>
-              <CardContent className="text-center">
-                <p className="text-white/80 mb-6">
-                  相談ベースで提案まで行います。<br />
-                  気軽にご相談ください。
-                </p>
-                <Button 
-                  asChild 
-                  className="bg-green-500 hover:bg-green-600 text-white font-bold px-8 py-3 w-full"
-                >
-                  <a 
-                    href="https://lin.ee/7IVLhKDH" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                  >
-                    LINE公式アカウントを友だち追加
-                  </a>
-                </Button>
-              </CardContent>
-            </Card>
+          {/* お問い合わせフォーム */}
+          <div className="mb-20">
+            <ContactForm formFields={siteData.contact.form_fields} />
+            <p className="text-center text-white/60 text-sm mt-6">
+              ※ ご入力内容は担当（{siteData.site.brand.email}）に直接届きます。
+            </p>
+          </div>
 
+          {/* SNS */}
+          <div className="text-center mb-10">
+            <h2 className="text-2xl md:text-3xl font-bold text-white font-['Zen_Old_Mincho']">
+              SNSでも発信しています
+            </h2>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16 max-w-3xl mx-auto">
             {/* X */}
             <Card className="bg-white/10 border-white/20 hover:bg-white/15 transition-colors duration-300 h-full">
               <CardHeader className="text-center">

@@ -101,3 +101,18 @@
   }
 }
 
+/* ヒーロー「CMO」強調用アクセント */
+.cmo-accent {
+  display: inline-block;
+  font-family: var(--font-ibm-plex-sans-jp), system-ui, -apple-system, sans-serif;
+  font-weight: 700;
+  font-size: 1.12em;
+  letter-spacing: 0.04em;
+  background: linear-gradient(120deg, #5eead4 0%, #38bdf8 45%, #a78bfa 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  filter: drop-shadow(0 2px 18px rgba(56, 189, 248, 0.3));
+}
+

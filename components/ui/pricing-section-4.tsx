@@ -7,16 +7,33 @@ import { InteractiveHoverButton } from "@/components/ui/interactive-hover-button
 import { cn } from "@/lib/utils";
 import NumberFlow from "@number-flow/react";
 import { useRef } from "react";
+import Link from "next/link";
 import { usePerformanceOptimizer } from "@/components/ui/performance-optimizer";
 
-const plans = [
+interface Plan {
+  name: string;
+  displayName: string;
+  nameJa: string;
+  price?: number;
+  setupFee?: number;
+  buttonText: string;
+  buttonHref: string;
+  buttonVariant: "outline" | "default";
+  popular?: boolean;
+  consultationRequired?: boolean;
+  includes: string[];
+}
+
+const plans: Plan[] = [
   {
     name: "Starter",
+    displayName: "スタートプラン",
     nameJa: "土台と導線設計を整備したい方向け",
     price: 100000,
     setupFee: 100000,
     buttonText: "お問い合わせ",
-    buttonVariant: "outline" as const,
+    buttonHref: "/contact",
+    buttonVariant: "outline",
     includes: [
       "含まれる内容:",
       "ペルソナ/訴求整理/導線設計",
@@ -27,11 +44,13 @@ const plans = [
   },
   {
     name: "Standard",
+    displayName: "スタンダードプラン",
     nameJa: "広告とLPを一体で最適化",
     price: 300000,
     setupFee: 100000,
     buttonText: "お問い合わせ",
-    buttonVariant: "default" as const,
+    buttonHref: "/contact",
+    buttonVariant: "default",
     popular: true,
     includes: [
       "含まれる内容:",
@@ -43,11 +62,12 @@ const plans = [
   },
   {
     name: "Premium",
+    displayName: "プレミアムプラン",
     nameJa: "複数チャネルで拡大",
-    price: 500000,
-    setupFee: 200000,
     buttonText: "お問い合わせ",
-    buttonVariant: "outline" as const,
+    buttonHref: "/contact",
+    buttonVariant: "outline",
+    consultationRequired: true,
     includes: [
       "含まれる内容:",
       "配信拡張（Google/Meta/Yahoo/Line）",
@@ -192,7 +212,7 @@ export default function PricingSection4() {
               <CardHeader className="text-left">
                 <div className="flex justify-between items-start">
                   <div>
-                    <h3 className="text-3xl mb-2 font-['Zen_Old_Mincho']">{plan.name} Plan</h3>
+                    <h3 className="text-3xl mb-2 font-['Zen_Old_Mincho']">{plan.displayName}</h3>
                     <p className="text-sm text-gray-300 mb-4 font-['Zen_Old_Mincho']">{plan.nameJa}</p>
                   </div>
                   {plan.popular && (
@@ -200,32 +220,54 @@ export default function PricingSection4() {
                       人気
                     </span>
                   )}
+                  {plan.consultationRequired && (
+                    <span className="bg-amber-500 text-white text-xs px-3 py-1 rounded-full h-fit whitespace-nowrap font-['Zen_Old_Mincho']">
+                      相談必須
+                    </span>
+                  )}
                 </div>
-                <div className="flex items-baseline">
-                  <span className="text-4xl font-semibold font-['Zen_Old_Mincho']">
-                    ¥
-                    <NumberFlow
-                      value={plan.price}
-                      format={{ 
-                        notation: "standard",
-                        maximumFractionDigits: 0,
-                      }}
-                      className="text-4xl font-semibold font-['Zen_Old_Mincho']"
-                    />
-                  </span>
-                  <span className="text-gray-300 ml-1 font-['Zen_Old_Mincho']">/月</span>
-                </div>
-                <p className="text-sm text-gray-400 mt-1 font-['Zen_Old_Mincho']">
-                  初期費用: ¥{plan.setupFee.toLocaleString()}
-                </p>
+                {plan.consultationRequired ? (
+                  <>
+                    <div className="flex items-baseline">
+                      <span className="text-4xl font-semibold font-['Zen_Old_Mincho']">
+                        要相談
+                      </span>
+                    </div>
+                    <p className="text-sm text-gray-400 mt-1 font-['Zen_Old_Mincho']">
+                      ※ご要望をヒアリングの上、最適なプランをご提案します
+                    </p>
+                  </>
+                ) : (
+                  <>
+                    <div className="flex items-baseline">
+                      <span className="text-4xl font-semibold font-['Zen_Old_Mincho']">
+                        ¥
+                        <NumberFlow
+                          value={plan.price ?? 0}
+                          format={{ 
+                            notation: "standard",
+                            maximumFractionDigits: 0,
+                          }}
+                          className="text-4xl font-semibold font-['Zen_Old_Mincho']"
+                        />
+                      </span>
+                      <span className="text-gray-300 ml-1 font-['Zen_Old_Mincho']">/月</span>
+                    </div>
+                    <p className="text-sm text-gray-400 mt-1 font-['Zen_Old_Mincho']">
+                      初期費用: ¥{plan.setupFee?.toLocaleString()}
+                    </p>
+                  </>
+                )}
               </CardHeader>
 
               <CardContent className="pt-0">
                 <div className="mb-6 flex justify-center">
-                  <InteractiveHoverButton 
-                    text={plan.buttonText} 
-                    className="w-48 font-['Zen_Old_Mincho']"
-                  />
+                  <Link href={plan.buttonHref}>
+                    <InteractiveHoverButton 
+                      text={plan.buttonText} 
+                      className="w-48 font-['Zen_Old_Mincho']"
+                    />
+                  </Link>
                 </div>
 
                 <div className="space-y-3 pt-4 border-t border-neutral-700">

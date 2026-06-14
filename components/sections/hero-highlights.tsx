@@ -25,16 +25,35 @@ export function HeroHighlights({ hero, highlights }: HeroHighlightsProps) {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <div className="space-y-6">
-            <h1 
-              className="text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl font-['Zen_Old_Mincho']" 
-              dangerouslySetInnerHTML={{ __html: hero.heading }}
-            />
-            
-            <p 
-              className="mx-auto max-w-2xl text-lg text-white/90 sm:text-xl font-['Zen_Old_Mincho']"
-              dangerouslySetInnerHTML={{ __html: hero.subheading }}
-            />
+          <div className="space-y-8">
+            <motion.div
+              className="flex justify-center"
+              initial={{ opacity: 0, y: 12 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, delay: 0.1 }}
+            >
+              <span className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-1.5 text-xs sm:text-sm text-white/80 backdrop-blur-md">
+                <span className="relative flex h-2 w-2">
+                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400/70" />
+                  <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-400" />
+                </span>
+                Fractional CMO Service ｜ 外部CMOという選択
+              </span>
+            </motion.div>
+
+            <div className="space-y-6">
+              <h1 
+                className="text-4xl font-black leading-[1.15] tracking-[-0.01em] text-white drop-shadow-[0_2px_20px_rgba(0,0,0,0.35)] sm:text-5xl lg:text-7xl font-['Zen_Old_Mincho']" 
+                dangerouslySetInnerHTML={{ __html: hero.heading }}
+              />
+
+              <div className="mx-auto h-px w-24 bg-gradient-to-r from-transparent via-white/50 to-transparent" />
+
+              <p 
+                className="mx-auto max-w-2xl text-lg text-white/85 sm:text-xl tracking-wide font-['Zen_Old_Mincho']"
+                dangerouslySetInnerHTML={{ __html: hero.subheading }}
+              />
+            </div>
 
             <div className="flex flex-col gap-4 sm:flex-row sm:justify-center">
               {hero.primary_cta.href.startsWith('http') ? (
@@ -70,6 +89,15 @@ export function HeroHighlights({ hero, highlights }: HeroHighlightsProps) {
                 ))}
               </div>
             )}
+
+            <motion.p
+              className="pt-2 text-xs sm:text-sm text-white/50 tracking-wide"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.8, delay: 0.5 }}
+            >
+              戦略設計から広告運用・SNS・LP制作まで、成果に直結する一貫支援
+            </motion.p>
           </div>
         </motion.div>
 
