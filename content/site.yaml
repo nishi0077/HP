@@ -23,7 +23,7 @@ home:
   hero:
     heading: あなたの会社に<br><span class="cmo-accent">CMO</span>を置く
     subheading: 成果を目的とした一貫型Webマーケティング
-    primary_cta: { label: 無料相談を申し込む, href: "/contact" }
+    primary_cta: { label: 無料相談はこちら, href: "/contact" }
     secondary_cta: { label: 実績を見る, href: "/cases" }
     trust_badges: []
   highlights:

@@ -58,20 +58,20 @@ export function HeroHighlights({ hero, highlights }: HeroHighlightsProps) {
             <div className="flex flex-col gap-4 sm:flex-row sm:justify-center">
               {hero.primary_cta.href.startsWith('http') ? (
                 <a href={hero.primary_cta.href} target="_blank" rel="noopener noreferrer">
-                  <InteractiveHoverButton text={hero.primary_cta.label} className="w-48" />
+                  <InteractiveHoverButton text={hero.primary_cta.label} className="w-52" hideDot />
                 </a>
               ) : (
                 <Link href={hero.primary_cta.href}>
-                  <InteractiveHoverButton text={hero.primary_cta.label} className="w-48" />
+                  <InteractiveHoverButton text={hero.primary_cta.label} className="w-52" hideDot />
                 </Link>
               )}
               {hero.secondary_cta.href.startsWith('http') ? (
                 <a href={hero.secondary_cta.href} target="_blank" rel="noopener noreferrer">
-                  <InteractiveHoverButton text={hero.secondary_cta.label} className="w-48" />
+                  <InteractiveHoverButton text={hero.secondary_cta.label} className="w-52" hideDot />
                 </a>
               ) : (
                 <Link href={hero.secondary_cta.href}>
-                  <InteractiveHoverButton text={hero.secondary_cta.label} className="w-48" />
+                  <InteractiveHoverButton text={hero.secondary_cta.label} className="w-52" hideDot />
                 </Link>
               )}
             </div>
