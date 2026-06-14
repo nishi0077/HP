@@ -144,18 +144,18 @@ export function StrategyModel() {
         </motion.div>
 
         {/* Desktop: 中央 + 3領域の循環図 */}
-        <div className="relative mx-auto hidden h-[900px] max-w-5xl lg:block">
+        <div className="relative mx-auto hidden h-[900px] max-w-6xl lg:block">
           <CycleRing />
           <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
             <CenterBadge />
           </div>
-          <div className="absolute left-1/2 top-0 w-[350px] -translate-x-1/2">
+          <div className="absolute left-1/2 top-0 w-[400px] -translate-x-1/2">
             <NodeCard node={nodes[0]} />
           </div>
-          <div className="absolute bottom-0 left-0 w-[360px]">
+          <div className="absolute bottom-0 left-0 w-[440px]">
             <NodeCard node={nodes[1]} />
           </div>
-          <div className="absolute bottom-0 right-0 w-[360px]">
+          <div className="absolute bottom-0 right-0 w-[440px]">
             <NodeCard node={nodes[2]} />
           </div>
         </div>
