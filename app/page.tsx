@@ -8,6 +8,16 @@ const HeroHighlights = dynamic(() => import('@/components/sections/hero-highligh
   ssr: true,
 })
 
+const ClientLogos = dynamic(() => import('@/components/ui/logos3').then(mod => ({ default: mod.Logos3 })), {
+  loading: () => <div className="py-16 bg-neutral-950" />,
+  ssr: true,
+})
+
+const StrategyModel = dynamic(() => import('@/components/sections/strategy-model').then(mod => ({ default: mod.StrategyModel })), {
+  loading: () => <div className="py-20 bg-black" />,
+  ssr: true,
+})
+
 const Services = dynamic(() => import('@/components/sections/services').then(mod => ({ default: mod.Services })), {
   loading: () => <div className="py-20 bg-black" />,
   ssr: true,
@@ -40,7 +50,14 @@ export default function HomePage() {
     <div className="min-h-screen bg-background">
       <Header navigation={site.navigation} />
       <main>
-        <HeroHighlights hero={site.home.hero} highlights={site.home.highlights} />
+        <HeroHighlights hero={site.home.hero} />
+        <section className="bg-neutral-950">
+          <ClientLogos
+            heading="過去取引企業"
+            subheading="これまでにご支援・ご一緒した企業様の一例です。"
+          />
+        </section>
+        <StrategyModel />
         <Services services={site.services} />
         <Process process={site.process} />
         <PricingSection4 />

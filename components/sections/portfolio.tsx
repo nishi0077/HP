@@ -3,7 +3,6 @@
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
-import { Logos3 } from '@/components/ui/logos3'
 import { BeamsBackground } from '@/components/ui/beams-background'
 import { ExternalLink, Monitor, Palette, BarChart3, TrendingUp, Users } from 'lucide-react'
 import { motion } from 'motion/react'
@@ -18,9 +17,6 @@ interface PortfolioProps {
 export function Portfolio({ portfolio }: PortfolioProps) {
   return (
     <section className="py-20 bg-muted/30">
-      {/* ロゴカルーセル */}
-      <Logos3 heading="取引実績のある企業様" />
-      
       {/* Beams背景を適用した実績セクション */}
       <BeamsBackground intensity="medium" className="min-h-screen">
         <div className="container relative z-10 py-20">
