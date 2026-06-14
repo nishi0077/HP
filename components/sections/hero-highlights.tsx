@@ -13,11 +13,11 @@ interface HeroHighlightsProps {
 
 export function HeroHighlights({ hero }: HeroHighlightsProps) {
   return (
-    <BeamsBackground intensity="medium" className="py-20 lg:py-32">
+    <BeamsBackground intensity="medium" className="pt-20 pb-12 lg:pt-32 lg:pb-16">
       <div className="container relative z-10">
         {/* Hero Section */}
         <motion.div 
-          className="mx-auto max-w-4xl text-center mb-20"
+          className="mx-auto max-w-4xl text-center"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -86,15 +86,6 @@ export function HeroHighlights({ hero }: HeroHighlightsProps) {
                 ))}
               </div>
             )}
-
-            <motion.p
-              className="pt-2 text-xs sm:text-sm text-white/50 tracking-wide"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.8, delay: 0.5 }}
-            >
-              戦略設計から広告運用・SNS・LP制作まで、成果に直結する一貫支援
-            </motion.p>
           </div>
         </motion.div>
       </div>
