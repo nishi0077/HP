@@ -16,7 +16,7 @@ export function FeaturesSectionWithHoverEffects() {
     {
       title: "マーケティング戦略設計",
       description:
-        "市場・競合・顧客心理を分析し、「勝てるポジション」と「収益化の道筋」を明確化。中長期的な売上を上げる戦略を設計します。",
+        "市場・競合・顧客を分析し、勝てるポジションと収益化の道筋を設計。中長期で売上を伸ばします。",
       icon: <Target className="h-8 w-8" />,
       href: "/services/strategy",
     },
