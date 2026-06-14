@@ -110,7 +110,7 @@ const Logos3 = ({
               AutoScroll({
                 playOnInit: true,
                 startDelay: 0,
-                speed: 1,
+                speed: 1.6,
                 stopOnInteraction: false,
                 stopOnMouseEnter: false,
                 stopOnFocusIn: false,

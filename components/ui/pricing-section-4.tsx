@@ -1,296 +1,182 @@
 "use client";
-import { Card, CardContent, CardHeader } from "@/components/ui/card";
-import { SparklesCore as SparklesComp } from "@/components/ui/sparkles";
-import { TimelineContent } from "@/components/ui/timeline-animation";
-import { VerticalCutReveal } from "@/components/ui/vertical-cut-reveal";
-import { InteractiveHoverButton } from "@/components/ui/interactive-hover-button";
-import { cn } from "@/lib/utils";
-import NumberFlow from "@number-flow/react";
-import { useRef } from "react";
+
+import { Check } from "lucide-react";
 import Link from "next/link";
-import { usePerformanceOptimizer } from "@/components/ui/performance-optimizer";
+import { cn } from "@/lib/utils";
 
 interface Plan {
-  name: string;
   displayName: string;
-  nameJa: string;
+  tagline: string;
   price?: number;
   setupFee?: number;
   buttonText: string;
   buttonHref: string;
-  buttonVariant: "outline" | "default";
+  badge?: string;
   popular?: boolean;
   consultationRequired?: boolean;
-  includes: string[];
+  accent: string;
+  features: string[];
 }
 
 const plans: Plan[] = [
   {
-    name: "Starter",
     displayName: "スタートプラン",
-    nameJa: "土台と導線設計を整備したい方向け",
+    tagline: "土台と導線設計を整備したい方向け",
     price: 100000,
     setupFee: 100000,
-    buttonText: "お問い合わせ",
+    buttonText: "このプランで相談する",
     buttonHref: "/contact",
-    buttonVariant: "outline",
-    includes: [
-      "含まれる内容:",
-      "ペルソナ/訴求整理/導線設計",
-      "広告設計(キーワード/広告文/ターゲティング)",
-      "計測実装(ピクセル+CAPI/GA4)",
-      "レポーティング週1回/定例30分",
+    badge: "スモールスタート",
+    accent: "from-sky-300 to-cyan-300",
+    features: [
+      "ペルソナ / 訴求整理 / 導線設計",
+      "広告設計（キーワード / 広告文 / ターゲティング）",
+      "計測実装（ピクセル + CAPI / GA4）",
+      "レポーティング週1回 / 定例30分",
     ],
   },
   {
-    name: "Standard",
     displayName: "スタンダードプラン",
-    nameJa: "広告とLPを一体で最適化",
+    tagline: "広告とLPを一体で最適化",
     price: 300000,
     setupFee: 100000,
-    buttonText: "お問い合わせ",
+    buttonText: "このプランで相談する",
     buttonHref: "/contact",
-    buttonVariant: "default",
+    badge: "人気",
     popular: true,
-    includes: [
-      "含まれる内容:",
-      "Meta/Google運用（月30〜100万円目安）",
+    accent: "from-blue-300 via-indigo-300 to-violet-300",
+    features: [
+      "Meta / Google 運用（月30〜100万円目安）",
       "LP改善ABテスト（月1回）",
       "広告クリエイティブ作成",
-      "レポーティング週1回/定例30分",
+      "レポーティング週1回 / 定例30分",
     ],
   },
   {
-    name: "Premium",
     displayName: "プレミアムプラン",
-    nameJa: "複数チャネルで拡大",
-    buttonText: "お問い合わせ",
+    tagline: "複数チャネルで拡大",
+    buttonText: "相談する",
     buttonHref: "/contact",
-    buttonVariant: "outline",
+    badge: "相談必須",
     consultationRequired: true,
-    includes: [
-      "含まれる内容:",
-      "配信拡張（Google/Meta/Yahoo/Line）",
+    accent: "from-amber-200 via-amber-300 to-yellow-200",
+    features: [
+      "配信拡張（Google / Meta / Yahoo / LINE）",
       "クリエイティブ作成",
-      "LP新規作成&LPO(LP最適化)",
+      "LP新規作成 & LPO（LP最適化）",
       "公式LINE構築",
-      "レポーティング週1回/定例30分",
+      "レポーティング週1回 / 定例30分",
     ],
   },
 ];
 
 export default function PricingSection4() {
-  const pricingRef = useRef<HTMLDivElement>(null);
-  const { particleDensity } = usePerformanceOptimizer();
-
-  const revealVariants = {
-    visible: (i: number) => ({
-      y: 0,
-      opacity: 1,
-      filter: "blur(0px)",
-      transition: {
-        delay: i * 0.4,
-        duration: 0.5,
-      },
-    }),
-    hidden: {
-      filter: "blur(10px)",
-      y: -20,
-      opacity: 0,
-    },
-  };
-
   return (
-    <div
-      className="min-h-screen mx-auto relative bg-black overflow-x-hidden"
-      ref={pricingRef}
-    >
-      <TimelineContent
-        animationNum={4}
-        timelineRef={pricingRef}
-        customVariants={revealVariants}
-        className="absolute top-0 h-96 w-screen overflow-hidden [mask-image:radial-gradient(circle_at_50%_50%,white,transparent)]"
-      >
-        <div className="absolute bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#ffffff2c_1px,transparent_1px),linear-gradient(to_bottom,#3a3a3a01_1px,transparent_1px)] bg-[size:70px_80px]"></div>
-        <SparklesComp
-          id="pricing-sparkles"
-          background="transparent"
-          minSize={0.4}
-          maxSize={1.2}
-          particleDensity={particleDensity}
-          speed={1}
-          particleColor="#FFFFFF"
-          className="absolute inset-x-0 bottom-0 h-full w-full [mask-image:radial-gradient(circle_at_50%_50%,white,transparent_85%)]"
-        />
-      </TimelineContent>
-      
-      <TimelineContent
-        animationNum={5}
-        timelineRef={pricingRef}
-        customVariants={revealVariants}
-        className="absolute left-0 top-[-114px] w-full h-[113.625vh] flex flex-col items-start justify-start content-start flex-none flex-nowrap gap-2.5 overflow-hidden p-0 z-0"
-      >
-        <div className="framer-1i5axl2">
-          <div
-            className="absolute left-[-568px] right-[-568px] top-0 h-[2053px] flex-none rounded-full"
-            style={{
-              border: "200px solid #3131f5",
-              filter: "blur(92px)",
-              WebkitFilter: "blur(92px)",
-            }}
-            data-border="true"
-            data-framer-name="Ellipse 1"
-          ></div>
-          <div
-            className="absolute left-[-568px] right-[-568px] top-0 h-[2053px] flex-none rounded-full"
-            style={{
-              border: "200px solid #3131f5",
-              filter: "blur(92px)",
-              WebkitFilter: "blur(92px)",
-            }}
-            data-border="true"
-            data-framer-name="Ellipse 2"
-          ></div>
-        </div>
-      </TimelineContent>
-
-      <article className="text-center mb-6 pt-32 max-w-3xl mx-auto space-y-2 relative z-50 px-4">
-        <h2 className="text-4xl font-medium text-white sm:text-5xl lg:text-6xl font-['Zen_Old_Mincho']">
-          <VerticalCutReveal
-            splitBy="words"
-            staggerDuration={0.15}
-            staggerFrom="first"
-            reverse={true}
-            containerClassName="justify-center"
-            transition={{
-              type: "spring",
-              stiffness: 250,
-              damping: 40,
-              delay: 0,
-            }}
-          >
+    <section className="relative bg-gradient-to-b from-black via-neutral-950 to-black py-20 lg:py-28">
+      <div className="container">
+        <div className="mx-auto mb-14 max-w-2xl text-center">
+          <span className="mb-4 block text-xs font-semibold uppercase tracking-[0.3em] text-blue-400">
+            Pricing
+          </span>
+          <h2 className="text-3xl font-bold text-white sm:text-4xl lg:text-5xl font-['Zen_Old_Mincho']">
             サービス価格
-          </VerticalCutReveal>
-        </h2>
+          </h2>
+          <p className="mt-4 text-sm text-white/50">
+            ※ 表示はすべて税抜き価格です。
+          </p>
+        </div>
 
-        <TimelineContent
-          as="p"
-          animationNum={0}
-          timelineRef={pricingRef}
-          customVariants={revealVariants}
-          className="text-gray-400 text-xs"
-        >
-          ※全て税抜き価格です。
-        </TimelineContent>
-      </article>
-
-      <div
-        className="absolute top-0 left-[10%] right-[10%] w-[80%] h-full z-0"
-        style={{
-          backgroundImage: `radial-gradient(circle at center, #206ce8 0%, transparent 70%)`,
-          opacity: 0.6,
-          mixBlendMode: "multiply",
-        }}
-      />
-
-      <div className="grid md:grid-cols-3 max-w-5xl gap-4 py-6 mx-auto px-4 pb-20">
-        {plans.map((plan, index) => (
-          <TimelineContent
-            key={plan.name}
-            as="div"
-            animationNum={2 + index}
-            timelineRef={pricingRef}
-            customVariants={revealVariants}
-          >
-            <Card
-              className={`relative text-white border-neutral-800 ${
+        <div className="mx-auto grid max-w-5xl items-start gap-6 md:grid-cols-3">
+          {plans.map((plan) => (
+            <div
+              key={plan.displayName}
+              className={cn(
+                "relative flex h-full flex-col rounded-2xl border bg-gradient-to-b from-neutral-900 to-neutral-950 p-7",
                 plan.popular
-                  ? "bg-gradient-to-r from-neutral-900 via-neutral-800 to-neutral-900 shadow-[0px_-13px_300px_0px_#0900ff] z-20"
-                  : "bg-gradient-to-r from-neutral-900 via-neutral-800 to-neutral-900 z-10"
-              }`}
+                  ? "border-blue-500/50 shadow-[0_0_50px_-12px_rgba(59,130,246,0.5)] md:-translate-y-3"
+                  : "border-white/10",
+              )}
             >
-              <CardHeader className="text-left">
-                <div className="flex justify-between items-start">
-                  <div>
-                    <h3 className="text-3xl mb-2 font-['Zen_Old_Mincho']">{plan.displayName}</h3>
-                    <p className="text-sm text-gray-300 mb-4 font-['Zen_Old_Mincho']">{plan.nameJa}</p>
-                  </div>
-                  {plan.popular && (
-                    <span className="bg-blue-600 text-white text-xs px-3 py-1 rounded-full h-fit whitespace-nowrap font-['Zen_Old_Mincho']">
-                      人気
-                    </span>
+              {plan.badge && (
+                <span
+                  className={cn(
+                    "mb-3 inline-block w-fit rounded-full px-3 py-1 text-[11px] font-semibold",
+                    plan.popular
+                      ? "bg-blue-600 text-white"
+                      : plan.consultationRequired
+                        ? "bg-amber-500 text-black"
+                        : "bg-white/10 text-white/70",
                   )}
-                  {plan.consultationRequired && (
-                    <span className="bg-amber-500 text-white text-xs px-3 py-1 rounded-full h-fit whitespace-nowrap font-['Zen_Old_Mincho']">
-                      相談必須
-                    </span>
-                  )}
-                </div>
+                >
+                  {plan.badge}
+                </span>
+              )}
+
+              <h3
+                className={cn(
+                  "bg-gradient-to-r bg-clip-text text-2xl font-bold text-transparent font-['Zen_Old_Mincho']",
+                  plan.accent,
+                )}
+              >
+                {plan.displayName}
+              </h3>
+
+              <div className="mt-4 flex items-baseline gap-1.5">
                 {plan.consultationRequired ? (
-                  <>
-                    <div className="flex items-baseline">
-                      <span className="text-4xl font-semibold font-['Zen_Old_Mincho']">
-                        要相談
-                      </span>
-                    </div>
-                    <p className="text-sm text-gray-400 mt-1 font-['Zen_Old_Mincho']">
-                      ※ご要望をヒアリングの上、最適なプランをご提案します
-                    </p>
-                  </>
+                  <span className="text-3xl font-bold text-white">要相談</span>
                 ) : (
                   <>
-                    <div className="flex items-baseline">
-                      <span className="text-4xl font-semibold font-['Zen_Old_Mincho']">
-                        ¥
-                        <NumberFlow
-                          value={plan.price ?? 0}
-                          format={{ 
-                            notation: "standard",
-                            maximumFractionDigits: 0,
-                          }}
-                          className="text-4xl font-semibold font-['Zen_Old_Mincho']"
-                        />
-                      </span>
-                      <span className="text-gray-300 ml-1 font-['Zen_Old_Mincho']">/月</span>
-                    </div>
-                    <p className="text-sm text-gray-400 mt-1 font-['Zen_Old_Mincho']">
-                      初期費用: ¥{plan.setupFee?.toLocaleString()}
-                    </p>
+                    <span className="text-sm text-white/60">月額</span>
+                    <span className="text-4xl font-bold text-white">
+                      ¥{plan.price?.toLocaleString()}
+                    </span>
                   </>
                 )}
-              </CardHeader>
+              </div>
 
-              <CardContent className="pt-0">
-                <div className="mb-6 flex justify-center">
-                  <Link href={plan.buttonHref}>
-                    <InteractiveHoverButton 
-                      text={plan.buttonText} 
-                      className="w-48 font-['Zen_Old_Mincho']"
-                    />
-                  </Link>
-                </div>
+              {plan.setupFee && (
+                <p className="mt-1.5 text-xs text-white/50">
+                  初期費用 ¥{plan.setupFee.toLocaleString()}
+                </p>
+              )}
+              {plan.consultationRequired && (
+                <p className="mt-1.5 text-xs text-white/50">
+                  ご要望をヒアリングの上、最適なプランをご提案します。
+                </p>
+              )}
 
-                <div className="space-y-3 pt-4 border-t border-neutral-700">
-                  <h4 className="font-medium text-base mb-3 font-['Zen_Old_Mincho']">
-                    {plan.includes[0]}
-                  </h4>
-                  <ul className="space-y-2">
-                    {plan.includes.slice(1).map((feature, featureIndex) => (
-                      <li
-                        key={featureIndex}
-                        className="flex items-start gap-2"
-                      >
-                        <span className="h-2.5 w-2.5 bg-neutral-500 rounded-full grid place-content-center mt-1.5 flex-shrink-0"></span>
-                        <span className="text-sm text-gray-300 font-['Zen_Old_Mincho']">{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </CardContent>
-            </Card>
-          </TimelineContent>
-        ))}
+              <p className="mt-4 text-sm text-white/70">{plan.tagline}</p>
+
+              <Link
+                href={plan.buttonHref}
+                className={cn(
+                  "mt-6 inline-flex w-full items-center justify-center rounded-full px-5 py-3 text-sm font-semibold transition-colors",
+                  plan.popular
+                    ? "bg-blue-600 text-white hover:bg-blue-500"
+                    : "border border-white/20 text-white hover:bg-white/10",
+                )}
+              >
+                {plan.buttonText}
+              </Link>
+
+              <div className="mt-7 space-y-3 border-t border-white/10 pt-6">
+                <p className="text-sm font-semibold text-white/80">含まれる内容</p>
+                <ul className="space-y-2.5">
+                  {plan.features.map((feature) => (
+                    <li
+                      key={feature}
+                      className="flex items-start gap-2.5 text-sm text-white/70"
+                    >
+                      <Check className="mt-0.5 h-4 w-4 shrink-0 text-blue-400" />
+                      <span>{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
-    </div>
+    </section>
   );
 }

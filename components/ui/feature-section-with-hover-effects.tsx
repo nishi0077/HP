@@ -4,15 +4,22 @@ import {
   Globe,
   Smartphone,
   Zap,
-  Monitor,
+  Search,
   Target,
-  Route,
+  Cpu,
   MessageCircle,
 } from "lucide-react";
 import Link from "next/link";
 
 export function FeaturesSectionWithHoverEffects() {
   const features = [
+    {
+      title: "マーケティング戦略設計",
+      description:
+        "市場・競合・顧客心理を分析し、「勝てるポジション」と「収益化の道筋」を明確化。中長期的な売上を上げる戦略を設計します。",
+      icon: <Target className="h-8 w-8" />,
+      href: "/services/strategy",
+    },
     {
       title: "広告運用",
       description:
@@ -42,25 +49,18 @@ export function FeaturesSectionWithHoverEffects() {
       href: "/services/sns",
     },
     {
-      title: "HP制作/最適化",
+      title: "SEO/LLMO",
       description:
-        "競合に流れないように、問い合わせ導線を設計、適切なセクション配置によって成約率の最大化を実現させます",
-      icon: <Monitor className="h-8 w-8" />,
+        "自然検索（SEO）と生成AI検索（LLMO）の双方に最適化。検索・AIからの安定した流入と指名獲得を実現します。",
+      icon: <Search className="h-8 w-8" />,
       href: "/services/website",
     },
     {
-      title: "マーケティング戦略設計",
+      title: "AI導入支援",
       description:
-        "市場・競合・顧客心理を分析し、「勝てるポジション」と「収益化の道筋」を明確化。中長期的な売上を上げる戦略を設計します。",
-      icon: <Target className="h-8 w-8" />,
-      href: "/services/strategy",
-    },
-    {
-      title: "集客導線設計",
-      description:
-        "「認知→ 興味 → 行動」までの導線を一貫設計し、お客様をスムーズに購買へ繋げ、取りこぼしを防ぎます。",
-      icon: <Route className="h-8 w-8" />,
-      href: "/services/funnel",
+        "業務選定からRAG構築・AIエージェント開発・ガバナンス整備まで。AI活用で生産性と成果を底上げします。",
+      icon: <Cpu className="h-8 w-8" />,
+      href: "/contact",
     },
     {
       title: "公式LINE構築",

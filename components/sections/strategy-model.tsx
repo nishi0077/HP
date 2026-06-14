@@ -45,20 +45,20 @@ const GOLD = '#c9a96a'
 
 function NodeCard({ node }: { node: ModelNode }) {
   return (
-    <div className="rounded-2xl border border-[#c9a96a]/25 bg-gradient-to-b from-white/[0.07] to-white/[0.02] p-5 shadow-[0_10px_40px_-15px_rgba(0,0,0,0.6)] backdrop-blur-sm">
+    <div className="rounded-2xl border border-[#c9a96a]/25 bg-gradient-to-b from-white/[0.07] to-white/[0.02] p-6 shadow-[0_10px_40px_-15px_rgba(0,0,0,0.6)] backdrop-blur-sm">
       <div className="text-center">
-        <h3 className="text-sm font-semibold tracking-[0.18em] text-[#e7d3a8]">
+        <h3 className="text-base font-semibold tracking-[0.16em] text-[#e7d3a8] lg:text-lg">
           {node.en}
         </h3>
-        <p className="mt-1 text-xs text-white/55">{node.ja}</p>
+        <p className="mt-1.5 text-sm text-white/60 lg:text-base">{node.ja}</p>
       </div>
-      <ul className="mt-4 space-y-2">
+      <ul className="mt-5 space-y-2.5">
         {node.items.map((item) => (
           <li
             key={item}
-            className="flex items-start gap-2 text-xs leading-relaxed text-white/75"
+            className="flex items-start gap-2.5 text-sm leading-relaxed text-white/80"
           >
-            <span className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-[#c9a96a]" />
+            <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[#c9a96a]" />
             <span>{item}</span>
           </li>
         ))}
@@ -69,14 +69,14 @@ function NodeCard({ node }: { node: ModelNode }) {
 
 function CenterBadge() {
   return (
-    <div className="flex h-44 w-44 flex-col items-center justify-center rounded-full border border-[#c9a96a]/40 bg-gradient-to-br from-[#c9a96a]/25 via-[#c9a96a]/5 to-transparent text-center shadow-[0_0_60px_-10px_rgba(201,169,106,0.5)] lg:h-52 lg:w-52">
-      <span className="text-[11px] tracking-[0.25em] text-[#e7d3a8] sm:text-xs">
+    <div className="flex h-52 w-52 flex-col items-center justify-center rounded-full border border-[#c9a96a]/40 bg-gradient-to-br from-[#c9a96a]/25 via-[#c9a96a]/5 to-transparent text-center shadow-[0_0_60px_-10px_rgba(201,169,106,0.5)] lg:h-60 lg:w-60">
+      <span className="text-xs tracking-[0.25em] text-[#e7d3a8] sm:text-sm">
         BUSINESS
       </span>
-      <span className="text-lg font-bold tracking-[0.12em] text-white sm:text-2xl">
+      <span className="text-2xl font-bold tracking-[0.12em] text-white sm:text-3xl">
         GROWTH
       </span>
-      <span className="mt-2 text-[11px] text-white/60">事業成長・売上拡大</span>
+      <span className="mt-2 text-sm text-white/70">事業成長・売上拡大</span>
     </div>
   )
 }
@@ -144,18 +144,18 @@ export function StrategyModel() {
         </motion.div>
 
         {/* Desktop: 中央 + 3領域の循環図 */}
-        <div className="relative mx-auto hidden h-[820px] max-w-5xl lg:block">
+        <div className="relative mx-auto hidden h-[900px] max-w-5xl lg:block">
           <CycleRing />
           <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
             <CenterBadge />
           </div>
-          <div className="absolute left-1/2 top-0 w-[300px] -translate-x-1/2">
+          <div className="absolute left-1/2 top-0 w-[350px] -translate-x-1/2">
             <NodeCard node={nodes[0]} />
           </div>
-          <div className="absolute bottom-0 left-0 w-[330px]">
+          <div className="absolute bottom-0 left-0 w-[360px]">
             <NodeCard node={nodes[1]} />
           </div>
-          <div className="absolute bottom-0 right-0 w-[330px]">
+          <div className="absolute bottom-0 right-0 w-[360px]">
             <NodeCard node={nodes[2]} />
           </div>
         </div>
