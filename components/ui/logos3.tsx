@@ -1,16 +1,6 @@
-// This template requires the Embla Auto Scroll plugin to be installed:
-//
-// npm install embla-carousel-auto-scroll
-
 "use client";
 
-import AutoScroll from "embla-carousel-auto-scroll";
-
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-} from "@/components/ui/carousel";
+import { InfiniteSlider } from "@/components/ui/infinite-slider";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
 
@@ -20,6 +10,8 @@ interface Logo {
   image: string;
   /** 黒背景のロゴなどをタイルに合わせて色反転する */
   invert?: boolean;
+  /** ロゴを大きめに表示する */
+  large?: boolean;
 }
 
 interface Logos3Props {
@@ -43,6 +35,7 @@ const Logos3 = ({
       id: "dentsu-digital",
       description: "電通デジタル",
       image: "/images/marketing/dentsu-digital.png",
+      large: true,
     },
     {
       id: "logo-1",
@@ -73,6 +66,7 @@ const Logos3 = ({
       id: "logo-6",
       description: "株式会社ReBORNGROUP",
       image: "/images/marketing/7.png",
+      large: true,
     },
     {
       id: "logo-7",
@@ -99,48 +93,32 @@ const Logos3 = ({
 
       <div className="relative mt-12 lg:mt-16">
         <div className="relative mx-auto flex items-center justify-center">
-          <Carousel
-            opts={{
-              loop: true,
-              align: "start",
-              slidesToScroll: 1,
-              containScroll: "trimSnaps",
-            }}
-            plugins={[
-              AutoScroll({
-                playOnInit: true,
-                startDelay: 0,
-                speed: 1.6,
-                direction: "forward",
-                stopOnInteraction: false,
-                stopOnMouseEnter: false,
-                stopOnFocusIn: false,
-              }),
-            ]}
+          <InfiniteSlider
+            gap={24}
+            duration={40}
+            durationOnHover={120}
+            className="w-full"
           >
-            <CarouselContent className="ml-0">
-              {logos.map((logo) => (
-                <CarouselItem
-                  key={logo.id}
-                  className="flex basis-auto justify-center pl-0"
-                >
-                  <div className="group mx-3 flex h-28 w-48 shrink-0 items-center justify-center rounded-2xl border border-white/10 bg-white px-7 shadow-[0_10px_30px_-12px_rgba(0,0,0,0.45)] ring-1 ring-black/5 transition-all duration-300 ease-out hover:-translate-y-1.5 hover:border-white/30 hover:shadow-[0_18px_45px_-12px_rgba(0,0,0,0.6)]">
-                    <Image
-                      src={logo.image}
-                      alt={logo.description}
-                      width={200}
-                      height={100}
-                      loading="lazy"
-                      className={cn(
-                        "max-h-14 w-auto object-contain opacity-90 grayscale transition-all duration-300 ease-out group-hover:opacity-100 group-hover:grayscale-0",
-                        logo.invert && "invert"
-                      )}
-                    />
-                  </div>
-                </CarouselItem>
-              ))}
-            </CarouselContent>
-          </Carousel>
+            {logos.map((logo) => (
+              <div
+                key={logo.id}
+                className="group flex h-28 w-48 shrink-0 items-center justify-center rounded-2xl border border-white/10 bg-white px-7 shadow-[0_10px_30px_-12px_rgba(0,0,0,0.45)] ring-1 ring-black/5 transition-all duration-300 ease-out hover:-translate-y-1.5 hover:border-white/30 hover:shadow-[0_18px_45px_-12px_rgba(0,0,0,0.6)]"
+              >
+                <Image
+                  src={logo.image}
+                  alt={logo.description}
+                  width={200}
+                  height={100}
+                  loading="lazy"
+                  className={cn(
+                    "w-auto object-contain opacity-90 grayscale transition-all duration-300 ease-out group-hover:opacity-100 group-hover:grayscale-0",
+                    logo.large ? "max-h-20" : "max-h-14",
+                    logo.invert && "invert"
+                  )}
+                />
+              </div>
+            ))}
+          </InfiniteSlider>
 
           {/* 両端のフェード（背景の暗色になじませる） */}
           <div className="pointer-events-none absolute inset-y-0 left-0 w-16 bg-gradient-to-r from-black/80 to-transparent sm:w-24" />
