@@ -76,7 +76,7 @@ const Logos3 = ({
   ],
 }: Logos3Props) => {
   return (
-    <section className="relative py-16 lg:py-24">
+    <section className="relative pt-6 pb-16 lg:pt-8 lg:pb-24">
       <div className="container flex flex-col items-center text-center">
         <span className="mb-4 text-xs font-semibold uppercase tracking-[0.3em] text-white/40">
           Our Clients
