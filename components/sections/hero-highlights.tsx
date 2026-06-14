@@ -13,7 +13,7 @@ interface HeroHighlightsProps {
 
 export function HeroHighlights({ hero }: HeroHighlightsProps) {
   return (
-    <BeamsBackground intensity="medium" className="pt-20 pb-0 lg:pt-32 lg:pb-0">
+    <BeamsBackground intensity="medium" className="min-h-0 pt-20 pb-12 lg:pt-32 lg:pb-16">
       <div className="container relative z-10">
         {/* Hero Section */}
         <motion.div 
