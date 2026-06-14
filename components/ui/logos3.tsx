@@ -111,6 +111,7 @@ const Logos3 = ({
                 playOnInit: true,
                 startDelay: 0,
                 speed: 1.6,
+                direction: "forward",
                 stopOnInteraction: false,
                 stopOnMouseEnter: false,
                 stopOnFocusIn: false,
