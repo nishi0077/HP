@@ -90,6 +90,10 @@ export interface SiteData {
         tech?: string[]
         deliverables?: string[]
         image?: string
+        metrics?: Array<{
+          value: string
+          label: string
+        }>
       }>
     }>
   }

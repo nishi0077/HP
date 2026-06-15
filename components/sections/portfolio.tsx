@@ -14,6 +14,28 @@ interface PortfolioProps {
   portfolio: SiteData['portfolio']
 }
 
+type WorkMetric = { value: string; label: string }
+
+function MetricsCards({ metrics }: { metrics: WorkMetric[] }) {
+  return (
+    <div className="mb-5 grid grid-cols-2 gap-3 sm:grid-cols-3">
+      {metrics.map((m, i) => (
+        <div
+          key={`${m.label}-${i}`}
+          className="rounded-xl border border-emerald-500/20 bg-emerald-500/5 px-3 py-3 text-center"
+        >
+          <div className="text-xl font-extrabold leading-tight text-emerald-600 sm:text-2xl">
+            {m.value}
+          </div>
+          <div className="mt-1 text-[11px] font-medium leading-snug text-muted-foreground">
+            {m.label}
+          </div>
+        </div>
+      ))}
+    </div>
+  )
+}
+
 export function Portfolio({ portfolio }: PortfolioProps) {
   return (
     <section className="py-20 bg-muted/30">
@@ -102,6 +124,10 @@ export function Portfolio({ portfolio }: PortfolioProps) {
                             </div>
                           </div>
                           
+                          {work.metrics && work.metrics.length > 0 && (
+                            <MetricsCards metrics={work.metrics} />
+                          )}
+
                           <div className="text-muted-foreground mb-4 whitespace-pre-line space-y-2">
                             {work.description.split('\n').map((line, index) => {
                               if (line.startsWith('**') && line.endsWith('**')) {
@@ -265,6 +291,9 @@ export function Portfolio({ portfolio }: PortfolioProps) {
                         </div>
                       </CardHeader>
                       <CardContent>
+                        {work.metrics && work.metrics.length > 0 && (
+                          <MetricsCards metrics={work.metrics} />
+                        )}
                         <div className="text-muted-foreground mb-4 whitespace-pre-line space-y-2">
                           {work.description.split('\n').map((line, index) => {
                             if (line.startsWith('**') && line.endsWith('**')) {

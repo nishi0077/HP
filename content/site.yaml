@@ -124,6 +124,9 @@ portfolio:
             **広告成果**
             **1件/月の成約→4,000万円の売上**
           category: 広告運用
+          metrics:
+            - { value: "4,000万円", label: 成約による売上 }
+            - { value: 1件/月, label: 新規成約 }
           tech: [Meta広告, Google広告, LP制作, 公式LINE構築, 診断フォーム, CAPI実装]
           deliverables: [広告キャンペーン設計, クリエイティブ制作, 診断システム, LINE自動化]
           image: /images/creative/solar-battery-creative1.png
@@ -138,6 +141,9 @@ portfolio:
             **東京で+2,148%の改善**
             **福岡で+3,322%の改善**
           category: 広告運用
+          metrics:
+            - { value: +2,148%, label: 東京エリア改善 }
+            - { value: +3,322%, label: 福岡エリア改善 }
           tech: [広告戦略, Meta広告, Google広告]
           deliverables: [マーケティング戦略設計, 広告キャンペーン設計, キーワード設計]
           image: /images/marketing/銀座Xiaoma.jpg
@@ -155,6 +161,10 @@ portfolio:
             **Meta広告を用いてフォロワー1.5万人**
             **2件/月の成約→8,000万円の売上**
           category: SNS運用
+          metrics:
+            - { value: "8,000万円", label: 成約による売上 }
+            - { value: 1.5万人, label: 獲得フォロワー }
+            - { value: 2件/月, label: 新規成約 }
           tech: [Instagram運用, 広告戦略, 内製化支援, 地方マーケティング]
           deliverables: [SNS戦略, 投稿運用, 広告運用, 内製化支援]
           image: /images/creative/test2.png
@@ -169,6 +179,9 @@ portfolio:
             **広告費50万円で1件成約、売上4,000万円**
           url: https://asitis.ibaraki.jp/
           category: Web制作
+          metrics:
+            - { value: "4,000万円", label: 成約売上 }
+            - { value: 50万円, label: 広告費 }
           tech: [マーケティング戦略, 広告運用, SNS運用]
           image: /images/marketing/as-it-is1.png
         - title: ReBORN GROUP株式会社
@@ -180,6 +193,9 @@ portfolio:
             **新規事業の立ち上げ→成約通算15件**
           url: https://reborngroup.me/
           category: Web制作
+          metrics:
+            - { value: 15件, label: 通算成約 }
+            - { value: 年商20億, label: 急成長企業の新規事業 }
           tech: [広告運用, 公式LINE構築, LP制作]
           image: /images/marketing/reborn-group1.png
         - title: 銀座XIAOMA（ASU BRAND株式会社）
@@ -191,6 +207,9 @@ portfolio:
             **HP流入350％改善。お問い合わせ数3件/日→15件/日へ増加。**
           url: https://ginzaxiaoma.com/ja
           category: Web制作
+          metrics:
+            - { value: +350%, label: HP流入改善 }
+            - { value: 15件/日, label: 問い合わせ(3→15) }
           tech: [多言語対応, 広告運用, 公式LINE構築]
           image: /images/marketing/xiaoma1.png
         - title: 株式会社ACTLAND
@@ -202,6 +221,9 @@ portfolio:
             **オープン初月でInstagram経由12万円の新規契約獲得。以後も平均月5件の契約を継続的に獲得。**
           url: https://actland.co.jp/
           category: Web制作
+          metrics:
+            - { value: 12万円, label: 初月の新規契約 }
+            - { value: 月5件, label: 継続契約(平均) }
           tech: [新規サロン立ち上げ, マーケティング戦略, Meta広告運用, SNS運用, 現地撮影]
           image: /images/marketing/actland1.png
     - name: 制作クリエイティブ
