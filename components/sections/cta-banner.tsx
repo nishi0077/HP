@@ -21,11 +21,11 @@ export function CtaBanner({ cta }: CtaBannerProps) {
           {cta.banner.button && cta.banner.button.href ? (
             cta.banner.button.href.startsWith('http') ? (
               <a href={cta.banner.button.href} target="_blank" rel="noopener noreferrer">
-                <InteractiveHoverButton text={cta.banner.button.label} className="w-48" />
+                <InteractiveHoverButton text={cta.banner.button.label} className="w-48" hideDot />
               </a>
             ) : (
               <Link href={cta.banner.button.href}>
-                <InteractiveHoverButton text={cta.banner.button.label} className="w-48" />
+                <InteractiveHoverButton text={cta.banner.button.label} className="w-48" hideDot />
               </Link>
             )
           ) : null}
