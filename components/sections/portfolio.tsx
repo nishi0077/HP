@@ -4,7 +4,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { BeamsBackground } from '@/components/ui/beams-background'
-import { ExternalLink, Monitor, Palette, BarChart3, TrendingUp, Users } from 'lucide-react'
+import { ExternalLink, Monitor, Palette, BarChart3, TrendingUp, Users, Search } from 'lucide-react'
 import { motion } from 'motion/react'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -59,6 +59,8 @@ export function Portfolio({ portfolio }: PortfolioProps) {
                 <TrendingUp className="h-6 w-6 text-white" />
               ) : category.name === 'SNS運用実績' ? (
                 <Users className="h-6 w-6 text-primary" />
+              ) : category.name === 'SEO・LLMO実績' ? (
+                <Search className="h-6 w-6 text-white" />
               ) : category.name === '制作クリエイティブ' ? (
                 <Palette className="h-6 w-6 text-white" />
               ) : (

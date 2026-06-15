@@ -122,31 +122,15 @@ portfolio:
             「電気代削減診断×公式LINE刈り取り」によって最大効率でリストを獲得
             
             **広告成果**
-            **1件/月の成約→4,000万円の売上**
+            **月30万円の広告費で、単価300万円の商材を6件成約**
           category: 広告運用
           metrics:
-            - { value: "4,000万円", label: 成約による売上 }
-            - { value: 1件/月, label: 新規成約 }
+            - { value: 6件, label: 成約 }
+            - { value: 300万円, label: 成約単価 }
+            - { value: 月30万円, label: 広告費 }
           tech: [Meta広告, Google広告, LP制作, 公式LINE構築, 診断フォーム, CAPI実装]
           deliverables: [広告キャンペーン設計, クリエイティブ制作, 診断システム, LINE自動化]
           image: /images/creative/solar-battery-creative1.png
-        - title: 銀座Xiaoma
-          subtitle: 広告運用実績
-          description: |
-            **相談内容**
-            • 広告運用の構築
-            • マーケティング戦略設計
-            
-            **成果**
-            **東京で+2,148%の改善**
-            **福岡で+3,322%の改善**
-          category: 広告運用
-          metrics:
-            - { value: +2,148%, label: 東京エリア改善 }
-            - { value: +3,322%, label: 福岡エリア改善 }
-          tech: [広告戦略, Meta広告, Google広告]
-          deliverables: [マーケティング戦略設計, 広告キャンペーン設計, キーワード設計]
-          image: /images/marketing/銀座Xiaoma.jpg
         - title: 地方工務店
           subtitle: SNS運用実績
           description: |
@@ -168,6 +152,27 @@ portfolio:
           tech: [Instagram運用, 広告戦略, 内製化支援, 地方マーケティング]
           deliverables: [SNS戦略, 投稿運用, 広告運用, 内製化支援]
           image: /images/creative/test2.png
+    - name: SEO・LLMO実績
+      works:
+        - title: 銀座Xiaoma
+          subtitle: SEO・LLMO実績
+          description: |
+            **相談内容**
+            • 自然検索からの集客強化
+            • 生成AI検索（LLMO）での露出最適化
+
+            構造化データ（Schema）の実装と内部リンク設計を中心に、サイト構造とコンテンツを最適化。
+
+            **成果**
+            **東京で+2,148%の改善**
+            **福岡で+3,322%の改善**
+          category: SEO・LLMO
+          metrics:
+            - { value: +2,148%, label: 東京エリア 自然検索流入 }
+            - { value: +3,322%, label: 福岡エリア 自然検索流入 }
+          tech: [SEO, LLMO, 構造化データ(Schema), 内部リンク設計, テクニカルSEO]
+          deliverables: [SEO戦略設計, 構造化データ実装, 内部リンク最適化, コンテンツ改善]
+          image: /images/marketing/銀座Xiaoma.jpg
     - name: Webマーケティング実績事例
       works:
         - title: 株式会社AS IT IS
