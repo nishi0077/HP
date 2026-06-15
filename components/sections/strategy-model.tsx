@@ -94,7 +94,8 @@ function CycleRing() {
       fill="none"
       aria-hidden="true"
     >
-      <circle
+      {/* 破線が流れるリング */}
+      <motion.circle
         cx={cx}
         cy={cy}
         r={r}
@@ -102,21 +103,30 @@ function CycleRing() {
         strokeOpacity="0.3"
         strokeWidth="1.5"
         strokeDasharray="4 9"
+        animate={{ strokeDashoffset: [0, -52] }}
+        transition={{ duration: 3, repeat: Infinity, ease: 'linear' }}
       />
-      {arrowAngles.map((a) => {
-        const rad = (a * Math.PI) / 180
-        const x = cx + r * Math.cos(rad)
-        const y = cy + r * Math.sin(rad)
-        return (
-          <path
-            key={a}
-            d="M -9 -6 L 9 0 L -9 6 Z"
-            transform={`translate(${x} ${y}) rotate(${a + 90})`}
-            fill={GOLD}
-            fillOpacity="0.75"
-          />
-        )
-      })}
+      {/* リング上を周回する矢印 */}
+      <motion.g
+        style={{ transformBox: 'view-box', transformOrigin: `${cx}px ${cy}px` }}
+        animate={{ rotate: 360 }}
+        transition={{ duration: 36, repeat: Infinity, ease: 'linear' }}
+      >
+        {arrowAngles.map((a) => {
+          const rad = (a * Math.PI) / 180
+          const x = cx + r * Math.cos(rad)
+          const y = cy + r * Math.sin(rad)
+          return (
+            <path
+              key={a}
+              d="M -9 -6 L 9 0 L -9 6 Z"
+              transform={`translate(${x} ${y}) rotate(${a + 90})`}
+              fill={GOLD}
+              fillOpacity="0.75"
+            />
+          )
+        })}
+      </motion.g>
     </svg>
   )
 }
