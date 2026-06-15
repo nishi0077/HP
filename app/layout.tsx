@@ -3,6 +3,7 @@ import { IBM_Plex_Sans_JP, Zen_Old_Mincho } from 'next/font/google'
 import Script from 'next/script'
 import './globals.css'
 import { loadSite } from '@/lib/content'
+import { Preloader } from '@/components/ui/preloader'
 
 const ibmPlexSansJP = IBM_Plex_Sans_JP({ 
   weight: ['300', '400', '500', '700'],
@@ -58,6 +59,7 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
       </head>
       <body className={`${ibmPlexSansJP.className} ${ibmPlexSansJP.variable} ${zenOldMincho.variable}`}>
+        <Preloader />
         {children}
         
         {/* GA4 */}
